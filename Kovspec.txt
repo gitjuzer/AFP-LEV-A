@@ -11,6 +11,7 @@ Jelen projekt célja, hogy ezt valósítsuk meg informatikai rendszer fejlesztéséve
 3. Jelenlegi helyzet leírása
 
 4. Vágyálom rendszer leírása
+Cél, hogy a gyerekek ne érezzék feladatnak a tanulást, hanem játék közben találkozzanak az új információkkal, tnaulják, gyakorolják azokat...
 
 5. Feltételrendszer
 
