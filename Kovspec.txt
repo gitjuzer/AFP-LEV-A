@@ -1,22 +1,30 @@
-Játékos okító Követelményspecifikáció
+ï»¿JÃ¡tÃ©kos okÃ­tÃ³ KÃ¶vetelmÃ©nyspecifikÃ¡ciÃ³
 --------------------------------------
 
 
-1. Bevezetés
-A gyerekek sokkal könnyebben tanulnak, ha ezt játékos formában tehetik.
-Jelen projekt célja, hogy ezt valósítsuk meg informatikai rendszer fejlesztésével.
+1. BevezetÃ©s
+A gyerekek sokkal kÃ¶nnyebben tanulnak, ha ezt jÃ¡tÃ©kos formÃ¡ban tehetik.
+Jelen projekt cÃ©lja, hogy ezt valÃ³sÃ­tsuk meg informatikai rendszer fejlesztÃ©sÃ©vel.
 
-2. Vezetõi összefoglaló
-A Játékos Okító projekt EU forrásból nyert pályázatból finanszírozva egy web és mobil platformon használható, elsõsorban tizenéves gyermekeknek szánt...
+2. VezetÅ‘i Ã¶sszefoglalÃ³
+A JÃ¡tÃ©kos OkÃ­tÃ³ projekt EU forrÃ¡sbÃ³l nyert pÃ¡lyÃ¡zatbÃ³l finanszÃ­rozva egy web Ã©s mobil platformon hasznÃ¡lhatÃ³, elsÅ‘sorban tizenÃ©ves gyermekeknek szÃ¡nt...
 
-3. Jelenlegi helyzet leírása
+3. Jelenlegi helyzet leÃ­rÃ¡sa
 
-4. Vágyálom rendszer leírása
-Cél, hogy a gyerekek ne érezzék feladatnak a tanulást, hanem játék közben találkozzanak az új információkkal, tanulják, gyakorolják azokat, tanáraik pedig visszajelzést kapjanak a fejlõdésükrõl.
+4. VÃ¡gyÃ¡lom rendszer leÃ­rÃ¡sa
+CÃ©l, hogy a gyerekek ne Ã©rezzÃ©k feladatnak a tanulÃ¡st, hanem jÃ¡tÃ©k kÃ¶zben talÃ¡lkozzanak az Ãºj informÃ¡ciÃ³kkal, tanuljÃ¡k, gyakoroljÃ¡k azokat, tanÃ¡raik pedig visszajelzÃ©st kapjanak a fejlÅ‘dÃ©sÃ¼krÅ‘l.
+KÃ¼lÃ¶nbÃ¶zÅ‘ tÃ©mÃ¡kat lehessen lÃ©trehozni, pl. matek, infÃ³, fizika, mozgÃ¡sok, kÃ¶rnyezetvÃ©delem.
+A tÃ©mÃ¡khoz az ismeretanyagot egyszerÅ± web felÃ¼leten lehessen felvinni.
+Egy anyag lehessen lecke, amely csak informÃ¡ciÃ³t tartalmaz szÃ¶veg Ã©s kÃ©pek (videÃ³???) formÃ¡jÃ¡ban, illetve teszt anyag, ahol kÃ©rdÃ©sekre kell vÃ¡laszolnia a tanulÃ³nak. A feladatok lehetnek feleletvÃ¡lasztÃ³s vagy Ã¶sszepÃ¡rosÃ­tÃ³s megoldÃ¡sÃºak.
+A rendszer hasznÃ¡latÃ¡hoz regisztrÃ¡ciÃ³ szÃ¼ksÃ©ges.
+Egy felhasznÃ¡lÃ³ lehet admin, tanÃ¡r vagy tanulÃ³.
 
-5. Feltételrendszer
+5. FeltÃ©telrendszer
 
-6. Technikai feltételek
+6. Technikai feltÃ©telek
+A rendszer tÃ¡mogassa a mysql x.x adatbÃ¡ziskezelÅ‘t Ã©s a php x.x verziÃ³t hasznÃ¡lÃ³ alkalmazÃ¡s szerver platformot.
+A rendszer hasznÃ¡latÃ¡t Android 4.1 verziÃ³tÃ³l szÃ¼ksÃ©ges tÃ¡mogatni.
+A rendszer tÃ¡mogassa a Google Chrome, Firefox, MS Edge bÃ¶ngÃ©szÅ‘ket.
 
-7. Követelménylista
+7. KÃ¶vetelmÃ©nylista
 
