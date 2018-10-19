@@ -12,7 +12,7 @@ A Játékos Okító projekt EU forrásból nyert pályázatból finanszírozva egy web és 
 3. Jelenlegi helyzet leírása
 
 4. Vágyálom rendszer leírása
-Cél, hogy a gyerekek ne érezzék feladatnak a tanulást, hanem játék közben találkozzanak az új információkkal, tnaulják, gyakorolják azokat...
+Cél, hogy a gyerekek ne érezzék feladatnak a tanulást, hanem játék közben találkozzanak az új információkkal, tnaulják, gyakorolják azokat, tanáraik pedig visszajelzést kapjanak a fejlõdésükrõl.
 
 5. Feltételrendszer
 
