@@ -3,6 +3,8 @@ Játékos okító Követelményspecifikáció
 
 
 1. Bevezetés
+A gyerekek sokkal könnyebben tanulnak, ha ezt játékos formában tehetik.
+Jelen projekt célja, hogy ezt valósítsuk meg informatikai rendszer fejlesztésével.
 
 2. Vezetõi összefoglaló
 
