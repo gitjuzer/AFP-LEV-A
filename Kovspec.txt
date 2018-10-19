@@ -7,6 +7,7 @@ A gyerekek sokkal könnyebben tanulnak, ha ezt játékos formában tehetik.
 Jelen projekt célja, hogy ezt valósítsuk meg informatikai rendszer fejlesztésével.
 
 2. Vezetõi összefoglaló
+A Játékos Okító projekt EU forrásból nyert pályázatból finanszírozva egy web és mobil platformon használható, elsõsorban tizenéves gyermekeknek szánt...
 
 3. Jelenlegi helyzet leírása
 
