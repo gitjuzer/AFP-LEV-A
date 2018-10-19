@@ -1,0 +1,18 @@
+Játékos okító Követelményspecifikáció
+--------------------------------------
+
+
+1. Bevezetés
+
+2. Vezetõi összefoglaló
+
+3. Jelenlegi helyzet leírása
+
+4. Vágyálom rendszer leírása
+
+5. Feltételrendszer
+
+6. Technikai feltételek
+
+7. Követelménylista
+
