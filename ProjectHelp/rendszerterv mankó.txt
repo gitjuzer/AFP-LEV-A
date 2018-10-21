@@ -20,10 +20,12 @@ Rendszerterv (több dokumentumból áll össze)
 			Elvárt eredmény: Ügyfél által nyilatkozatban elfogadott dokumentum az alkalmazandó technológiáról				
  2. A megvalósítás feltételei
 		Cél: a kiválasztott technológia által megkövetelt hardver és szoftverkörnyezet meghatározása.
-		Elvárt erdmény: Dokumentáció a technológia által megkövetelt hardver és szoftverkör listáról és az alkalmazandó fejlesztőkörnyezetről és egyébb a fejelsztésben felhasználandó szoftverekről, felmerülő költségekről.
+		Elvárt erdmény: Dokumentáció a technológia által megkövetelt hardver és szoftverkör listáról és az 
+		alkalmazandó fejlesztőkörnyezetről és egyébb a fejelsztésben felhasználandó szoftverekről, felmerülő költségekről.
  3. A tényleges megvalósítás
-		Cél: az elvégzendő feladatok meghatározása. A feladatok elvégzéséhez szükséges időbecslések megadása a kivitelező által befektetett munka előzetes felméréséhez.
-		Elvárt eredmény: dokumentum az elvégzendő feladatokról, azok időbecsléséről és várható költségéről.
+		Cél: az elvégzendő feladatok meghatározása. A feladatok elvégzéséhez szükséges időbecslések megadása 
+		a kivitelező által befektetett munka előzetes felméréséhez. Elvárt eredmény: dokumentum az elvégzendő 
+		feladatokról, azok időbecsléséről és várható költségéről.
  4. Előzetes tesztek
  5. Telepítés tervezett menete
 		- telepítési dokumentáció
