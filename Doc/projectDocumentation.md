@@ -6,9 +6,9 @@
 
 ## Követelmény leírás 
 
-- [Követelmény specifikáció](Doc/Kovspec.txt)
+- [Követelmény specifikáció](Kovspec.txt)
 
 ## Rendszer specifikáció
 
-- [prototípus](Doc/RendszerSpec/Mockup/WebFrontend/index.html) 
+- [prototípus](RendszerSpec/Mockup/WebFrontend/index.html) 
 
