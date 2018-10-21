@@ -1,12 +1,5 @@
-﻿# AFP-LEV-A
+﻿# Git segítség és konvenciók
 
-A következő leírásokat mindenképp olvasd el, mielőtt nekilátsz a munkának:
-  - [Git mankó](ProjectHelp/git_manko.md)
-  - [Projekt Struktúra](ProjectHelp/git.txt)
-  - [Projekt életciklus mankó](ProjectHelp/projekt_manko.txt)
-  - [Rendszerterv mankó](ProjectHelp/rendszerterv_manko.txt)
- 
-Minden csoport válasszon magának vezetőt!
-Az egyes csapatok vezetői keressék fel a [szakmai vezetőt](https://github.com/malbertHE), mielőtt bármibe is belekezdenek!
+Fejlesztés alatt
 
-Ha a fentieket nem tartjuk be mindannyian, akkor nagyon hamar kezelhetlenné válhat a projekt.
+  - [Forrás](https://nvie.com/posts/a-successful-git-branching-model/)
