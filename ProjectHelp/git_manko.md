@@ -29,7 +29,7 @@ Ha a következő kérdésekre keresed a választ, akkor először [ezt olvasd el
 - A lépések előtt és után is vizsgáld meg a repód tartalmát (így fog letisztulni a branch-ek máködése)!
 - Tedd meg ezt úgy is, hogy van commit-ra váró módosítás a kiinduló branch-ben!
 
-## Szöveges fájlok a GitHubon, avagy hogyan készítsünk szépen formázott dokumentációt
+## Szöveges fájlok a GitHubon - dokumentáció készítés
 
 - Ne használj ékezeteket és szóközöket a fájlnevekben!
 - A formázandó dokumentum kiterjesztése legyen .md !
@@ -56,12 +56,13 @@ is komoly problémákba ütközhet. A lépések végrehajtásáról részletesen
 
 A folyamat:
 
-	1. Ne kezdd el a fejlesztést, **még egy fájnevet se írj át, egy mappát se hozz létre**, amíg az adott pont nem ad rá utasítást!
+	1. Ne kezdd el a fejlesztést, **még egy fájnevet se írj át, egy mappát se hozz létre**, 
+		amíg az adott pont nem ad rá utasítást!
 	2. Git repó klónozása.
-	3. Váltás a develop branchre. **FONTOS**: ha nem váltasz át, akkor **nem fogod látni a többi fejlesztő módosításait**, 
-		és a fejlesztéseid egy elavult kódbázisra fognak épülni. Ezen felül, a többiek, akik végrehajtják ezt a lépést, 
-		**nem fogják látni a te módosításaidat**, hiszen nem ugyanabbaz az ágban dolgoztok.
-	4. Adj nevet a fejlesztendő feladatnak, és hozz létre hozzá egy branch-et! Hogy mi számít elkülöníthető feladatnak, és az 			elnevezéssel kapcsolatos konvenciókat beszéljétek meg a csoportotok vezetőjével!
+	3. Váltás a develop branchre. **NE HAGYD KI**
+	4. Adj nevet a fejlesztendő feladatnak, és hozz létre hozzá egy branch-et! 
+		Hogy mi számít elkülöníthető feladatnak, és az elnevezéssel kapcsolatos 
+		konvenciókat beszéljétek meg a csoportotok vezetőjével!
 	5. **Most kezdheted a fejlesztést!** 
 	6. Ha úgy gondolod, hogy a munkád publikálható (commitálható), akkor hajts végre egy **commit**-ot!
 	7. Válts vissza a develop branch-re, mergeld vissza a feature branchedet, majd töröld azt!
