@@ -3,6 +3,7 @@
 	Projekt megrendelője: EKE Tajti Tibor
 	Projekt kivitelező: AFP LEV A team
 	Projekt neve: X Projekt
+	Határidő: ????????
 
 ## Követelmény leírás 
 
