@@ -25,9 +25,10 @@ Ha a következő kérdésekre keresed a választ, akkor először [ezt olvasd el
 	- git merge
 	- git push
 
-- Hozz létre fájlokat, add hozzá s repóhoz, commitold. Hozz létre új branchet, checkoutold. 
-- A lépések előtt és után is vizsgáld meg a repód tartalmát (így fog letisztulni a branch-ek máködése)!
+- Hozz létre fájlokat, add hozzá a repóhoz, commitold! Hozz létre új branchet, checkoutold. 
+- A lépések előtt és után is vizsgáld meg a repód tartalmát valamilyen fájlkezelővel (így fog letisztulni a branch-ek működése)!
 - Tedd meg ezt úgy is, hogy van commit-ra váró módosítás a kiinduló branch-ben!
+- Kísérletezz kedved szerint, amíg az alapvető utasítások rögzülnek!
 
 ## Szöveges fájlok a GitHubon - dokumentáció készítés
 
@@ -56,20 +57,15 @@ is komoly problémákba ütközhet. A lépések végrehajtásáról részletesen
 
 A folyamat:
 
-	1. Ne kezdd el a fejlesztést, **még egy fájnevet se írj át, egy mappát se hozz létre**, 
-		amíg az adott pont nem ad rá utasítást!
-	2. Git repó klónozása.
-	3. Váltás a develop branchre. **NE HAGYD KI**
-	4. Adj nevet a fejlesztendő feladatnak, és hozz létre hozzá egy branch-et! 
-		Hogy mi számít elkülöníthető feladatnak, és az elnevezéssel kapcsolatos 
-		konvenciókat beszéljétek meg a csoportotok vezetőjével!
-	5. **Most kezdheted a fejlesztést!** 
-	6. Ha úgy gondolod, hogy a munkád publikálható (commitálható), akkor hajts végre egy **commit**-ot!
-	7. Válts vissza a develop branch-re, mergeld vissza a feature branchedet, majd töröld azt!
-	   Ne aggódj, a munkád nem fog elveszni, csak az ágak elkülönítés szűnik meg ilyenkor. 
-		(Természetesen van lehetőség telljes törlésre is, de ez nem ide tartozik)
-	8. A develop branche-t pushold a GitHub repóba (szükség esetén pull és konfliktus feloldás)!
-	9. Minden egyes jól elkülöníthető feladatra ismételd a 4-8 pontokat!
+1. Ne kezdd el a fejlesztést, **még egy fájnevet se írj át, egy mappát se hozz létre**, amíg az adott pont nem ad rá utasítást!
+2. Git repó klónozása.
+3. Váltás a develop branchre. **NE FEJLESSZ A MASTER BRANCH-BEN!**
+4. Adj nevet a fejlesztendő feladatnak, és hozz létre hozzá egy feature branch-et! Hogy mi számít elkülöníthető feladatnak, és az elnevezéssel kapcsolatos konvenciókat beszéljétek meg a csoportotok vezetőjével!
+5. **Most kezdheted a fejlesztést!** 
+6. Ha úgy gondolod, hogy a munkád publikálható (commitálható), akkor hajts végre egy **commit**-ot!
+7. Válts vissza a develop branch-re, mergeld vissza a feature branchedet, majd töröld azt! Ne aggódj, a munkád nem fog elveszni, csak az ágak elkülönítése szűnik meg ilyenkor. (Természetesen van lehetőség teljes törlésre is, de ez nem ide tartozik)
+8. A develop branche-t pushold a GitHub repóba (szükség esetén pull és konfliktus feloldás)!
+9. Minden egyes jól elkülöníthető feladatra ismételd a 4-8 pontokat!
 
 A fenti szabályok talán szigorúnak tűnnek, de mindenképp megéri betartani őket. Ha ezt a 9 pontot következetesen, 
 algoritmikus módon alkalmazod, akkor nagyon hamar belejösz, és nem fog nehézséget okozni.
@@ -78,8 +74,15 @@ Egy újabb fontos szabály: **Ne pusholj, amíg nem ellenőrzöd meg a repód á
 
 Mit tegyek, ha mégis kihagytam valamit?
 
-	1. Don't Panic :) A commitált módosításaid nem vesznek el, és amíg lokális környezetben dolgozol másnak sem tudsz gondot okozni.
-	2. Ha nem a megfelelő branchben kezdtél el dolgozni, akkor egyszerűen válts át a helyes branchre, és folytasd a munkát.
-	3. Csak akkor commit-olj, amikor biztos vagy abban, hoyg minden a helyén van. Ilyenkor viszont azonnal!!!
+1. Don't Panic :) A commitált módosításaid nem vesznek el, és amíg lokális környezetben dolgozol, másnak sem tudsz gondot okozni.
+2. Ha nem a megfelelő branchben kezdtél el dolgozni, akkor egyszerűen válts át a helyes branchre, és folytasd a munkát! **De a váltás előtt NE COMMIT-OLJ**
+3. Csak akkor commit-olj, amikor biztos vagy abban, hoyg minden a helyén van. Ilyenkor viszont azonnal!!!
+
+## Végezetül, ne feledd: 
+
+1. Amit commit-oltál, az már nem fog elveszni. 
+2. Amíg nincs commit, addig nyugodtan módosíts bármit, vissza fogod tudni állítani az előző állapotot.
+3. A master branch a stabil (estünkben a végleges) verzió helye, ezt ne használd, csak a develop és az abból származó feature branch-eket!
+4. Ha megakadtál keresd a csoportod vezetőjét!
 	
   
