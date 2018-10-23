@@ -1,4 +1,72 @@
-﻿Játékos okító Követelményspecifikáció
+#Jelenlegi helyzet leírása:
+
+A gazdasági legtöbb területén jelentkező munkaerőhiány az oktatásban is erőteljesen megjelent. Amit egyes tanárokra eső óraszámnöveléssel próbálnak kompenzálni. Jelenleg a tanárok heti minimális tanórakerete 22 óra, amely lényegében csak nagyon alacsony számú tanár esetén nem több. Ez az órarendben előírt tanórák száma, nem tartalmazza a felkészülést az órákra, számonkérésekkel kapcsolatos feladatokat, adminisztratív feladatokat, helyettesítéseket, fakultatív órákat, diák rendezvények szervezési idejét, továbbképzéseket stb. Ha ezeket az nem dokumnetált munkaórákat is figyelembe vesszük, akkor egy 25 tanórakerettel rendelkező lekiismeretes tanár hozzávetőlegesen heti 45-50 órát tölt munkával. 
+A jelenlegi diákok nagyban különböznek az évezredforduló előtt születettektől. Életük elválaszthatalan része a digitális jelenlét, az okostelefon a testrészükké vált. Ehhez a változáshoz az oktatásnak is alkalmazkodnia kell és nem tiltani hanem felhasználni kell a diákok digitalizált életét. 
+**Az órai felkészülési idő és a számonkérésekkel kapcsolatos időráfordítás sok esetben csökkenthető, hiszen a tananyag oktatóanyagából készülnek a számonkérések.**
+**A diákok a okostelefonjaikra nem csak közösségi eszközként hanem elsődleges információforrásként is tekintenek, gyorsan és szívesen végeznek feladatokat azokon keresztül.**
+
+
+
+
+#Megrendelői igényspecifikáció (megrendelő által megfogalmazott igények, célok, követelmények):
+
+##Megrendelői vízió (Vágyálom)
+A tananyaggal kapcsolatos feladatok egy platformon belül, digitális formában állíthatók össze. A feladatok és oktatóanyagok egyaránt elkészíthetők ezen felületen. Az anyagok egyszeri elkészítését követően az órai felkészülési idő minimális. Az számonkérés előállítására fordított idő kiázrólag a már előállított feladatok összeválogatására és a tesztírási időre korlátozódik. A számonkérés kiértékelésére fordított idő nulla, vagy kizárólag az esszé jellegű feladatok kiértékelésére korlátozódik.
+A diákok gyakorlása végig digitális, interaktív kultúrájukba illeszkedik és teljesen papírmentes.
+
+##Megrendelői cél: 
+1. több idő jusson az oktatásra azzal, hogy az tanórákra történő felkészülési időt és tanárok számonkérésekre fordított idejét csökkentjük. (munkaóra megtakarítás amely a rendundáns folyamatokat megszüntetésével valósul meg amelyben ki kell használni, hogy egy feladatot egyszer kell csak elkészíteni, amely azt követően átalakítható, előszedhető) 
+2. interaktív digitális oktatás, amely a mai diákok igényeihez igazodik. (passzivitás megszüntetés, játszvatanulás)  
+
+##Megrendelői követelmény:
+1. A kialakíott feladatokat, gyakorlatokat elő lehessen szedni és át lehessen alakítani, továbbfejleszteni (tesztekhez, feladatsorokhoz is). 
+Tesztkérdések, feladatsorok helyes megoldásait tárolja, a tanuló válaszait tárolja, ellenőrizze. (felhasználónként) Feladatokhoz időlimitet, pontokat is lehessen rendelni, amikből kiszámolja az összpontszámot, százalékot és érdemjegyet.
+2. A kitöltött feladatsorok pdf-be áttehetők legyenek. 
+3. Mobiltelefonon bejelentkezhessenek a userek (diákok és tanárok egyeránt), a feladatsorok kitöltése mobilon kell hogy működjön. Mobilon fogják elsősorban kitölteni.
+
+######Megrendelői "atomi" igényspecifikáció:
+Feladat és oktatási anyagtípusok: 
+1. A tananyag szövege alapján igaz hamis állításokat fogalmaz meg: igaz-hamis
+2.Tananyag szövege alapján a megoldások közül egy, vagy több megoldás kiválasztása.
+3.A tananyag szövege alapján rakja sorba a szövegdarabokat.
+4.A tananyag szövegének hiányzó részeinek kiegészítése. Önállóan vagy előre megadott szöveggel.
+5.Párosítsa össze az összetartozó szövegeket. előre megadott párosítások.
+6.Képek puzzleszerű kirakása. 
+7.emberi szervek testbe helyezése (Képek réteg szerű egymásra helyezése)
+8.Képeken szereplő elemek megnevezése.
+9.Képeken szereplő elemek és hozzá tartozó szövegek összekötése.
+10.Élettani folyamatok animációja (egymás után megjelenő képek, animációk, videók)
+11.Képek és szöveg összepárosítása. 
+12.Nyitott mondat befejezése.
+13.Emberi koponya forgatása, belső elemek tanulmányozása (3D-s képforgatás, alakzatba történő betekintés keresztmetszeti ábrákként, animációk
+14.3D-s testek kiterítése
+15.Narráció
+16.Tananyag szövegében szereplő kifejezések magyarázata buboréktippszerűen vagy linkeken (linkkelési lehetőség, buboréktippbe komplett rajzok, animációk)
+17.Képen egy gomb megnyitására megjelenő állatok (7. pont) 
+18. Hanglejátszási, videólejátszási lehetőség
+19. Összeállított anyagtípusok megoszthatósága szerkesztésre tanárok között
+20.Jegyek e-naplóba történő exportja
+
+
+
+
+#Fejlesztői igényspecifikáció:
+
+##Fejlesztői vízió (Vágyálom):
+
+##Fejlesztői cél: 
+
+##Fejlesztői követelmény:
+
+
+
+
+
+
+
+#Korábbi követelményspecifikáció:
+
+Játékos okító Követelményspecifikáció
 --------------------------------------
 
 
@@ -27,4 +95,3 @@ A rendszer használatát Android 4.1 verziótól szükséges támogatni.
 A rendszer támogassa a Google Chrome, Firefox, MS Edge böngészőket.
 
 7. Követelménylista
-
