@@ -1,4 +1,4 @@
-#Jelenlegi helyzet leírása:
+# Jelenlegi helyzet leírása:
 
 A gazdasági legtöbb területén jelentkező munkaerőhiány az oktatásban is erőteljesen megjelent. Amit egyes tanárokra eső óraszámnöveléssel próbálnak kompenzálni. Jelenleg a tanárok heti minimális tanórakerete 22 óra, amely lényegében csak nagyon alacsony számú tanár esetén nem több. Ez az órarendben előírt tanórák száma, nem tartalmazza a felkészülést az órákra, számonkérésekkel kapcsolatos feladatokat, adminisztratív feladatokat, helyettesítéseket, fakultatív órákat, diák rendezvények szervezési idejét, továbbképzéseket stb. Ha ezeket az nem dokumnetált munkaórákat is figyelembe vesszük, akkor egy 25 tanórakerettel rendelkező lekiismeretes tanár hozzávetőlegesen heti 45-50 órát tölt munkával. 
 A jelenlegi diákok nagyban különböznek az évezredforduló előtt születettektől. Életük elválaszthatalan része a digitális jelenlét, az okostelefon a testrészükké vált. Ehhez a változáshoz az oktatásnak is alkalmazkodnia kell és nem tiltani hanem felhasználni kell a diákok digitalizált életét. 
@@ -8,23 +8,23 @@ A jelenlegi diákok nagyban különböznek az évezredforduló előtt született
 
 
 
-#Megrendelői igényspecifikáció (megrendelő által megfogalmazott igények, célok, követelmények):
+# Megrendelői igényspecifikáció (megrendelő által megfogalmazott igények, célok, követelmények):
 
-##Megrendelői vízió (Vágyálom)
+## Megrendelői vízió (Vágyálom)
 A tananyaggal kapcsolatos feladatok egy platformon belül, digitális formában állíthatók össze. A feladatok és oktatóanyagok egyaránt elkészíthetők ezen felületen. Az anyagok egyszeri elkészítését követően az órai felkészülési idő minimális. Az számonkérés előállítására fordított idő kiázrólag a már előállított feladatok összeválogatására és a tesztírási időre korlátozódik. A számonkérés kiértékelésére fordított idő nulla, vagy kizárólag az esszé jellegű feladatok kiértékelésére korlátozódik.
 A diákok gyakorlása végig digitális, interaktív kultúrájukba illeszkedik és teljesen papírmentes.
 
-##Megrendelői cél: 
+## Megrendelői cél: 
 1. több idő jusson az oktatásra azzal, hogy az tanórákra történő felkészülési időt és tanárok számonkérésekre fordított idejét csökkentjük. (munkaóra megtakarítás amely a rendundáns folyamatokat megszüntetésével valósul meg amelyben ki kell használni, hogy egy feladatot egyszer kell csak elkészíteni, amely azt követően átalakítható, előszedhető) 
 2. interaktív digitális oktatás, amely a mai diákok igényeihez igazodik. (passzivitás megszüntetés, játszvatanulás)  
 
-##Megrendelői követelmény:
+## Megrendelői követelmény:
 1. A kialakíott feladatokat, gyakorlatokat elő lehessen szedni és át lehessen alakítani, továbbfejleszteni (tesztekhez, feladatsorokhoz is). 
 Tesztkérdések, feladatsorok helyes megoldásait tárolja, a tanuló válaszait tárolja, ellenőrizze. (felhasználónként) Feladatokhoz időlimitet, pontokat is lehessen rendelni, amikből kiszámolja az összpontszámot, százalékot és érdemjegyet.
 2. A kitöltött feladatsorok pdf-be áttehetők legyenek. 
 3. Mobiltelefonon bejelentkezhessenek a userek (diákok és tanárok egyeránt), a feladatsorok kitöltése mobilon kell hogy működjön. Mobilon fogják elsősorban kitölteni.
 
-######Megrendelői "atomi" igényspecifikáció:
+###### Megrendelői "atomi" igényspecifikáció:
 Feladat és oktatási anyagtípusok: 
 1. A tananyag szövege alapján igaz hamis állításokat fogalmaz meg: igaz-hamis
 2.Tananyag szövege alapján a megoldások közül egy, vagy több megoldás kiválasztása.
@@ -50,21 +50,21 @@ Feladat és oktatási anyagtípusok:
 
 
 
-#Fejlesztői igényspecifikáció:
+# Fejlesztői igényspecifikáció:
 
-##Fejlesztői vízió (Vágyálom):
+## Fejlesztői vízió (Vágyálom):
 
-##Fejlesztői cél: 
+## Fejlesztői cél: 
 
-##Fejlesztői követelmény:
-
-
+## Fejlesztői követelmény:
 
 
 
 
 
-#Korábbi követelményspecifikáció:
+
+
+# Korábbi követelményspecifikáció:
 
 Játékos okító Követelményspecifikáció
 --------------------------------------
