@@ -44,7 +44,7 @@ Az első link alatt található parancsok értelmezése bőven elég az indulás
 - [Angol, naprakész és bővebb](https://github.com/tcsk/practice-git/blob/master/README.md)
 
 
-### Repók az AFP-LEV-A pro
+### AFP-LEV-A repó használata
 
 Ha megvannak az alapok, akkor el is kezdhetjük a munkát. Fontos, hogy itt már ne kísérletezz, mert minden amit teszel, megjelenik majd a központi repóban is.
 
@@ -228,6 +228,8 @@ Sikeres commit és üres status esetén:
 
 ```bash
 git checkout develop
+git pull origin develop
+# ha szükséges, itt oldd fel a konfliktusokat
 git merge --no-ff feature/frontend_html5_skeleton
 git branch -d feature/frontend_html5_skeleton
 $ git push origin develop
@@ -243,6 +245,13 @@ A biztonság érdekében ne spórolj az ágak explicit megadásán!
 
 Ezután elkezdheted a következő feladatot, amihez újra létrehozol egy feature branch-ez a developból, fejlesztesz, commitolsz, váltasz, mergelsz és pusholsz.
 
+####Ha felmerült benned a kérdés, hogy miért kell ezt ennyire megbonyolítani:
+
+Először is, a bonyolítás csak első látásra tűnik annak, munka közben rá fogsz jönni, hogy ezek a műveletek nagyon gyorsan elsajátíthatóak. A konfliktusokról, amelyek elkerülésére
+találták ki ezt a rendszert, pedig még nem esett szó. Amikor húszan fejlesztenek egy projektet, elkerülhetetlen, hogy többen is dolgozzanak ugyanazon a fájlon. Ilyenkor a git benne hagyja a fájlban
+az eredeti és a módosított tartalmat is, amit aztán a fejlesztőnek kell összemosnia. Ez szöveges fájloknál nem is okoz akkora gondot, legfeljebb egy kicsit értelmetlen lesz egy-egy bekezdés.
+A programfájlok azonban működésképtelenné válnak, amíg a konfliktus feloldásra nem kerül. Ez gyakran komoly nehézséget okoz, aki találkozott már ilyennel, tudja, hogy a legjobb elkerülni.
+A branching model használatával azt érjük el, hogy jóval kevesebb merge (csak ez a művelet okozhat konfliktust) érkezik a master és a develop ágra, mintha mindenki csak ezekben dolgozna.
 
 ### Upstream fogalma
 
