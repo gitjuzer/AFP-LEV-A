@@ -25,27 +25,29 @@ Tesztkérdések, feladatsorok helyes megoldásait tárolja, a tanuló válaszait
 3. Mobiltelefonon bejelentkezhessenek a userek (diákok és tanárok egyeránt), a feladatsorok kitöltése mobilon kell hogy működjön. Mobilon fogják elsősorban kitölteni.
 
 ###### Megrendelői "atomi" igényspecifikáció:
+
 Feladat és oktatási anyagtípusok: 
-1. A tananyag szövege alapján igaz hamis állításokat fogalmaz meg: igaz-hamis
-2.Tananyag szövege alapján a megoldások közül egy, vagy több megoldás kiválasztása.
-3.A tananyag szövege alapján rakja sorba a szövegdarabokat.
-4.A tananyag szövegének hiányzó részeinek kiegészítése. Önállóan vagy előre megadott szöveggel.
-5.Párosítsa össze az összetartozó szövegeket. előre megadott párosítások.
-6.Képek puzzleszerű kirakása. 
-7.emberi szervek testbe helyezése (Képek réteg szerű egymásra helyezése)
-8.Képeken szereplő elemek megnevezése.
-9.Képeken szereplő elemek és hozzá tartozó szövegek összekötése.
-10.Élettani folyamatok animációja (egymás után megjelenő képek, animációk, videók)
-11.Képek és szöveg összepárosítása. 
-12.Nyitott mondat befejezése.
-13.Emberi koponya forgatása, belső elemek tanulmányozása (3D-s képforgatás, alakzatba történő betekintés keresztmetszeti ábrákként, animációk
-14.3D-s testek kiterítése
-15.Narráció
-16.Tananyag szövegében szereplő kifejezések magyarázata buboréktippszerűen vagy linkeken (linkkelési lehetőség, buboréktippbe komplett rajzok, animációk)
-17.Képen egy gomb megnyitására megjelenő állatok (7. pont) 
-18. Hanglejátszási, videólejátszási lehetőség
-19. Összeállított anyagtípusok megoszthatósága szerkesztésre tanárok között
-20.Jegyek e-naplóba történő exportja
+
+1. A tananyag szövege alapján igaz hamis állításokat fogalmaz meg: igaz-hamis.
+2. Tananyag szövege alapján a megoldások közül egy, vagy több megoldás kiválasztása.
+3. A tananyag szövege alapján rakja sorba a szövegdarabokat.
+4. A tananyag szövegének hiányzó részeinek kiegészítése. Önállóan vagy előre megadott szöveggel.
+5. Párosítsa össze az összetartozó szövegeket. előre megadott párosítások.
+6. Képek puzzleszerű kirakása.
+7. Emberi szervek testbe helyezése (Képek réteg szerű egymásra helyezése).
+8. Képeken szereplő elemek megnevezése.
+9. Képeken szereplő elemek és hozzá tartozó szövegek összekötése.
+10. Élettani folyamatok animációja (egymás után megjelenő képek, animációk, videók).
+11. Képek és szöveg összepárosítása.
+12. Nyitott mondat befejezése.
+13. Emberi koponya forgatása, belső elemek tanulmányozása (3D-s képforgatás, alakzatba történő betekintés keresztmetszeti ábrákként, animációk.
+14. 3D-s testek kiterítése.
+15. Narráció
+16. Tananyag szövegében szereplő kifejezések magyarázata buboréktippszerűen vagy linkeken (linkkelési lehetőség, buboréktippbe komplett rajzok, animációk).
+17. Képen egy gomb megnyitására megjelenő állatok (7. pont).
+18. Hanglejátszási, videólejátszási lehetőség.
+19. Összeállított anyagtípusok megoszthatósága szerkesztésre tanárok között.
+20. Jegyek e-naplóba történő exportja.
 
 
 
