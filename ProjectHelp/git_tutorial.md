@@ -228,6 +228,8 @@ Sikeres commit és üres status esetén:
 
 ```bash
 git checkout develop
+git pull origin develop
+# ha szükséges, itt oldd fel a konfliktusokat
 git merge --no-ff feature/frontend_html5_skeleton
 git branch -d feature/frontend_html5_skeleton
 $ git push origin develop
