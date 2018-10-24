@@ -73,11 +73,39 @@ git remote -v
 
 Az eredmény várhatóan:
 
+```bash
 origin  https://github.com/gitjuzer/AFP-LEV-A.git (fetch)
 origin  https://github.com/gitjuzer/AFP-LEV-A.git (push)
+``` 
 
 Vagyis, a lokális repó távoli, origin elnevezésű remote-ja (ez a szabványos elnevezése a központi repónak, erre gyakran fognak hivatkozni publikációkban is) a 
 https://github.com/gitjuzer/AFP-LEV-A.git útvonalon érhető el. A le és feltöltés útvonala lehet eltérő, emiatt kapjuk két sorba az eredményt.
+
+Mielőtt továbblépnénk tisztázzuk az adatbázis és a fájlrendszer fogalmát a verziókövető rendszerekben.
+
+- Adatbázis: A fájlrendszer eltérő, egyedi, rögzített állapotait tárolja. Bármely rögzített állapot kereshető, törölhető, visszaállítható. Amikor a git utasításait használod, akkor az adatbázist manipulálod.
+A git add, a git commit, a git status és az utasítások zöme adatbázis műveleteket indít el, a fájlrendszert nem módosítja. Ez alól kivétel például a checkout és a merge, ami nem csak az adatbázis egy bizonyos 
+állapotát állítja aktívra, hanem a hozzá tartozó fájlrendszert is módosítja. Egy adott repóhoz egyetlen adatbázis tartozik, amely tetszőleges mennyiségű állapotot tárolhat.
+
+- Fájlrendszer: Az aktívnak jelölt adatbázis állapot fizikai kivetítése. Ezek között a git eszközrendszerével pillanatok alatt válthatsz. Ha megkéred a git-et, hogy állítson vissza egy két hónappal 
+ezelőtti állapotot, zokszó nélkül teljesíteni fogja a kérésed. Te csak annyit észlelsz majd ebből, hogy a könyvtáradban egyik pillanatról a másikra eltűnnek, megjelennek és tartalmilag is módosulnak 
+a fájlok, könyvtárak. 
+Egy újabb hasonló parancs kiadása után, szintén pillanatokon belül megkapsz egy teljesen eltérő verziót. És pontosan ez volt a rendszer célja. Nincs szükséged annyi mappára, ahány verziót készítesz a szoftveredből. 
+Egyetlen könyvtárban férsz hozzá N verzióhoz, egy 2-3 szóból és paraméterből álló utasítás hatására, pillanatok alatt. A dolog egyetlen hátránya, hogy egy pillanatban csak egy verzió van jelen. 
+Ezt persze áthidalhatod azzal, hogy klónozod a repódat egy másik mappába, és ott egy másik állapotot jelölsz meg aktívnak. Ez ellentmond a verziókövetés filozófiájának, ráadásul magában rejti 
+az adatvesztés veszélyét is, tehát semmiképp sem ajánlott eljárás. De ha te egyszerre szeretnél két állapotot is használni (teljesítménybeli összehasonlítás, vagy csak a változatosság gyönyöre miatt), 
+akkor erre is van lehetőséged.
+
+**Fontos, hogy e két alapvető fogalmat tisztán, elkülönítve lásd!**
+
+Amikor git-tel dolgozol, akkor az adatbázist manipulálod. Ilyenkor nem szerkesztesz fájlokat, nem írsz programot. Kizárólag git utasításokat használsz (parancssorból, vagy GUI alól, ez teljesen mindegy).
+
+Amikor a projekten dolgozol, akkor pedig a fájlrendszert módosítod. Ilyenkor a git-es eszközeidet félre is teheted, teljesen meg is feledkezhetsz róluk! Ekkor mindent a hagyományos, tanult módon folytass! 
+A txt fájlokat Notepadban, a C# projekteket Visual Studio-ban, az adatbázis sémáidat pedig MysqlWorkbenchben szerkesztheted. Amint a projekt rögzítésre kész állapotba került 
+(végre megjelentek azok a fránya animációk, vagy hibamentesen e tud jelentkezni a felhasználó az api-ba) mentsd el a munkád a hagyományos módon, 
+majd újra térj vissza a git eszközeihez, és rögzítsd a munkád a git adatbázisába is!
+
+### A folyamat a gyakorlatban 
 
 A lokális adatbázis adatainak frissítése a távoli repó állapotára (a branch_name paramétert egy későbbi bekezdésben tárgyaljuk):
 
@@ -85,10 +113,10 @@ A lokális adatbázis adatainak frissítése a távoli repó állapotára (a bra
 git fetch origin [branch_name]
 ``` 
 
-A fetch használatát nem szükséges korlátozni, mivel soha nem fog belepiszkálni a fájlrendszerbe. Nagyon röviden (és sarkítva) annyit csinál, hogy naprakészen tartja 
-a local és a remote közötti különbségek naplóját. Ha kíváncsi vagy arra, hogy a legutóbbi pull-od milyen változások keletkeztek a remote-on, akkor ezt a parancsot kell használnod!
+A fetch használatát nem szükséges korlátozni, mivel soha nem fog belepiszkálni a fájlrendszerbe. Csak annyit csinál, hogy letölti a távoli adatbázis azon elemeit, ami lokálisan nincs jelen.
+Ha ezután kiadsz egy git merge parancsot, akkor a fájlrendszered is felülírja.
 
-A lokális adatbázis, és fájlrendszer frissítése a távoli repó állapotára:
+A lokális adatbázis és fájlrendszer frissítése a távoli repó állapotára:
 
 ```bash
 git pull origin [branch_name]
