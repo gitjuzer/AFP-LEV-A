@@ -2,7 +2,7 @@
 
 	Projekt megrendelője: EKE Tajti Tibor
 	Projekt kivitelező: AFP LEV A team
-	Projekt neve: X Projekt
+	Projekt neve: Játékos Okító Projekt
 	Határidő: ????????
 
 ## Követelmény leírás 
