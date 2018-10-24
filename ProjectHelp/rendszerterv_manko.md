@@ -31,7 +31,7 @@ Meggyőző érvekkel alátámasztani az általunk kiválasztott technológiát.
 A kiválasztott technológia által megkövetelt hardver és szoftverkörnyezet meghatározása.
 	- *Elvárt erdmény*
 Dokumentáció a technológia által megkövetelt hardver és szoftverkör listáról és az alkalmazandó fejlesztőkörnyezetről és egyébb a fejelsztésben felhasználandó szoftverekről, felmerülő költségekről.
-3. A tényleges megvalósítás.
+3. **A tényleges megvalósítás.**
 	- *Cél*
 Az elvégzendő feladatok meghatározása. A feladatok elvégzéséhez szükséges időbecslések megadása a kivitelező által befektetett munka előzetes felméréséhez. Elvárt eredmény: dokumentum az elvégzendő feladatokról, azok időbecsléséről és várható költségéről.
 4. **Előzetes tesztek.**
