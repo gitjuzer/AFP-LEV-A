@@ -4,6 +4,7 @@ A követelményspecifikációban megfogalmazott feladatok elkészítés több ü
 Az ütemterv első része az alábbiakat tartalmazza.	
 
 ## A rendszerrel szemben támasztott általános követelmények
+- A rendszer funkcióit csak bejelentkezett felhasználó használhatja.
 - Webes, bizonyos funkciókhoz androidos felület.
 - Adattárolás MySQL adatbázison.
 - ...
@@ -19,6 +20,14 @@ Az ütemterv első része az alábbiakat tartalmazza.
  	- témaköröket (matek, infó, fizika stb)
 	- tananyagot (az egyes témakörökhöz)
 	- tesztanyagot (feladatok)
+
+## Felülettel szemben támasztott követelmények
+- Web - az elkészített prototípusnak megfelelő
+- Android
+	- Bejelentkező ablak diákoknak
+	- Témakör választó ablak
+	- Témakörön belül tananyag választó ablak
+	- Tananyag megtekintés ablak
 
 **Tesztanyagok:**
 - A tananyag szövege alapján igaz hamis állításokat fogalmaz meg: igaz-hamis.
