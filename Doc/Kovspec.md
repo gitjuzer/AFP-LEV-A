@@ -50,6 +50,7 @@ Feladat és oktatási anyagtípusok:
 20. Jegyek e-naplóba történő exportja.
 
 
+-------------------------------------------------------------------------------
 
 
 # Fejlesztői igényspecifikáció:
