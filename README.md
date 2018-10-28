@@ -1,5 +1,7 @@
 # AFP-LEV-A
 
+## Figyelem: ha a push parancsaid 403 (authentication failed) hibával térnek vissza, kérj contibutor-i meghívást tanár úrtól!
+
 A következő leírásokat mindenképp olvasd el, mielőtt nekilátsz a munkának:
   - [Git mankó](ProjectHelp/git_manko.md)
   - [Projekt Struktúra](ProjectHelp/git.txt)
