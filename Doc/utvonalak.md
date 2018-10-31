@@ -48,13 +48,15 @@ elhelyeztem példakódokat.
     Példák:
     
     Felhasználók listája: GET http://API_URL/sapi/users
+    
     A 6-os id-jű user adatai: GET http://API_URL/sapi/user/6
+    
     A "Matematika" téma lekérdezése: GET http://API_URL/sapi/topic/Matematika
     
     Bejelentkezés: POST http://API_URL/api/login
         A kérés törzsébe: {"email": "example@email.com", "password": "szupertitkos" }
         
-    Bejelentkezés: POST http://API_URL/api/registration
+    Regisztráció: POST http://API_URL/api/registration
             A kérés törzsébe: 
                 {
                     "loginName": "GipszJakab", 
@@ -81,9 +83,10 @@ elhelyeztem példakódokat.
     Bejelentkezés után a /sapi (bejelentkezést igénylő) kéréseidhez a headerbe csatold a tokent így:
     
     Header name: Authorization
+    
     Header value: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjIiLCJlbWFpbCI6ImFyanVucGhwQGdtYWlsLmNvbSJ9.yXgY7LWB3_lHEkPB9pj5onGsNWk8norftkRdGesXMb8
     
-    A Bearer szót ne feledd beszúrni a token elé, majd egy szóköz, amjd a login kérésre kapott token 
+    A Bearer szót ne feledd beszúrni a token elé, majd egy szóköz, majd a login kérésre kapott token 
     tartalma idézőjel nélkül.
     
 #### Válasz
@@ -121,7 +124,7 @@ Kezdjétek a regisztrációval, bejelentkezéssel és a témák létrehozásáva
 
     URL: http://nyusz.eu/public/api/login
     
-    Method: GET
+    Method: POST
     
     Body Content Type: application/json
     
@@ -153,7 +156,7 @@ Kezdjétek a regisztrációval, bejelentkezéssel és a témák létrehozásáva
 
     URL: http://nyusz.eu/public/sapi/user
     
-    Method: POST
+    Method: GET
     
     Header 1 name: Content-Type
     
