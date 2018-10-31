@@ -97,3 +97,55 @@ Kezdjétek a regisztrációval, bejelentkezéssel és a témák létrehozásáva
 Amint lesz működőképes API, felrakom egy szerverre, és megadom hozzá az URL-t.
     
 ##### Happy Coding :)
+
+##### Kész útvonalak
+
+1. Bejelentkezés
+
+    URL: http://nyusz.eu/public/api/login
+    
+    Method: GET
+    
+    Body Content Type: application/json
+    
+    Body Content: {"email": "arjunphp@gmail.com", "password": "Arjun@123"}
+    
+    Mivel még regisztráció nincs, csak ez fog működni!!!
+    
+    Ha ezt kapod:
+    
+    {
+    "error": true,
+    "message": "These email credentials do not match our records."
+    }
+    
+    Akkor a body content type a hibás, vagy elírtad az adatokat.
+    
+    Ha ezt:
+    
+    {
+    "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjIiLCJlbWFpbCI6ImFyanVucGhwQGdtYWlsLmNvbSJ9.yXgY7LWB3_lHEkPB9pj5onGsNWk8norftkRdGesXMb8"
+    }
+    
+    Akkor siker. A token tartalmát (a kettőspont utáni karakterlánc ékezetek nélkül) mentsd el, 
+    ez kell majd a következő lekérdezéshez a Bearer után.
+    
+    
+    
+2. Bejelentkezett user adatainak lekérdezése
+
+    URL: http://nyusz.eu/public/sapi/user
+    
+    Method: POST
+    
+    Header 1 name: Content-Type
+    
+    Header 1 value: application/json
+    
+    Header 2 name: Authorization
+    
+    Header 2 value: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjIiLCJlbWFpbCI6ImFyanVucGhwQGdtYWlsLmNvbSJ9.yXgY7LWB3_lHEkPB9pj5onGsNWk8norftkRdGesXMb8
+    
+    A hosszú karakterlánc egyedi, az előző pontban ezt kaptad vissza. Módosítsd a kérést e-szerint!
+
+
