@@ -22,8 +22,8 @@ elhelyeztem példakódokat.
 
 #### Általános szabályok
 
-1. A body content type minden esetben legyen Application/Json! Vagyis ha post data-t( egy űrlapot) 
-    küldök be, akkor gondoskodjatok arról, hogy ez szabályos json formában érkezzen! 
+1. A body content type minden esetben legyen Application/Json! Vagyis ha post data-t(egy űrlapot) 
+    küldtök be, akkor gondoskodjatok arról, hogy ez szabályos json formában érkezzen! 
 2. A REST API címét tároljátok el egy beállítás fájlban, hogy szükség esetén csak egy helyen kelljen módosítani.
     A továbbiakban erre API_URL-ként fogok hivatkozni.
 3. A bejelentkezést nem igénylő útvonalak kezdődjenek így: API_URL/api
@@ -35,17 +35,19 @@ elhelyeztem példakódokat.
     4. Törlés: DELETE
     
     Hogy miképpen tudod megadni egy kérésnek a metódust, az implementáció függő. Mivel ezek szabványok, 
-    minden jobb platform kínál rá egyszerű megoldást. Ha órákba telik erre rájönni, akkor keress más eszközt!
+    minden platform kínál rá egyszerű megoldást. Ha órákba telik erre rájönni, akkor keress más eszközt!
     Ugyenez igaz a fejléc és a törzs adataira is.
 6. Útvonal építés:
     - Az útvonalhoz add hozzá az **adatbázis adott táblájának a nevét kisbetűvel**!
     - Ha több rekordot kérdezel le, használj többes számot!
-    - Ha egyetlen rekordot kérdezel le, vagy módosítasz, használj egyes számot!
+    - Ha egyetlen rekordot kérdezel le vagy módosítasz, használj egyes számot!
 7. A további paramétereket ehhez fűzd hozzá!
-8. Amelyik útvonal nem építhető fel ezen szabályok alapján (például több praméter kell, 
+8. Amelyik útvonal nem építhető fel ezen szabályok alapján (például több paraméter kell, 
     és ezek sorrendjét meg kell határozni), azzal kapcsolatban keresd a Backend csapatot!
     
-    Felhasználok listája ez alapján: GET http://API_URL/sapi/users
+    Példák:
+    
+    Felhasználók listája: GET http://API_URL/sapi/users
     A 6-os id-jű user adatai: GET http://API_URL/sapi/user/6
     A "Matematika" téma lekérdezése: GET http://API_URL/sapi/topic/Matematika
     
@@ -74,7 +76,7 @@ elhelyeztem példakódokat.
         "message": "These email credentials do not match our records."
         }
         
-    Akkor vagy hibás bejelentkezési adatokat küldtél, vagy nem szabványos Json-t csatoltál a kérés törzsébe.
+    Vagy hibás bejelentkezési adatokat küldtél, vagy nem szabványos Json-t csatoltál a kérés törzsébe.
     
     Bejelentkezés után a /sapi (bejelentkezést igénylő) kéréseidhez a headerbe csatold a tokent így:
     
@@ -86,7 +88,7 @@ elhelyeztem példakódokat.
     
 #### Válasz
 
-A válasz minden siker esetén:
+A válasz siker esetén:
 
     {"status": "success", "code": CODE (pl: 200), "payload": AZ IGÉNYELT ERŐFORRÁS JSON FORMÁTUMBAN}
     
@@ -104,15 +106,12 @@ A válasz hiba esetén:
     
 #### Hibakeresés
 
-A kéréseitekbe illesszetek bele egy lehetőséget, amivel könnyedén meg tudjátok jeleníteni a választ.
-Ha sehogy sem működnek a kérések, az útvonal, válasz és esetleges hibaüzenet beszúrásával keressetek
-engem nyugodtan!
+Ha a fentieket betartva sem működnek a kérések, akkor az útvonal, a válasz és az esetleges hibaüzenet 
+beszúrásával keressetek engem nyugodtan!
     
 #### Javaslat 
 Kezdjétek a regisztrációval, bejelentkezéssel és a témák létrehozásával listázásával. Mi is 
 Így fogunk haladni. Az elkészült funkciók útvonalával folyamatosan bővítem ez a dokumentumot.
-    
-Amint lesz működőképes API, felrakom egy szerverre, és megadom hozzá az URL-t.
     
 ##### Happy Coding :)
 
@@ -165,5 +164,7 @@ Amint lesz működőképes API, felrakom egy szerverre, és megadom hozzá az UR
     Header 2 value: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjIiLCJlbWFpbCI6ImFyanVucGhwQGdtYWlsLmNvbSJ9.yXgY7LWB3_lHEkPB9pj5onGsNWk8norftkRdGesXMb8
     
     A hosszú karakterlánc egyedi, az előző pontban ezt kaptad vissza. Módosítsd a kérést e-szerint!
+    
+3. Folyamatban: regisztráció
 
 
