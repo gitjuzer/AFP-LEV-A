@@ -84,6 +84,24 @@ elhelyeztem példakódokat.
     A Bearer szót ne feledd beszúrni a token elé, majd egy szóköz, amjd a login kérésre kapott token 
     tartalma idézőjel nélkül.
     
+#### Válasz
+
+A válasz minden siker esetén:
+
+    {"status": "success", "code": CODE (pl: 200), "payload": AZ IGÉNYELT ERŐFORRÁS JSON FORMÁTUMBAN}
+    
+    Tehát, ha egy felhasználót kérdeztél le, akkor az adatait így éred el:
+    
+        response.payload
+    
+    Ha csak az email címére vagy kíváncs akkor:
+    
+        response.payload.email
+    
+A válasz hiba esetén:
+
+    {"status": "failed", "code": ERROR_CODE, "message": HIBAÜZENET}    
+    
 #### Hibakeresés
 
 A kéréseitekbe illesszetek bele egy lehetőséget, amivel könnyedén meg tudjátok jeleníteni a választ.
