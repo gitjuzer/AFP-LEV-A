@@ -168,6 +168,20 @@ Kezdjétek a regisztrációval, bejelentkezéssel és a témák létrehozásáva
     
     A hosszú karakterlánc egyedi, az előző pontban ezt kaptad vissza. Módosítsd a kérést e-szerint!
     
-3. Folyamatban: regisztráció
+3. Regisztráció
+
+    URL: http://nyusz.eu/public/api/register
+    
+    Method: POST
+    
+    Body Content Type: application/json
+    
+    Body Content példa: {
+                    "loginName": "loginName",
+                    "realName": "realName",
+                    "email": "valami@example.com",
+                    "password": "123456"
+                  }
+    A sikeres regisztráció válasza ugyanaz mint a login esetében.
 
 
