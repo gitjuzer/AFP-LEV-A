@@ -161,7 +161,7 @@ Kezdjétek a regisztrációval, bejelentkezéssel és a témák létrehozásáva
 
 1. Bejelentkezés
 
-        URL: https://nyusz.eu/public/api/login
+        URL: https://nyusz.eu/afpleva/public/api/login
         
         Method: POST
         
@@ -193,7 +193,7 @@ Kezdjétek a regisztrációval, bejelentkezéssel és a témák létrehozásáva
     
 2. Bejelentkezett user adatainak lekérdezése
 
-        URL: https://nyusz.eu/public/sapi/user
+        URL: https://nyusz.eu/afpleva/public/sapi/user
         
         Method: GET
         
@@ -209,7 +209,7 @@ Kezdjétek a regisztrációval, bejelentkezéssel és a témák létrehozásáva
     
 3. Regisztráció
 
-        URL: https://nyusz.eu/public/api/register
+        URL: https://nyusz.eu/afpleva/public/api/register
         
         Method: POST
         

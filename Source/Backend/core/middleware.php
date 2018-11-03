@@ -8,7 +8,7 @@ $app->add(function ($request, $response, $next) {
     if (strpos($contentType, 'application/json') === false) {
         return $response->withStatus(415)->withJson([
             'status' => 'error',
-            'code' => '415',
+            'code' => 415,
             'message' => 'Unsupported Media Type.',
         ]);
     }

@@ -17,7 +17,7 @@ $container['notFoundHandler'] = function ($c) {
     return function ($request, $response) use ($c) {
         return $response->withStatus(404)->withJson([
             'status' => 'error',
-            'code' => 405,
+            'code' => 404,
             'message' => 'Not Found',
         ]);
     };
