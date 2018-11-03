@@ -44,19 +44,20 @@ elhelyeztem példakódokat.
 7. A további paramétereket ehhez fűzd hozzá!
 8. Amelyik útvonal nem építhető fel ezen szabályok alapján (például több paraméter kell, 
     és ezek sorrendjét meg kell határozni), azzal kapcsolatban keresd a Backend csapatot!
+9. Az ideiglenes szerver csak https protokollon keresztül fogadja az api hívásokat. Ha a dokumentumban valamelyik útvonal nem ezzel           kezdődik, az hiba. Ha ilyet találsz, kérlek javítsd, vagy értesíts!
     
     Példák:
     
-    Felhasználók listája: GET http://API_URL/sapi/users
+    Felhasználók listája: GET https://API_URL/sapi/users
     
-    A 6-os id-jű user adatai: GET http://API_URL/sapi/user/6
+    A 6-os id-jű user adatai: GET https://API_URL/sapi/user/6
     
-    A "Matematika" téma lekérdezése: GET http://API_URL/sapi/topic/Matematika
+    A "Matematika" téma lekérdezése: GET https://API_URL/sapi/topic/Matematika
     
-    Bejelentkezés: POST http://API_URL/api/login
+    Bejelentkezés: POST https://API_URL/api/login
         A kérés törzsébe: {"email": "example@email.com", "password": "szupertitkos" }
         
-    Regisztráció: POST http://API_URL/api/registration
+    Regisztráció: POST https://API_URL/api/registration
             A kérés törzsébe: 
                 {
                     "loginName": "GipszJakab", 
@@ -122,7 +123,7 @@ Kezdjétek a regisztrációval, bejelentkezéssel és a témák létrehozásáva
 
 1. Bejelentkezés
 
-    URL: http://nyusz.eu/public/api/login
+    URL: https://nyusz.eu/public/api/login
     
     Method: POST
     
@@ -154,7 +155,7 @@ Kezdjétek a regisztrációval, bejelentkezéssel és a témák létrehozásáva
     
 2. Bejelentkezett user adatainak lekérdezése
 
-    URL: http://nyusz.eu/public/sapi/user
+    URL: https://nyusz.eu/public/sapi/user
     
     Method: GET
     
@@ -170,7 +171,7 @@ Kezdjétek a regisztrációval, bejelentkezéssel és a témák létrehozásáva
     
 3. Regisztráció
 
-    URL: http://nyusz.eu/public/api/register
+    URL: https://nyusz.eu/public/api/register
     
     Method: POST
     
