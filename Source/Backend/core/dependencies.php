@@ -13,6 +13,14 @@ $container['db'] = function ($c) {
     return $pdo;
 };
 
+$container[App\Action\LoginAction::class] = function ($c) {
+    return new App\Action\LoginAction($c->get('db'), $c->get('settings'));
+};
+
+$container[App\Action\RegisterAction::class] = function ($c) {
+    return new App\Action\RegisterAction($c->get('db'), $c->get('settings'));
+};
+
 $container['notFoundHandler'] = function ($c) {
     return function ($request, $response) use ($c) {
         return $response->withStatus(404)->withJson([

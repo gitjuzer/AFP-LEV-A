@@ -7,52 +7,16 @@ use Slim\Http\Request;
 use Slim\Http\Response;
 use Slim\Http\Environment;
 
-/**
- * This is an example class that shows how you could set up a method that
- * runs the application. Note that it doesn't cover all use-cases and is
- * tuned to the specifics of this skeleton app, so if your needs are
- * different, you'll need to change it.
- */
 class BaseTestCase extends \PHPUnit_Framework_TestCase
 {
-    /**
-     * Use middleware when running application?
-     *
-     * @var bool
-     */
+    public static $db;
+    public $app;
+
     protected $withMiddleware = true;
 
-    /**
-     * Process the application given a request method and URI
-     *
-     * @param string $requestMethod the request method (e.g. GET, POST, etc.)
-     * @param string $requestUri the request URI
-     * @param array|object|null $requestData the request data
-     * @return \Slim\Http\Response
-     */
-    public function runApp($requestMethod, $requestUri, $requestData = null)
-    {
-        // Create a mock environment for testing with
-        $environment = Environment::mock(
-            [
-                'REQUEST_METHOD' => $requestMethod,
-                'REQUEST_URI' => $requestUri
-            ]
-        );
-
-        // Set up a request object based on the environment
-        $request = Request::createFromEnvironment($environment);
-
-        // Add request data, if it exists
-        if (isset($requestData)) {
-            $request = $request->withParsedBody($requestData);
-        }
-
-        // Set up a response object
-        $response = new Response();
-
+    public function __construct(){
         // Use the application settings
-        $settings = require __DIR__ . '/../../core/config/config.php';
+        $settings = require __DIR__ . '/../../core/config/config_test.php';
 
         // Instantiate the application
         $app = new App($settings);
@@ -68,10 +32,26 @@ class BaseTestCase extends \PHPUnit_Framework_TestCase
         // Register routes
         require __DIR__ . '/../../core/routes.php';
 
-        // Process the application
-        $response = $app->process($request, $response);
+        self::$db = $app->getContainer()->get('db');
+        $this->app = $app;
+    }
 
-        // Return the response
+    public function runApp($requestMethod, $requestUri, $requestData = null, $contentType = 'application/json', $token = null)
+    {
+        $environment = Environment::mock(
+            [
+                'REQUEST_METHOD' => $requestMethod,
+                'REQUEST_URI' => $requestUri,
+                'CONTENT_TYPE' => $contentType,
+                'HTTP_AUTHORIZATION'  => 'Bearer ' . $token,
+            ]
+        );
+        $request = Request::createFromEnvironment($environment);
+        if ($requestData !== null) {
+            $request = $request->withParsedBody($requestData);
+        }
+        $response = new Response();
+        $response = $this->app->process($request, $response);
         return $response;
     }
 }

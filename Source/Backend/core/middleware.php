@@ -9,7 +9,7 @@ $app->add(function ($request, $response, $next) {
         return $response->withStatus(415)->withJson([
             'status' => 'error',
             'code' => 415,
-            'message' => 'Unsupported Media Type.',
+            'message' => 'Unsupported Media Type',
         ]);
     }
     $response = $next($request, $response);
