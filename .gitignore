@@ -424,6 +424,6 @@ ASALocalRun/
 # Local History for Visual Studio
 .localhistory/
 
-/Source/Backend/core/config/config.php
+/Source/Backend/core/config/*
+!Source/Backend/core/config/config_sample.php
 /Source/Backend/vendor/
-*.php
