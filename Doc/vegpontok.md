@@ -1,8 +1,8 @@
 ### A REST API hívásának a szabályai.
 
-A projektben a Slim PHP által felállított REST API konvenciókat használjuk az útvonalak definiálására.
-A szabályok betartásával pusztán az adatbázis szerkezet ismeretében ugyanazt az útvonalat definiálja bárki 
-egy adott kérésre, nincs szükség funkciónkénti útvonal egyeztetésre.
+A projektben a Slim PHP által felállított REST API konvenciókat használjuk a végpontok definiálására.
+A szabályok betartásával pusztán az adatbázis szerkezet ismeretében ugyanazt a végpontot definiálja bárki 
+egy adott kérésre.
 
 Ehhez azonban először meg kell ismerni a kliens oldali lehetőségeket.
 
@@ -26,8 +26,8 @@ elhelyeztem példakódokat.
     küldtök be, akkor gondoskodjatok arról, hogy ez szabályos json formában érkezzen! 
 2. A REST API címét tároljátok el egy beállítás fájlban, hogy szükség esetén csak egy helyen kelljen módosítani.
     A továbbiakban erre API_URL-ként fogok hivatkozni.
-3. A bejelentkezést nem igénylő útvonalak kezdődjenek így: API_URL/api
-4. A bejelentkezést igénylő útvonalak kezdődjelen így: API_URL/sapi
+3. A bejelentkezést nem igénylő végpontok kezdődjenek így: API_URL/api
+4. A bejelentkezést igénylő végpontok kezdődjelen így: API_URL/sapi
 5. HTTP metódusok:
     1. Lekérdezés: GET
     2. Új rekord, login, regisztráció: POST
@@ -37,7 +37,7 @@ elhelyeztem példakódokat.
     Hogy miképpen tudod megadni egy kérésnek a metódust, az implementáció függő. Mivel ezek szabványok, 
     minden platform kínál rá egyszerű megoldást. Ha órákba telik erre rájönni, akkor keress más eszközt!
     Ugyenez igaz a fejléc és a törzs adataira is.
-6. Útvonal építés:
+6. Végpont elérés építés:
     - Az útvonalhoz add hozzá az **adatbázis adott táblájának a nevét kisbetűvel**!
     - Ha több rekordot kérdezel le, használj többes számot!
     - Ha egyetlen rekordot kérdezel le vagy módosítasz, használj egyes számot!
@@ -147,11 +147,11 @@ beszúrásával keressetek engem nyugodtan!
     
 #### Javaslat 
 Kezdjétek a regisztrációval, bejelentkezéssel és a témák létrehozásával listázásával. Mi is 
-Így fogunk haladni. Az elkészült funkciók útvonalával folyamatosan bővítem ez a dokumentumot.
+Így fogunk haladni. Az elkészült funkciók végpontjait folyamatosan bővítem ez a dokumentumot.
     
 ##### Happy Coding :)
 
-##### Kész útvonalak
+##### Kész végpontok
 
 ###### MINDEN KÉRÉSBE: 
     
@@ -168,8 +168,6 @@ Kezdjétek a regisztrációval, bejelentkezéssel és a témák létrehozásáva
         Body Content Type: application/json
         
         Body Content: {"email": "arjunphp@gmail.com", "password": "Arjun@123"}
-        
-    Mivel még regisztráció nincs, csak ez fog működni!!!
     
     Ha ezt kapod:
     
