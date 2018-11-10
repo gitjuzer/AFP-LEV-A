@@ -6,11 +6,23 @@ namespace Tests\Functional;
 class LoginTest extends BaseTestCase
 {
 
+    public static function setUpBeforeClass()
+    {
+        $sql = 'SET FOREIGN_KEY_CHECKS=0;TRUNCATE TABLE User;SET FOREIGN_KEY_CHECKS=1;';
+        $query = self::$db->prepare($sql);
+        $query->execute();
+    }
 
     public function testLoginWithRightCredentials()
     {
-        $response = $this->runApp('POST', '/api/login', ['email' => 'arjunphp@gmail.com', 'password' => 'Arjun@123']);
+        $this->runApp('POST', '/api/register', [
+            'loginName' => 'arjunphp@gmail.com',
+            'realName' => 'arjunphp@gmail.com',
+            'email' => 'arjunphp@gmail.com',
+            'password' => 'Arjun@123'
+        ]);
 
+        $response = $this->runApp('POST', '/api/login', ['email' => 'arjunphp@gmail.com', 'password' => 'Arjun@123']);
         $this->assertEquals(200, $response->getStatusCode());
 
         $data = json_decode($response->getBody(), true);

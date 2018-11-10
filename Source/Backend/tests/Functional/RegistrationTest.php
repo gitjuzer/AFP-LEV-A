@@ -3,12 +3,12 @@
 namespace Tests\Functional;
 
 
-/*class RegistrationTest extends BaseTestCase
+class RegistrationTest extends BaseTestCase
 {
 
     public static function setUpBeforeClass()
     {
-        $sql = 'DELETE FROM user WHERE U_ID != 1';
+        $sql = 'SET FOREIGN_KEY_CHECKS=0;TRUNCATE TABLE User;SET FOREIGN_KEY_CHECKS=1;';
         $query = self::$db->prepare($sql);
         $query->execute();
     }
@@ -21,10 +21,10 @@ namespace Tests\Functional;
     public function testRegistrationWithRightCredentials()
     {
         $response = $this->runApp('POST', '/api/register', [
-            'loginName' => 'testLoginName',
-            'realName' => 'testLoginName',
-            'email' => 'testLoginName@example.com',
-            'password' => '123456'
+            'loginName' => 'arjunphp@gmail.com',
+            'realName' => 'arjunphp@gmail.com',
+            'email' => 'arjunphp@gmail.com',
+            'password' => 'Arjun@123'
         ]);
 
         $this->assertEquals(200, $response->getStatusCode());
@@ -35,10 +35,10 @@ namespace Tests\Functional;
     public function testRegistrationWithExistingCredentials()
     {
         $response = $this->runApp('POST', '/api/register', [
-            'loginName' => 'testLoginName',
-            'realName' => 'testLoginName',
-            'email' => 'testLoginName@example.com',
-            'password' => '123456'
+            'loginName' => 'arjunphp@gmail.com',
+            'realName' => 'arjunphp@gmail.com',
+            'email' => 'arjunphp@gmail.com',
+            'password' => 'Arjun@123'
         ]);
 
         $this->assertEquals(401, $response->getStatusCode());
@@ -52,4 +52,4 @@ namespace Tests\Functional;
         $this->assertEquals(401, $data['code']);
         $this->assertContains('Integrity constraint violation', $data['message']);
     }
-}*/
+}

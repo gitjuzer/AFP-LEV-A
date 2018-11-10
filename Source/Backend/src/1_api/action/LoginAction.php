@@ -1,9 +1,11 @@
 <?php
-namespace App\Action;
+
+namespace Afp\Api\Action;
 
 use Slim\Http\Request;
 use Slim\Http\Response;
 use \Firebase\JWT\JWT;
+use \PDO;
 
 final class LoginAction
 {
@@ -18,8 +20,23 @@ final class LoginAction
 
     public function __invoke(Request $request, Response $response, $args)
     {
+
+        $servername = "localhost";
+        $username = "root";
+        $password = "";
+
+        try {
+            $conn = new PDO("mysql:host=$servername;dbname=afpleva_test", $username, $password);
+            $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+            //$response = "Connected successfully";
+        }
+        catch(PDOException $e)
+        {
+            //$response = $e->getMessage();
+        }
+
         $input = $request->getParsedBody();
-        $sql = 'SELECT * FROM user WHERE U_Email = :email';
+        $sql = 'SELECT * FROM User WHERE U_Email = :email';
         $sth = $this->db->prepare($sql);
         $sth->bindParam('email', $input['email']);
         $sth->execute();
@@ -52,6 +69,7 @@ final class LoginAction
             'code' => $response->getStatusCode(),
             'payload' => [
                 'token' => $token
+
             ]
         ];
 

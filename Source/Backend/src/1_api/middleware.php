@@ -1,7 +1,6 @@
 <?php
-// Application middleware
 
-// e.g: $app->add(new \Slim\Csrf\Guard);
+use \Tuupola\Middleware\JwtAuthentication;
 
 $app->add(function ($request, $response, $next) {
     $contentType = $request->getContentType();
@@ -16,7 +15,7 @@ $app->add(function ($request, $response, $next) {
     return $response;
 });
 
-$app->add(new \Tuupola\Middleware\JwtAuthentication([
+$app->add(new JwtAuthentication([
     'path' => '/sapi',
     'attribute' => 'decoded_token_data',
     'secret' => $container->get('settings')['jwt']['secret'],
