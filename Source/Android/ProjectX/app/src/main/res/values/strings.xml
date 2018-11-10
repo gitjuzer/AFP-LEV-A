@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">ProjectX</string>
+    <!-- Strings related to login -->
+    <string name="prompt_email">E-mail</string>
+    <string name="prompt_password">Jelszó</string>
+    <string name="action_sign_in">Bejelentkezés</string>
+    <string name="action_sign_in_short">Bejelentkezés</string>
+    <string name="Registration">Regisztráció</string>>
+    <string name="error_invalid_email">Hibás e-mail cím</string>
+    <string name="error_invalid_password">A jelszó túl rövid</string>
+    <string name="error_incorrect_password">Hibás jelszó</string>
+    <string name="error_field_required">Ez a mező kötelező</string>
+    <string name="permission_rationale">"A Kapcsolatokhoz azért kell hozzáférés hogy az e-mail cím kiegészítés működjön"
+    </string>
+    <string name="Exit">Kilépés</string>>
+    <string name="title_activity_main">Főoldal</string>
+    <string name="navigation_drawer_open">Nyisd ki a menüt</string>
+    <string name="navigation_drawer_close">Zárd be a menüt</string>
+    <string name="nav_header_title">AFP-LEV-A</string>
+    <string name="nav_header_subtitle">eke.hu</string>
+    <string name="nav_header_desc">Menüsor</string>
+    <string name="action_settings">Beállítások</string>
+    <string name="mittanul">Mit szeretnél ma tanulni?</string>
+    <string name="matek">Matematika</string>
+    <string name="biologia">Biológia</string>
+    <string name="info">Informatika</string>
+    <string name="nyelvtan">Nyelvtan</string>
+
+</resources>
