@@ -16,23 +16,23 @@ class BaseTestCase extends \PHPUnit_Framework_TestCase
 
     public function __construct(){
         // Use the application settings
-        $settings = require __DIR__ . '/../../core/config/config_test.php';
+        $settings = require __DIR__ . '/../../src/1_api/config/config_test.php';
 
         // Instantiate the application
         $app = new App($settings);
 
         // Set up dependencies
-        require __DIR__ . '/../../core/dependencies.php';
+        require __DIR__ . '/../../src/1_api/dependencies.php';
 
         // Register middleware
         if ($this->withMiddleware) {
-            require __DIR__ . '/../../core/middleware.php';
+            require __DIR__ . '/../../src/1_api/middleware.php';
         }
 
         // Register routes
-        require __DIR__ . '/../../core/routes.php';
+        require __DIR__ . '/../../src/1_api/routes.php';
 
-        self::$db = $app->getContainer()->get('db');
+        self::$db = $app->getContainer()->get('mysql');
         $this->app = $app;
     }
 

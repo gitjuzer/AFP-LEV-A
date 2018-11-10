@@ -1,6 +1,5 @@
 <?php
-
-namespace App\Action;
+namespace Afp\Api\Action;
 
 use Slim\Http\Request;
 use Slim\Http\Response;
