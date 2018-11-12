@@ -129,8 +129,16 @@ public class Login extends AppCompatActivity implements LoaderCallbacks<Cursor> 
                 activateReg();
             }
         });
+        Button ExitButton = (Button)findViewById(R.id.exit_button);
+        ExitButton.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+                System.exit(0);
+            }
+        });
 
-        mLoginFormView = findViewById(R.id.login_form);
+
         mProgressView = findViewById(R.id.login_progress);
     }
 //Ha rákattint a regisztrációra ez behozza a többi gombot
