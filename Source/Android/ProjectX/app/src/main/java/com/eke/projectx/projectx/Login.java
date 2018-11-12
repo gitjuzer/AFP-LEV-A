@@ -54,21 +54,19 @@ import static android.Manifest.permission.READ_CONTACTS;
  * A login screen that offers login via email/password.
  */
 public class Login extends AppCompatActivity implements LoaderCallbacks<Cursor> {
+    //TODO:Utána járni a Nagy Tibor által ajánlot JWT-nek
+    //egyszer ebbe fogjuk lekérdezni a felhasználók adatát
     public static User user = null;
+    //ebbe töljük a api által küldött válaszokat
     String downloadedjsonstring;
+    //Egyenlőre ebbe tesszük a tokent
     public static TokenHelper token = null;
     /**
      * Id to identity READ_CONTACTS permission request.
      */
     private static final int REQUEST_READ_CONTACTS = 0;
 
-    /**
-     * A dummy authentication store containing known user names and passwords.
-     * TODO: remove after connecting to a real authentication system.
-     */
-    private static final String[] DUMMY_CREDENTIALS = new String[]{
-            "foo@example.com:hello", "bar@example.com:world"
-    };
+
     /**
      * Keep track of the login task to ensure we can cancel it if requested.
      */
@@ -103,49 +101,6 @@ public class Login extends AppCompatActivity implements LoaderCallbacks<Cursor> 
         // Set up the login form.
         mEmailView = (AutoCompleteTextView) findViewById(R.id.email);
         populateAutoComplete();
-       /* jsonbutton.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View view){
-                try {
-
-                    URL url = new URL("http://nyusz.eu/public/api/login");
-                    JSONObject felh = new JSONObject();
-                    felh.put("email","arjunphp@gmail.com");
-                    felh.put("password","Arjun@123");
-
-                    conn = (HttpURLConnection) url.openConnection();
-                    conn.setDoOutput( true );
-                    conn.setInstanceFollowRedirects( false );
-
-                    conn.setRequestMethod("POST");
-                    conn.setRequestProperty("Content-Type","application/json");
-                    conn.setRequestProperty( "charset", "utf-8");
-                    OutputStream os = conn.getOutputStream();
-                    os.write(felh.toString().getBytes("UTF-8"));
-                    os.close();
-                    conn.connect();
-                    InputStream in = new BufferedInputStream(conn.getInputStream());
-                    downloadedjsonstring = readStream(in);
-
-                    jsontext.setText(downloadedjsonstring);
-                }catch (Exception e){
-                    jsontext.setText("Hiba");
-                    e.printStackTrace();
-                }
-                finally {
-                    conn.disconnect();
-                }
-
-                if(downloadedjsonstring != null){
-                    Gson gson = new Gson();
-                    User user = gson.fromJson(downloadedjsonstring,User.class);
-                    if(user.payload.token == null) jsontext.setText("Nincs token");
-                    else jsontext.setText(user.payload.token);
-                }
-
-            }
-
-        });*/
         mPasswordView = (EditText) findViewById(R.id.password);
         mPasswordView.setOnEditorActionListener(new TextView.OnEditorActionListener() {
             @Override
@@ -487,10 +442,8 @@ public class Login extends AppCompatActivity implements LoaderCallbacks<Cursor> 
         @Override
         //Bejelentkezés
         protected Boolean doInBackground(Void... params) {
-            // TODO: attempt authentication against a network service.
-
             try {
-
+                //Ugyan az nagyjából mint a regisztráció csak máshogy paraméterezzuk a JSON objectet
                 URL url = new URL(TokenHelper.LoginApiUrl);
                 JSONObject felh = new JSONObject();
                 felh.put("email",mEmail);
@@ -533,8 +486,6 @@ public class Login extends AppCompatActivity implements LoaderCallbacks<Cursor> 
             }
             return false;
 
-            // TODO: register the new account here.
-
         }
 
         @Override
@@ -559,6 +510,7 @@ public class Login extends AppCompatActivity implements LoaderCallbacks<Cursor> 
             showProgress(false);
         }
     }
+    // Ezzel a classal regisztráljuk az uj felhasználókat
     public class UserRegTask extends AsyncTask<Void, Void, Boolean> {
 
         private final String mEmail;
@@ -573,20 +525,19 @@ public class Login extends AppCompatActivity implements LoaderCallbacks<Cursor> 
             this.loginname = loginname;
 
         }
-
+//A háttérben elküldön egy POST method-os kérést a tartalma egy JSON a backend által irt doksi alapján
         @Override
         protected Boolean doInBackground(Void... params) {
-            // TODO: attempt authentication against a network service.
-
             try {
 
                 URL url = new URL(TokenHelper.RegApiUrl);
+                //itthozzuk létre és pakolásszuk a JSON-be az infókat
                 JSONObject felh = new JSONObject();
                 felh.put("loginName",loginname);
                 felh.put("realName",realname);
                 felh.put("email",mEmail);
                 felh.put("password",mPassword);
-
+                //itt állítjuk be a csatlakozást
                 conn = (HttpsURLConnection) url.openConnection();
                 conn.setDoOutput( true );
                 conn.setInstanceFollowRedirects( false );
@@ -594,10 +545,13 @@ public class Login extends AppCompatActivity implements LoaderCallbacks<Cursor> 
                 conn.setRequestMethod("POST");
                 conn.setRequestProperty("Content-Type","application/json");
                 conn.setRequestProperty( "charset", "utf-8");
+                //Itt irjuk a JSON objectet a kérésbe.
                 OutputStream os = conn.getOutputStream();
                 os.write(felh.toString().getBytes("UTF-8"));
                 os.close();
+                //itt küldjük el a kérést
                 conn.connect();
+                //itt kapunk választ
                 InputStream in = new BufferedInputStream(conn.getInputStream());
                 downloadedjsonstring = readStream(in);
 
@@ -614,6 +568,7 @@ public class Login extends AppCompatActivity implements LoaderCallbacks<Cursor> 
                 Gson gson = new Gson();
 
                 try{
+                    //egyenlőre egy static változóba tesszük bele a tokent
                     token = gson.fromJson(downloadedjsonstring,TokenHelper.class);
                 }catch(Exception e){
                     return false;
@@ -624,11 +579,12 @@ public class Login extends AppCompatActivity implements LoaderCallbacks<Cursor> 
             }
             return false;
 
-            // TODO: register the new account here.
+
 
         }
 
         @Override
+        //Ha sikeres volt a regisztráció folyamat
         protected void onPostExecute(final Boolean success) {
             mRegTask = null;
             showProgress(false);
