@@ -5,6 +5,7 @@ import android.animation.AnimatorListenerAdapter;
 import android.annotation.TargetApi;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.graphics.Region;
 import android.os.StrictMode;
 import androidx.annotation.NonNull;
 import com.google.android.material.snackbar.Snackbar;
@@ -79,6 +80,7 @@ public class Login extends AppCompatActivity implements LoaderCallbacks<Cursor> 
     private View mProgressView;
     private View mLoginFormView;
     private HttpsURLConnection conn = null;
+    //Ezzel alakitjuk át a letöltött információt binárisból string
     private String readStream(InputStream is) {
         try {
             ByteArrayOutputStream bo = new ByteArrayOutputStream();
@@ -131,7 +133,7 @@ public class Login extends AppCompatActivity implements LoaderCallbacks<Cursor> 
         mLoginFormView = findViewById(R.id.login_form);
         mProgressView = findViewById(R.id.login_progress);
     }
-
+//Ha rákattint a regisztrációra ez behozza a többi gombot
     private void activateReg() {
         Button button = (Button) findViewById(R.id.email_sign_in_button);
         Button button2 = (Button) findViewById(R.id.email_reg_button);
@@ -150,7 +152,7 @@ public class Login extends AppCompatActivity implements LoaderCallbacks<Cursor> 
         login.setVisibility(View.VISIBLE);
         reg.setVisibility(View.VISIBLE);
     }
-
+//Másodjára ha rákattint a regisztrációra akkor végzi a muveletet
     private void attemptReg() {
 
         EditText real = (EditText)findViewById(R.id.realName);
@@ -182,7 +184,7 @@ public class Login extends AppCompatActivity implements LoaderCallbacks<Cursor> 
             focusView = real;
             cancel = true;
         } else if (!ValidRealName(real.getText().toString())) {
-            real.setError(getString(R.string.error_invalid_email));
+            real.setError(getString(R.string.error_invalid_RealName));
             focusView = real;
             cancel = true;
         }
@@ -190,8 +192,8 @@ public class Login extends AppCompatActivity implements LoaderCallbacks<Cursor> 
             login.setError(getString(R.string.error_field_required));
             focusView = login;
             cancel = true;
-        } else if (!ValidRealName(login.getText().toString())) {
-            real.setError(getString(R.string.error_invalid_email));
+        } else if (!ValidLogin(login.getText().toString())) {
+            real.setError(getString(R.string.error_incorrect_username));
             focusView = login;
             cancel = true;
         }
@@ -219,6 +221,11 @@ public class Login extends AppCompatActivity implements LoaderCallbacks<Cursor> 
 
         }
 
+    }
+
+    private boolean ValidLogin(String s) {
+        if(s.length() > 4) return true;
+        else return false;
     }
 
     private boolean ValidRealName(String editText) {
@@ -422,7 +429,6 @@ public class Login extends AppCompatActivity implements LoaderCallbacks<Cursor> 
         int ADDRESS = 0;
         int IS_PRIMARY = 1;
     }
-
     /**
      * Represents an asynchronous login/registration task used to authenticate
      * the user.
