@@ -8,7 +8,9 @@
     <string name="Registration">Regisztráció</string>>
     <string name="error_invalid_email">Hibás e-mail cím</string>
     <string name="error_invalid_password">A jelszó túl rövid</string>
+    <string name="error_incorrect_username">Hibás felhasználónév(Nem elég hosszú)</string>
     <string name="error_incorrect_password">Hibás jelszó</string>
+    <string name="error_invalid_RealName">Hibás kitöltés(Nem elég hosszú)</string>
     <string name="error_field_required">Ez a mező kötelező</string>
     <string name="permission_rationale">"A Kapcsolatokhoz azért kell hozzáférés hogy az e-mail cím kiegészítés működjön"
     </string>
