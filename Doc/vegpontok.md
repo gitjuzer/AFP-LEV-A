@@ -223,5 +223,46 @@ Kezdjétek a regisztrációval, bejelentkezéssel és a témák létrehozásáva
         }
     
     A sikeres regisztráció válasza ugyanaz mint a login esetében.
+    
+4. Topic
 
-
+- Új
+        URL: https://nyusz.eu/afpleva/public/sapi/topic
+        
+        Method: POST
+        
+        Body Content Type: application/json
+    
+    Body Content példa: 
+    
+        {"name": "topic name", "description": "topic desription"}
+        
+ - Módosít
+ 
+        URL: https://nyusz.eu/afpleva/public/sapi/topic/1
+        
+        Method: PUT
+        
+        Body Content Type: application/json
+    
+    Body Content példa: 
+    
+        {"name": "topic name", "description": "topic desription"}
+        
+ -Lista
+ 
+        URL: https://nyusz.eu/afpleva/public/sapi/topics
+        
+        Method: GET
+        
+ -Adott id 
+ 
+        URL: https://nyusz.eu/afpleva/public/sapi/topic/1
+        
+        Method: GET
+        
+ -Törlés
+ 
+        URL: https://nyusz.eu/afpleva/public/sapi/topic/1
+        
+        Method: DELETE
