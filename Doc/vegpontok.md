@@ -301,3 +301,11 @@ Kezdjétek a regisztrációval, bejelentkezéssel és a témák létrehozásáva
         URL: https://nyusz.eu/afpleva/public/sapi/curriculum/1
         
         Method: GET
+        
+  -Törlés
+ 
+        URL: https://nyusz.eu/afpleva/public/sapi/curriculum/1
+        
+        Method: DELETE
+        
+  - Az update methodok idő híján egyelőre kimaradnak a további elemekből is. Addig is, ha módosítani szeretnétek: delete + post.
