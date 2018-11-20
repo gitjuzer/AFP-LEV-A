@@ -252,19 +252,19 @@ Kezdjétek a regisztrációval, bejelentkezéssel és a témák létrehozásáva
     
         {"name": "topic name", "description": "topic desription"}
         
- -Lista
+ - Lista
  
         URL: https://nyusz.eu/afpleva/public/sapi/topics
         
         Method: GET
         
- -Adott id 
+ - Adott id 
  
         URL: https://nyusz.eu/afpleva/public/sapi/topic/1
         
         Method: GET
         
- -Törlés
+ - Törlés
  
         URL: https://nyusz.eu/afpleva/public/sapi/topic/1
         
@@ -284,25 +284,25 @@ Kezdjétek a regisztrációval, bejelentkezéssel és a témák létrehozásáva
     
         {"title": "curriculum title", "content": "curriculum content", "topic": 2}
         
- -Lista
+ - Lista
  
         URL: https://nyusz.eu/afpleva/public/sapi/curricula
         
         Method: GET
         
- -Lista topic ID-re szűrve
+ - Lista topic ID-re szűrve
  
         URL: https://nyusz.eu/afpleva/public/sapi/curricula?topic=2
         
         Method: GET   
         
- -Adott id 
+ - Adott id 
  
         URL: https://nyusz.eu/afpleva/public/sapi/curriculum/1
         
         Method: GET
         
-  -Törlés
+  - Törlés
  
         URL: https://nyusz.eu/afpleva/public/sapi/curriculum/1
         
