@@ -158,6 +158,8 @@ Kezdjétek a regisztrációval, bejelentkezéssel és a témák létrehozásáva
     Header name: Accept
     
     Header value: application/json
+    
+##### Figyelem: a hibakezelés még nem teljes. Igyekezzetek csak olyan azonosítókat és relációkat használni, amelyekről tudjátok, hogy léteznek az adatbázisban!
 
 1. Bejelentkezés
 
@@ -227,6 +229,7 @@ Kezdjétek a regisztrációval, bejelentkezéssel és a témák létrehozásáva
 4. Topic
 
 - Új
+
         URL: https://nyusz.eu/afpleva/public/sapi/topic
         
         Method: POST
@@ -266,3 +269,35 @@ Kezdjétek a regisztrációval, bejelentkezéssel és a témák létrehozásáva
         URL: https://nyusz.eu/afpleva/public/sapi/topic/1
         
         Method: DELETE
+        
+ 4. Curriculum
+
+- Új
+
+        URL: https://nyusz.eu/afpleva/public/sapi/curriculum
+        
+        Method: POST
+        
+        Body Content Type: application/json
+    
+    Body Content példa: 
+    
+        {"title": "curriculum title", "content": "curriculum content", "topic": 2}
+        
+ -Lista
+ 
+        URL: https://nyusz.eu/afpleva/public/sapi/curricula
+        
+        Method: GET
+        
+ -Lista topic ID-re szűrve
+ 
+        URL: https://nyusz.eu/afpleva/public/sapi/curricula?topic=2
+        
+        Method: GET   
+        
+ -Adott id 
+ 
+        URL: https://nyusz.eu/afpleva/public/sapi/curriculum/1
+        
+        Method: GET
