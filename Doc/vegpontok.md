@@ -86,6 +86,23 @@
     Body Content példa: 
     
         {"name": "topic name", "description": "topic desription"}
+		
+	Válasz:
+	
+		{
+			"status": "success",
+			"code": 200,
+			"payload": {
+				"name": "topic name",
+				"description": "topic description",
+				"id": 2
+			}
+		}
+		
+		A nem létező ID-re kapott válasz egyelőre nincs jól lekezelve. 200-as státuszú választ kapsz, de a payload mezői null értékűek.
+		A későbbiekben erre 404-es státusz fog érkezni válaszul.
+		
+	#### Minden új rekord tárolására ez a válasz érkezik, természetesen a saját adatszerkezetével. Ezért ezeket a későbbiekben már nem részletezem. Ha sikeresen tárolsz egy rekordot, akkor mindig visszakapod 	a rekord minden mezőjét, beleértve az azonosítóját is, tehát ezzel azonnal tudsz dolgozni.
         
  - Módosít
  
