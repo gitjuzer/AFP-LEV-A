@@ -261,11 +261,11 @@
     
     Body Content példa jelenleg: 
     
-        {"dilemma": {1,2,3,4,5}}
+        {"dilemma": [1,2,3,4,5]}
 	
 	Body Content példa később, ha már tárolható lesz a másik feladattípus is:
 	
-		{"dilemma": {1,2,3,4,5}, "multipleChoice": {1,2,3,4,5}}
+		{"dilemma": [1,2,3,4,5], "multipleChoice": [1,2,3,4,5]}
 		
 	Vagyis a hozzárendelendő feladatokat típusonként csoportosítva, az azonosítójukkal ellátva kell felsorolni.
 
