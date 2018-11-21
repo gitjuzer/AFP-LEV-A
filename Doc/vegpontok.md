@@ -106,7 +106,7 @@
         
  - Módosít
  
-        URL: https://nyusz.eu/afpleva/public/sapi/topic/1
+        URL: https://nyusz.eu/afpleva/public/sapi/topic/{id}
         
         Method: PUT
         
@@ -124,17 +124,17 @@
         
  - Adott id 
  
-        URL: https://nyusz.eu/afpleva/public/sapi/topic/1
+        URL: https://nyusz.eu/afpleva/public/sapi/topic/{id}
         
         Method: GET
         
  - Törlés
  
-        URL: https://nyusz.eu/afpleva/public/sapi/topic/1
+        URL: https://nyusz.eu/afpleva/public/sapi/topic/{id}
         
         Method: DELETE
         
- 4. Curriculum
+5. Curriculum
 
 - Új
 
@@ -156,25 +156,25 @@
         
  - Lista topic ID-re szűrve
  
-        URL: https://nyusz.eu/afpleva/public/sapi/curricula?topic=2
+        URL: https://nyusz.eu/afpleva/public/sapi/curricula?topic={id}
         
         Method: GET   
         
  - Adott id 
  
-        URL: https://nyusz.eu/afpleva/public/sapi/curriculum/1
+        URL: https://nyusz.eu/afpleva/public/sapi/curriculum/{id}
         
         Method: GET
         
   - Törlés
  
-        URL: https://nyusz.eu/afpleva/public/sapi/curriculum/1
+        URL: https://nyusz.eu/afpleva/public/sapi/curriculum/{id}
         
         Method: DELETE
         
   - Az update methodok idő híján egyelőre kimaradnak a további elemekből is. Addig is, ha módosítani szeretnétek: delete + post.
   
-4. ExerciseDilemma
+6. ExerciseDilemma
 
 - Új
 
@@ -196,24 +196,85 @@
         
  - Lista topic ID-re szűrve
  
-        URL: https://nyusz.eu/afpleva/public/sapi/exerciseDilemmas?topic=2
-        
-        Method: GET
-        
- - Lista feladatsor ID-re szűrve (folyamatban...)
- 
-        URL: https://nyusz.eu/afpleva/public/sapi/exerciseDilemmas?exerciseList=1
+        URL: https://nyusz.eu/afpleva/public/sapi/exerciseDilemmas?topic={id}
         
         Method: GET
         
  - Adott id 
  
-        https://nyusz.eu/afpleva/public/sapi/exerciseDilemma/2
+        https://nyusz.eu/afpleva/public/sapi/exerciseDilemma/{id}
         
         Method: GET
         
   - Törlés
  
-        URL: https://nyusz.eu/afpleva/public/sapi/exerciseDilemma/1
+        URL: https://nyusz.eu/afpleva/public/sapi/exerciseDilemma/{id}
         
         Method: DELETE
+		
+7. ExerciseList
+
+- Új
+
+    URL: https://nyusz.eu/afpleva/public/sapi/ExerciseList
+        
+    Method: POST
+        
+    Body Content Type: application/json
+    
+    Body Content példa: title": "A feladatsor címe"}
+		
+	A tanár ID hozzáadása automatikus. Mivel jelenleg nincs jogosultságrendszer, így akár diák is tárolhat.
+	Az azonosítót a Tokenből dekódolja a rendszer.
+        
+- Lista
+ 
+    URL: https://nyusz.eu/afpleva/public/sapi/ExerciseList
+        
+    Method: GET
+        
+- Lista tanár ID-re szűrve
+ 
+    URL: https://nyusz.eu/afpleva/public/sapi/ExerciseLists?teacher={id}
+        
+    Method: GET
+        
+- Adott id 
+ 
+    https://nyusz.eu/afpleva/public/sapi/ExerciseList/{id}
+        
+    Method: GET
+        
+- Törlés
+ 
+    URL: https://nyusz.eu/afpleva/public/sapi/ExerciseList/{id}
+        
+    Method: DELETE
+		
+- Feladatok hozzárendelése
+
+	URL: https://nyusz.eu/afpleva/public/sapi/ExerciseList/{id}/assign
+        
+    Method: POST
+        
+    Body Content Type: application/json
+    
+    Body Content példa jelenleg: 
+    
+        {"dilemma": {1,2,3,4,5}}
+	
+	Body Content példa később, ha már tárolható lesz a másik feladattípus is:
+	
+		{"dilemma": {1,2,3,4,5}, "multipleChoice": {1,2,3,4,5}}
+		
+	Vagyis a hozzárendelendő feladatokat típusonként csoportosítva, az azonosítójukkal ellátva kell felsorolni.
+
+	##### Figyelem: az assign parancs jelenleg felülírja a listát, tehát mindig a teljes felsorolást csatold!
+
+- Hozzárendelt feladatok megjelenítése (feladatsor lekérése a vizsgákhoz, nem lesz benne a helyes válasz)
+
+	URL: https://nyusz.eu/afpleva/public/sapi/ExerciseList/{id}/assigned
+        
+    Method: GET
+        
+    Body Content Type: application/json
