@@ -309,3 +309,47 @@ Kezdjétek a regisztrációval, bejelentkezéssel és a témák létrehozásáva
         Method: DELETE
         
   - Az update methodok idő híján egyelőre kimaradnak a további elemekből is. Addig is, ha módosítani szeretnétek: delete + post.
+  
+4. ExerciseDilemma
+
+- Új
+
+        URL: https://nyusz.eu/afpleva/public/sapi/exerciseDilemma
+        
+        Method: POST
+        
+        Body Content Type: application/json
+    
+    Body Content példa: 
+    
+        {"question": "Ez egy kérdés?", "yesNo": 1, "topic": 2}
+        
+ - Lista
+ 
+        URL: https://nyusz.eu/afpleva/public/sapi/exerciseDilemmas
+        
+        Method: GET
+        
+ - Lista topic ID-re szűrve
+ 
+        URL: https://nyusz.eu/afpleva/public/sapi/exerciseDilemmas?topic=2
+        
+        Method: GET
+        
+ - Lista feladatsor ID-re szűrve (folyamatban...)
+ 
+        URL: https://nyusz.eu/afpleva/public/sapi/exerciseDilemmas?exerciseList=1
+        
+        Method: GET
+        
+ - Adott id 
+ 
+        https://nyusz.eu/afpleva/public/sapi/exerciseDilemma/2
+        
+        Method: GET
+        
+  - Törlés
+ 
+        URL: https://nyusz.eu/afpleva/public/sapi/exerciseDilemma/1
+        
+        Method: DELETE
