@@ -2,7 +2,7 @@
   <div class="login">
     <div>
       <el-row>
-        <el-col :span="12" :push="6">
+        <el-col :span="16" :push="4">
           <el-card class="box-card">
           	<el-col>
           	  <h2>{{$t('Login')}}</h2>
@@ -14,16 +14,19 @@
                   </el-input>
                 </el-form-item>
                 <el-form-item :label="$t('Password')">
-                  <el-input type="text" :model="user.password">
+                  <el-input type="password" :model="user.password">
                   </el-input>
                 </el-form-item>
-                <el-form-item :label="$t('Select language')">
-                  <el-select :placeholder="locale" v-model="$i18n.locale">
-                    <el-option v-for="(lang,index) in languages" :key="index" :label="lang" :value="lang"></el-option>
-                  </el-select>
-                </el-form-item>
               </el-form>
-          	</el-col>
+              <el-col>
+                <el-col class="login-button" :span="12" :push="6">
+                  <el-button v-on:click="login">{{$t('Login')}}</el-button>
+                </el-col>
+                <el-col class="registration-link" :span="21">
+                  <a v-on:click="$router.push('registration')">{{$t('If you dont have account, click here to register')}}</a>
+                </el-col>
+              </el-col>
+            </el-col>
           </el-card>
         </el-col>
       </el-row>
@@ -47,7 +50,9 @@ export default {
   methods:{
     login: function(){
       var _this = this;
-      this.axios.post("/login", this.user).then((response) => {
+      this.$globals.loggedIn = true;
+      this.$router.push("dashboard");
+      this.$http.post("/api/login", this.user).then((response) => {
         _this.$notify.success('Sikeres bejelentkezés')
       })
     }
@@ -66,5 +71,16 @@ h3 {
 }
 h2{
   color: #000;
+}
+.el-card{
+  padding: 20px;
+}
+.registration-link{
+  cursor: pointer;
+  margin: 30px;
+  text-align: center;
+}
+.login-button > div{
+  width: 100%;
 }
 </style>

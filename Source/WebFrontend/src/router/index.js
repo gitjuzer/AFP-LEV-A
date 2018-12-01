@@ -38,8 +38,10 @@ export default new Router({
       name: 'logout',
       meta: {requiresAuth: false},
       beforeEnter: function(to, from, next){
-        localStorage.clear();
-        location.reload();
+        next("login")
+        //localStorage.clear();
+        //this.$router.push("login");
+        //location.reload();
       }
     },
     {

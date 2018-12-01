@@ -3,7 +3,7 @@
     <el-container
       v-loading.fullscreen.lock="loading2"
       element-loading-background="rgba(0, 0, 0, 0.9)">
-      <el-header  v-if="loggedIn">
+      <el-header v-if="$globals.loggedIn">
         <AppHeader/>
       </el-header>
       <el-main>
