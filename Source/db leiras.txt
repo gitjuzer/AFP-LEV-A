@@ -1,0 +1,3 @@
+Adbázis MANUAL
+
+Adatbázis meghatározása:
