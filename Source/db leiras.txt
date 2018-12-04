@@ -1,3 +1,10 @@
 Adbázis MANUAL
 
 Adatbázis meghatározása:
+Curriculum tábla
+Mezők:
+
+-C_ID me‌zőnév, egész típusú mező, elsődleges kulcs.
+-C_Title mezőnév, szöveg típusú mező (Varchar(99)), NOT NULL megkötés.
+-C_Content mezőnév, szöveg típusú mező, NOT NULL megkötés.
+-C_T_ID mezőnév, egész típusú mező, idegen kulcs.
