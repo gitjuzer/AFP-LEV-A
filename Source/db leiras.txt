@@ -1,6 +1,8 @@
 Adbázis MANUAL
 
-Adatbázis meghatározása:
+Adatbázis feladata:
+Az adatbázis egy összetett program adatait kezeli le.
+
 Curriculum tábla
 Mezők:
 
