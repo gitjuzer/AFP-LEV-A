@@ -22,6 +22,7 @@ Curriculum tábla
 
 
 Topic tábla
+  Ebben a táblában tároljuk a feladat fajtákat.
   Mezők:
 
   -T_ID mezőnév, egész típusú, elsődleges kulcs.
