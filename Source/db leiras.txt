@@ -1,0 +1,42 @@
+﻿Adbázis MANUAL
+
+Adatbázis feladata:
+Az adatbázis egy összetett program adatait kezeli le.
+
+Curriculum tábla
+  Mezők:
+
+  -C_ID me‌zőnév, egész típusú mező, elsődleges kulcs.
+  -C_Title mezőnév, szöveg típusú mező (Varchar(99)), NOT NULL megkötés.
+  -C_Content mezőnév, szöveg típusú mező, NOT NULL megkötés.
+  -C_T_ID mezőnév, egész típusú mező, idegen kulcs.
+
+
+  A "Curriculum" tábla felépítés szempontjából 4 mezőből áll. Ezek a mezők
+  a "C_ID", "C_Title", "C_Content" és a "C_T_ID" mezők. Ezekből a mezőkből
+  a C_ID egész típusú és a tölti be az elsődleges kulcs szerepét. A C_Title
+  mező az adott tanmenet nevét, mely nem lehet NULL értékű és a maga a mezőtípusa
+  VARCHAR ami 99 hosszúságú. A tábla még tartalmaz egy C_T_ID mezőt mely idegen
+  kulcs szerepét tölti be, amely a Topic táblához kapcsolódik. A tábla
+  kapcsolatait tekintve csak a Topic táblához kapcsolódik egy a többhöz kapcsolattal.
+
+
+Topic tábla
+  Ebben a táblában tároljuk a feladat fajtákat.
+  Mezők:
+
+  -T_ID mezőnév, egész típusú, elsődleges kulcs.
+  -T_Name mezőnév, karakter típusú mező (VARCHAR (45)), UNIQUE megkötés.
+  -T_Desc mezőnév, szöveg típusú mező.
+
+Exercise tábla
+	Ebben a táblában tároljuk a feladatokat. A témakörök (topic) táblával van összekötve.
+	Mezők:
+
+	-E_ID mezőnév, egész típusú mező, elsődleges kulcs.
+	-E_T_ID mezőnév, egész típusú mező, idegen kulcs.
+
+	Az "Exercise" tábla felépítése csupán 2 mezőt foglal magában.
+	Az E_ID mező egész típusú, elsődleges kulcs megszorítással rendelkező mező.
+	Az E_T_ID mező egy egész típusú és idegen kulcs megszorítással rendelkező mező.
+	A tábla 3 kapcsolattal rendelkezik, melyek a "Topic","ExerciceMultipleChoice" és az "ExerciseDilemma" táblákat foglalják magukba. 
