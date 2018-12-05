@@ -8,13 +8,13 @@
           	  <h2>{{$t('Login')}}</h2>
             </el-col>
             <el-col>
-              <el-form ref="loginForm" :model="user" label-width="30%">
+              <el-form ref="loginForm" label-width="30%">
                 <el-form-item :label="$t('Username')">
-                  <el-input type="text" :model="user.username">
+                  <el-input type="text" v-model="user.email">
                   </el-input>
                 </el-form-item>
                 <el-form-item :label="$t('Password')">
-                  <el-input type="password" :model="user.password">
+                  <el-input type="password" v-model="user.password">
                   </el-input>
                 </el-form-item>
               </el-form>
@@ -41,7 +41,7 @@ export default {
   data: function(){
     return {
       user: {
-        username: null,
+        email: null,
         password: null
       },
       languages: Object.keys(this.$i18n.messages),
@@ -50,10 +50,13 @@ export default {
   methods:{
     login: function(){
       var _this = this;
-      this.$globals.loggedIn = true;
-      this.$router.push("dashboard");
-      this.$http.post("/api/login", this.user).then((response) => {
-        _this.$notify.success('Sikeres bejelentkezés')
+      //this.$globals.loggedIn = true;
+      //this.$router.push("dashboard");
+      console.log(this.user.email,this.user.password)
+      this.$http.post("/api/login",this.user).then((response) => {
+        localStorage.setItem("token",response.data.payload.token);
+
+        _this.$notify.success('Sikeres bejelentkezés' + localStorage.token)
       })
     }
 

@@ -26,7 +26,8 @@ export const globalStore = new Vue({
   data: {
     test: 'global hello world',
     user:{},
-    loggedIn: false
+    loggedIn: false,
+    token: null,
   }
 })
 Vue.prototype.$globals = globalStore;
@@ -37,17 +38,19 @@ Vue.use(CancelToken);
 Vue.prototype.$http = axios.create({
   baseURL: baseServerUrl,
   timeout: 3000,
+  responseType: 'json',
   headers:{
-    "Authorization": 'Bearer ' + localStorage.accessToken,
-    "Accept-Language": 'en-EN,en;',
+    "Authorization": 'Bearer ' + localStorage.getItem('token'),
+    "Content-Type": 'application/json',
+    //"Accept-Language": 'en-EN,en;',
   }
 });
 Vue.prototype.$httpBase = axios.create({
   baseURL: baseServerUrl,
   timeout: 3000,
-  headers:{
+ /* headers:{
     "Accept-Language": 'en-EN,en;'
-  }
+  }*/
 });
 
 Vue.config.productionTip = false
