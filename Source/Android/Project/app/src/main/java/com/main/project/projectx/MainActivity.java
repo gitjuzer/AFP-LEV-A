@@ -1,6 +1,7 @@
 package com.main.project.projectx;
 
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -175,7 +176,11 @@ public class MainActivity extends AppCompatActivity
         } else if (id == R.id.nav_share) {
             Toast.makeText(context, "Megosztás", duration).show();
         } else if (id == R.id.nav_logout) {
-            Toast.makeText(context, "Kijelentkezés", duration).show();
+
+            context.getSharedPreferences("Adatok", 0).edit().clear().commit();
+            Intent intent_name = new Intent();
+            intent_name.setClass(getApplicationContext(),LoginActivity.class);
+            startActivity(intent_name);
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
