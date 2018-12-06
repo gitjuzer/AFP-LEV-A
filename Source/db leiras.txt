@@ -80,6 +80,16 @@ EXErciseDilemma tábla:
 	-ED_Question mezőnév, karakter típusú mező (VARCHAR(255)), NOT NULL megkötés.
 	-ED_YesNo mezőnév, egész típusú mező (TINYINT), NOT NULL megkötés.
 	-ED_E_ID mezőnév, egész típusú mező, idegen kulcs.
+	
+	Az adat tábla 4 mezőből áll.
+	Ezen mezők nevei "ED_ID","ED_Question","ED_YesNo" és a "ED_E_ID".
+	Az "ED_ID" mező egy egész típusú és elsődleges kulcs megszorítással rendelkező mező.
+	Az "ED_Question" mező karakter típusú, 255 hosszú mező amely a kérdéseket tárolja, NOT NULL megkötéssel.
+	Az "ED_YesNo mező egy egész típusú mező, NOT NULL megkötéssel.
+	Az "ED_E_ID" mező egy egész típusú mező amely az "Exercise" tábla és az "ExerciseDilemma
+	" tábla egy-a-többhöz kapcsolatából származik, egy idegen kulcs megköttéssel.
+	A tábla rendelkezik még egy egy-a-többhöz kapcsolattal ami az "EDTestList" tábla között van.
+	
 Test tábla:
 	Ebben a táblában tároljuk az egyes teszteket és az eredményeket.
 	Mezők:
