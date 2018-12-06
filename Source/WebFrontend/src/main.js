@@ -39,12 +39,13 @@ Vue.use(CancelToken);
 Vue.prototype.$http = axios.create({
   baseURL: baseServerUrl,
   timeout: 3000,
-  responseType: 'json',
+  //responseType: 'json',
   headers:{
-    "Authorization": 'Bearer ' + localStorage.getItem('token'),
     "Content-Type": 'application/json',
+    "Authorization": 'Bearer ' + localStorage.getItem('token'),
     //"Accept-Language": 'en-EN,en;',
-  }
+  },
+  data:{XXX:"-"}
 });
 Vue.prototype.$httpBase = axios.create({
   baseURL: baseServerUrl,

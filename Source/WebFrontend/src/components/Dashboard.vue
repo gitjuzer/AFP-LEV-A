@@ -61,7 +61,7 @@ export default {
         }],
       defaultProps: {
         children: 'children',
-        label: 'label'
+        label: 'name'
       }
     }
   },
@@ -70,6 +70,7 @@ export default {
       var _this = this;
       this.$http("/sapi/topics", this.user).then((response) => {
         console.log(response.data);
+        _this.dataAll = response.data.payload;
       })
     },
     handleNodeClick: function(){}
