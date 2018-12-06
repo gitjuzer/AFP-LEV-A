@@ -28,6 +28,12 @@ Topic tábla
   	-T_ID mezőnév, egész típusú, elsődleges kulcs.
   	-T_Name mezőnév, karakter típusú mező (VARCHAR (45)), UNIQUE megkötés.
   	-T_Desc mezőnév, szöveg típusú mező.
+	
+	A "Topic" tábla felépítése 3 mezőből áll. Ezek a mezők a "T_ID",  T_Name és a T_Desc.
+	A táblában az elsődleges kulcs szerepét a "T_ID" mező tölti be, mely egy egész típusú mező.
+	A tételek neveit a "T_Name" mező végzi el, mely egy karakter típusú mező ami 45 karakter hosszú és rendelkezik egy UNIQUE 		megszorítással.
+	A tábla rendelkezik még két darab kapcsolattal egy-a-többhöz típusú kapcsolatokról beszélünk.
+	Ezen két kapcsolat táblái az "Curriculum" tábla és az "Exercise" táblák. 
 
 Exercise tábla
 	Ebben a táblában tároljuk a feladatokat. A témakörök (topic) táblával van összekötve.
