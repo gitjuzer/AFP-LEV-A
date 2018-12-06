@@ -23,6 +23,7 @@ A diákok gyakorlása végig digitális, interaktív kultúrájukba illeszkedik 
 Tesztkérdések, feladatsorok helyes megoldásait tárolja, a tanuló válaszait tárolja, ellenőrizze. (felhasználónként) Feladatokhoz időlimitet, pontokat is lehessen rendelni, amikből kiszámolja az összpontszámot, százalékot és érdemjegyet.
 2. A kitöltött feladatsorok pdf-be áttehetők legyenek. 
 3. Mobiltelefonon bejelentkezhessenek a userek (diákok és tanárok egyeránt), a feladatsorok kitöltése mobilon kell hogy működjön. Mobilon fogják elsősorban kitölteni.
+4. A rendszer használjon adatbázist az adatok és eredmények tárolásához, így azok bármikor visszakereshetőek. A rendszer MySQl adatbázist használjon és az egyes részek legyenek szétszedve önálló táblákra.
 
 ###### Megrendelői "atomi" igényspecifikáció:
 
