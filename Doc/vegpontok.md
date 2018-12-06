@@ -214,24 +214,24 @@
 		
 7. ExerciseList
 
-	- Új
+  - Új
 
-	    URL: https://nyusz.eu/afpleva/public/sapi/exerciseList
+        URL: https://nyusz.eu/afpleva/public/sapi/exerciseList
 
-	    Method: POST
+        Method: POST
 
-	    Body Content Type: application/json
+        Body Content Type: application/json
 
-	    Body Content példa: title": "A feladatsor címe"}
+        Body Content példa: title": "A feladatsor címe"}
 
-		A tanár ID hozzáadása automatikus. Mivel jelenleg nincs jogosultságrendszer, így akár diák is tárolhat.
-		Az azonosítót a Tokenből dekódolja a rendszer.
+ A tanár ID hozzáadása automatikus. Mivel jelenleg nincs jogosultságrendszer, így akár diák is tárolhat.
+ Az azonosítót a Tokenből dekódolja a rendszer.
 
-	- Lista
+ - Lista
 
-	    URL: https://nyusz.eu/afpleva/public/sapi/exerciseLists
+       URL: https://nyusz.eu/afpleva/public/sapi/exerciseLists
 
-	    Method: GET
+       Method: GET
 
 	- Lista tanár ID-re szűrve
 
