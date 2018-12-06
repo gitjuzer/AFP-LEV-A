@@ -49,18 +49,26 @@ EMCAnswer tábla:
 	-EMCA_Answer mezőnév, karakter típusú mező (VARCHAR(255)), NOT NULL megkötés.
 	-EMCA_IsCorrect mezőnév, egész típusú mező(TINYINT), NOT NULL megkötés.
 	-EMCA_EMC_ID mezőnév, egész típusú mező, idegen kulcs.
+	
+	Az "EMCAnswer" tábla felépítése 4 mezőből áll.
+	A táblai mezői "EMCA_ID","EMCA_Answer"."EMCA_IsCorrect" és a "EMCA_EMC_ID".
+	Az "EMCA_ID" mező lesz az elsődleges kulcs a táblában ez a mező egy egész típusú mező.
+	Az "EMCA_Answer" mező fogja tárolni magukat a kérdéseket, mely egy NOT NULL megszorítással rendelkezik.
+	Az "EMCA_IsCorrect" mező egész típusú mező, NOT NULL megkötéssel.
+	Az "EMCA_EMC_ID mező egész típusú, idegen kulcs megkötéssel.
+	A Tábla kapcsolati tekintve rendelkezik egy-a-többhöz kapcsolattal amit az ExerciceMultipleChoice táblával.
 
 ExerciseMultipleChoice tábla:
-Mezők:
+	Mezők:
 
--EMC_ID mezőnév, egész típusú mező, elsődleges kulcs.
--EMC_Question mezőnév, karakter típusú mező (VARCHAR(255)), NOT NULL megkötés.
--EMC_E_ID mezőnév, egész típusú mező, idegen kulcs.
+	-EMC_ID mezőnév, egész típusú mező, elsődleges kulcs.
+	-EMC_Question mezőnév, karakter típusú mező (VARCHAR(255)), NOT NULL megkötés.
+	-EMC_E_ID mezőnév, egész típusú mező, idegen kulcs.
 
 EXErciseDilemma tábla:
-Mezők:
+	Mezők:
 
--ED_ID mezőnév, egész típusú mező, elsődleges kulcs.
--ED_Question mezőnév, karakter típusú mező (VARCHAR(255)), NOT NULL megkötés.
--ED_YesNo mezőnév, egész típusú mező (TINYINT), NOT NULL megkötés.
--ED_E_ID mezőnév, egész típusú mező, idegen kulcs.
+	-ED_ID mezőnév, egész típusú mező, elsődleges kulcs.
+	-ED_Question mezőnév, karakter típusú mező (VARCHAR(255)), NOT NULL megkötés.
+	-ED_YesNo mezőnév, egész típusú mező (TINYINT), NOT NULL megkötés.
+	-ED_E_ID mezőnév, egész típusú mező, idegen kulcs.
