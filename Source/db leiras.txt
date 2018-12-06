@@ -39,4 +39,12 @@ Exercise tábla
 	Az "Exercise" tábla felépítése csupán 2 mezőt foglal magában.
 	Az E_ID mező egész típusú, elsődleges kulcs megszorítással rendelkező mező.
 	Az E_T_ID mező egy egész típusú és idegen kulcs megszorítással rendelkező mező.
-	A tábla 3 kapcsolattal rendelkezik, melyek a "Topic","ExerciceMultipleChoice" és az "ExerciseDilemma" táblákat foglalják magukba. 
+	A tábla 3 kapcsolattal rendelkezik, melyek a "Topic","ExerciceMultipleChoice" és az "ExerciseDilemma" táblákat foglalják magukba.
+	
+EMCAnswer tábla:
+	Mezők:
+
+	-EMCA_ID mezőnév, egész típusú mező, elsődleges kulcs.
+	-EMCA_Answer mezőnév, karakter típusú mező (VARCHAR(255)), NOT NULL megkötés.
+	-EMCA_IsCorrect mezőnév, egész típusú mező(TINYINT), NOT NULL megkötés.
+	-EMCA_EMC_ID mezőnév, egész típusú mező, idegen kulcs.
