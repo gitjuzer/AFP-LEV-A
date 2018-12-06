@@ -120,6 +120,15 @@ User tábla:
 	-U_Email mezőnév, karakter típusú mező (VARCHAR(50)), NOT NULL megkötés.
 	-U_Pass mezőnév, karakter típusú mező (VARCHAR(255)), NOT NULL megkötés.
 	-U_Type mezőnév, ENUM típusú mező, NOT NULL megkötés.
+	
+	Az "User" tábla 6 mezőt tartalmaz.
+	Melyeknek a nevei "U_ID","U_LoginName","U_Name","U_Email","U_Pass" és az "U_Type".
+	A tábla "U_ID" mezője az elsődleges kulcs megszorítással rendelkezik a mező egész típusú.
+	A "U_LoginName" mező egy karakter típusú mező amely az felhasználók, felhasználó neveiknek eltárolására használ.
+	A "U_Name" mező szintén karakater típusú mező, amely a felhasználók neveinek eltárolására használatos.
+	A "U_Email" mező karakter típusú, a felhasználók e-mail címeinek eltárolására használatos.
+	A "U_Pass" mező karakter típusú, a felhasználók jelszavait tárolja.
+	A "U_Type" mező egy enum típusú mező, amely a felhasználók "típusát" tárolja, azaz adott felhasználó tanár vagy diák vagy egyéb enum 		típus.
 
 TestList tábla:
 	A különböző tesztek neveit tároljuk ebben a táblában.
