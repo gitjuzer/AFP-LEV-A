@@ -3,9 +3,13 @@ package com.main.project.projectx;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.Color;
 import android.os.Bundle;
+import android.support.constraint.ConstraintLayout;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.util.Log;
+import android.view.Gravity;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -16,9 +20,26 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
+import android.widget.FrameLayout;
 import android.widget.ImageButton;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.google.android.flexbox.FlexboxLayout;
+import com.google.gson.Gson;
+import com.mikhaellopez.circularimageview.CircularImageView;
+
+import org.json.JSONArray;
+import org.json.JSONObject;
+
+import java.io.BufferedInputStream;
+import java.io.InputStream;
+import java.net.URL;
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.net.ssl.HttpsURLConnection;
 
 
 public class MainActivity extends AppCompatActivity
@@ -32,8 +53,10 @@ public class MainActivity extends AppCompatActivity
     ImageButton Kemia_Button;
     ImageButton Biologia_Button;
     ImageButton Rajz_Button;
-    Context context;
     int duration;
+    public static List<Topic> TopicList;
+    Context context;
+    FlexboxLayout topics;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -49,71 +72,6 @@ public class MainActivity extends AppCompatActivity
                         .setAction("Action", null).show();
             }
         });
-         Matek_Button = (ImageButton) findViewById(R.id.btn_matek);
-         Irodalom_Button = (ImageButton) findViewById(R.id.btn_irodalom);;
-         Nyelvtan_Button = (ImageButton) findViewById(R.id.btn_nyelvtan);;
-         Fizika_Button = (ImageButton) findViewById(R.id.btn_fizika);;
-         Tori_Button = (ImageButton) findViewById(R.id.btn_tori);;
-         Info_Button = (ImageButton) findViewById(R.id.btn_informatika);;
-         Kemia_Button = (ImageButton) findViewById(R.id.btn_kemia);;
-         Biologia_Button = (ImageButton) findViewById(R.id.btn_biologia);;
-         Rajz_Button = (ImageButton) findViewById(R.id.btn_rajz);
-         context = getApplicationContext();
-         duration = Toast.LENGTH_SHORT;
-         Matek_Button.setOnClickListener(new View.OnClickListener(){
-             @Override
-             public  void onClick(View view){
-                 Toast.makeText(context, "Matek gomb megnyomva", duration).show();
-             }
-         });
-        Irodalom_Button.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public  void onClick(View view){
-                Toast.makeText(context, "Irodalom gomb megnyomva", duration).show();
-            }
-        });
-        Nyelvtan_Button.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public  void onClick(View view){
-                Toast.makeText(context, "Nyelvtan gomb megnyomva", duration).show();
-            }
-        });
-        Fizika_Button.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public  void onClick(View view){
-                Toast.makeText(context, "Fizika gomb megnyomva", duration).show();
-            }
-        });
-        Tori_Button.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public  void onClick(View view){
-                Toast.makeText(context, "Tori gomb megnyomva", duration).show();
-            }
-        });
-        Info_Button.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public  void onClick(View view){
-                Toast.makeText(context, "Info gomb megnyomva", duration).show();
-            }
-        });
-        Kemia_Button.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public  void onClick(View view){
-                Toast.makeText(context, "Kemia gomb megnyomva", duration).show();
-            }
-        });
-        Biologia_Button.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public  void onClick(View view){
-                Toast.makeText(context, "Biologia gomb megnyomva", duration).show();
-            }
-        });
-        Rajz_Button.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public  void onClick(View view){
-                Toast.makeText(context, "Rajz gomb megnyomva", duration).show();
-            }
-        });
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -122,7 +80,129 @@ public class MainActivity extends AppCompatActivity
         toggle.syncState();
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+        topics = (FlexboxLayout)findViewById(R.id.topic_flexbox);
+        context = getApplicationContext();
+        Runnable r = new Runnable() {
+            @Override
+            public void run() {
+                feltoltFlex();
+            }
+        };
+        Thread t = new Thread(r);
+
+        t.start();
+        try{
+            t.join();
+        }catch (Exception e){
+
+        }
+        final float scale = getResources().getDisplayMetrics().density;
+        int pixels =  (int) (95 * scale +0.5f);
+        int pixelsmargin = (int) (10 * scale + 0.5f);
+        for (Topic item:TopicList) {
+            LinearLayout linearLayout = new LinearLayout(this);
+            linearLayout.setOrientation(LinearLayout.VERTICAL);
+            ConstraintLayout.LayoutParams lparams = new ConstraintLayout.LayoutParams(ConstraintLayout.LayoutParams.WRAP_CONTENT, ConstraintLayout.LayoutParams.WRAP_CONTENT);
+            lparams.setMargins(pixelsmargin, pixelsmargin, pixelsmargin, pixelsmargin);
+
+            linearLayout.setLayoutParams(lparams);
+            linearLayout.setVisibility(View.VISIBLE);
+            FrameLayout frame = new FrameLayout(this);
+            LinearLayout.LayoutParams lparams2 = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT);
+            frame.setLayoutParams(lparams2);
+            ImageButton button = new ImageButton(this);
+            button.setTag(item.id);
+            button.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    GombReakcio(v.getTag().toString());
+                }
+            });
+            button.setBackgroundColor(Color.TRANSPARENT);
+            button.setVisibility(View.VISIBLE);
+            button.setLayoutParams(new FrameLayout.LayoutParams(pixels,pixels));
+            CircularImageView kep = new CircularImageView(this);
+
+            kep.setImageResource(R.drawable.matek);
+            kep.setBorderColor(getResources().getColor(R.color.fooldal_button_border_color));
+            kep.setBorderWidth((int) (4 * scale + 0.5f));
+
+            kep.addShadow();
+
+            kep.setShadowRadius(15);
+            kep.setShadowColor(0xaa000000);
+
+            kep.setShadowGravity(CircularImageView.ShadowGravity.CENTER);
+            kep.setLayoutParams(new FrameLayout.LayoutParams(pixels,pixels));
+            TextView titleView = new TextView(this);
+            titleView.setText(item.name);
+            titleView.setTextSize(20);
+            titleView.setTextColor(getResources().getColor(R.color.fooldal_button_border_color));
+            titleView.setGravity(Gravity.CENTER);
+            frame.addView(kep,0);
+            frame.addView(button,1);
+            linearLayout.addView(frame);
+            linearLayout.addView(titleView);
+            topics.addView(linearLayout);
+
+
+        }
+
     }
+    private  void feltoltFlex(){
+        Gson gson= new Gson();
+        try {
+
+            URL url = new URL("https://nyusz.eu/afpleva/public/sapi/topics");
+            HttpsURLConnection test = (HttpsURLConnection) url.openConnection();
+            test.setRequestMethod("GET");
+            test.setRequestProperty("Content-Type", "application/json; charset=utf-8");
+            test.setRequestProperty("Authorization","Bearer "+getToken().replace('"',' '));
+
+            Log.w("RequestProps: ",test.getRequestProperties().toString());
+            test.setDoInput(true);
+            InputStream in;
+            test.connect();
+            if (test.getResponseCode() != 200) {
+
+                in = new BufferedInputStream(test.getErrorStream());
+
+            }
+            else{
+                in = new BufferedInputStream(test.getInputStream());
+            }
+            if (test.getResponseCode() != 200) {
+
+                Log.w("Failed ",test.getResponseMessage());
+
+            }
+            String downloadedjsonstring =  LoginActivity.readStream(in);
+            Log.w("Api answer: ",downloadedjsonstring);
+            test.disconnect();
+
+            if(downloadedjsonstring != null){
+                JSONObject json = new JSONObject(downloadedjsonstring);
+                JSONArray array = json.getJSONArray("payload");
+                TopicList = new ArrayList<Topic>();
+                for (int i = 0; i < array.length();i++ ){
+                    Log.w("JsonArray item"+i,array.getJSONObject(i).toString());
+                    TopicList.add(gson.fromJson(array.getJSONObject(i).toString(),Topic.class));
+                }
+            }
+
+
+        }catch (Exception e){
+            Log.w("Api error: ",e);
+        }
+
+
+        // TODO: register the new account here.
+
+    }
+    void GombReakcio(String nev){
+        Toast.makeText(context, nev, duration).show();
+    }
+
     private String getToken() {
         SharedPreferences prefs = getSharedPreferences("Adatok",Context.MODE_PRIVATE);
         return prefs.getString("token","");
