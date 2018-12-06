@@ -214,67 +214,67 @@
 		
 7. ExerciseList
 
-- Új
+	- Új
 
-    URL: https://nyusz.eu/afpleva/public/sapi/ExerciseList
-        
-    Method: POST
-        
-    Body Content Type: application/json
-    
-    Body Content példa: title": "A feladatsor címe"}
-		
-	A tanár ID hozzáadása automatikus. Mivel jelenleg nincs jogosultságrendszer, így akár diák is tárolhat.
-	Az azonosítót a Tokenből dekódolja a rendszer.
-        
-- Lista
- 
-    URL: https://nyusz.eu/afpleva/public/sapi/ExerciseList
-        
-    Method: GET
-        
-- Lista tanár ID-re szűrve
- 
-    URL: https://nyusz.eu/afpleva/public/sapi/ExerciseLists?teacher={id}
-        
-    Method: GET
-        
-- Adott id 
- 
-    https://nyusz.eu/afpleva/public/sapi/ExerciseList/{id}
-        
-    Method: GET
-        
-- Törlés
- 
-    URL: https://nyusz.eu/afpleva/public/sapi/ExerciseList/{id}
-        
-    Method: DELETE
-		
-- Feladatok hozzárendelése
+	    URL: https://nyusz.eu/afpleva/public/sapi/exerciseList
 
-	URL: https://nyusz.eu/afpleva/public/sapi/ExerciseList/{id}/assign
-        
-    Method: POST
-        
-    Body Content Type: application/json
-    
-    Body Content példa jelenleg: 
-    
-        {"dilemma": [1,2,3,4,5]}
-	
-	Body Content példa később, ha már tárolható lesz a másik feladattípus is:
-	
-		{"dilemma": [1,2,3,4,5], "multipleChoice": [1,2,3,4,5]}
-		
-	Vagyis a hozzárendelendő feladatokat típusonként csoportosítva, az azonosítójukkal ellátva kell felsorolni.
+	    Method: POST
 
-	##### Figyelem: az assign parancs jelenleg felülírja a listát, tehát mindig a teljes felsorolást csatold!
+	    Body Content Type: application/json
 
-- Hozzárendelt feladatok megjelenítése (feladatsor lekérése a vizsgákhoz, nem lesz benne a helyes válasz)
+	    Body Content példa: title": "A feladatsor címe"}
 
-	URL: https://nyusz.eu/afpleva/public/sapi/ExerciseList/{id}/assigned
-        
-    Method: GET
-        
-    Body Content Type: application/json
+		A tanár ID hozzáadása automatikus. Mivel jelenleg nincs jogosultságrendszer, így akár diák is tárolhat.
+		Az azonosítót a Tokenből dekódolja a rendszer.
+
+	- Lista
+
+	    URL: https://nyusz.eu/afpleva/public/sapi/exerciseLists
+
+	    Method: GET
+
+	- Lista tanár ID-re szűrve
+
+	    URL: https://nyusz.eu/afpleva/public/sapi/exerciseLists?teacher={id}
+
+	    Method: GET
+
+	- Adott id 
+
+	    https://nyusz.eu/afpleva/public/sapi/exerciseList/{id}
+
+	    Method: GET
+
+	- Törlés
+
+	    URL: https://nyusz.eu/afpleva/public/sapi/exerciseList/{id}
+
+	    Method: DELETE
+
+	- Feladatok hozzárendelése
+
+		URL: https://nyusz.eu/afpleva/public/sapi/exerciseList/{id}/assign
+
+	    Method: POST
+
+	    Body Content Type: application/json
+
+	    Body Content példa jelenleg: 
+
+		{"dilemma": [1,2,3,4,5]}
+
+		Body Content példa később, ha már tárolható lesz a másik feladattípus is:
+
+			{"dilemma": [1,2,3,4,5], "multipleChoice": [1,2,3,4,5]}
+
+		Vagyis a hozzárendelendő feladatokat típusonként csoportosítva, az azonosítójukkal ellátva kell felsorolni.
+
+		##### Figyelem: az assign parancs jelenleg felülírja a listát, tehát mindig a teljes felsorolást csatold!
+
+	- Hozzárendelt feladatok megjelenítése (feladatsor lekérése a vizsgákhoz, nem lesz benne a helyes válasz)
+
+		URL: https://nyusz.eu/afpleva/public/sapi/exerciseList/{id}/assigned
+
+	    Method: GET
+
+	    Body Content Type: application/json
