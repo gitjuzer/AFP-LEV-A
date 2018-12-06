@@ -161,6 +161,12 @@ EMCTestList kapcsoló tábla:
 
 	EMCTL_TL_ID mezőnév, egész típusú mező, elsődleges és idegen kulcs megkötéssel.
 	EMCTL_EMC_ID mezőnév, egész típusú mező, elsődleges és idegen kulcs megkötéssel.
+	
+	Az EMCTestList táblaban 2 mező van.
+	Az "EMCTL_TL_ID" mező amely egész típusú, megszorításokat tekintve elsődleges és idegen kulcs megszorításokkal rendelkezik.
+	Az "EMCTL_EMC_ID" mező szintén egész típusú, megszorításokat tekintve elsődleges és idegen kulcs megszorításokkal rendelkezik.
+	A tábla szerepét tekintve egy kapcsoló tábla amely az "ExerciseMultipleChoice" és a "TestList" táblákat kötik össze.
+	A kapcsolatott tekintve több-a-többhöz kapcsolatról beszélünk.
 
 	*ExerciseDilemma-TestList: Több-a-többhöz kapcsolat (EDTestlist a kapcsoló tábla).
 EDTestList kapcsoló tábla:
