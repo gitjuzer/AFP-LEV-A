@@ -103,6 +103,12 @@ Test tábla:
 	-TE_ID mezőnév, egész típusú mező, elsődleges kulcs.
 	-TE_Score mezőnév, egész típusú mező, NOT NULL megkötés.
 	-TE_TL_ID mezőnév, egész típusú mező, idegen kulcs , NOT NULL megkötés.
+	
+	A Test adat tábla 3 mezőből áll.
+	A mezők név szerint "TE_ID","TE_Score" és a "TE_TL_ID" mezők.
+	A "TE_ID" mező egy egész típusú mező, elsődleges kulcs megszorítással.
+	A "TE_Score" mezp egy egész típusú mező amely a tesztek ponjait tárolja el, mely még rendelkezik egy NOT NULL megszorítással.
+	A "TE_TL_ID" mező egész típusú mező, idegen kulcs megszorítással, amely a "TestList" tábla kapcsolatából vonatkoztatható.
 
 User tábla:
 	Ebben a táblában tároljuk a felhasználó adatait.
