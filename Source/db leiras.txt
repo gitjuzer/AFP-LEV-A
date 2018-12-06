@@ -329,7 +329,7 @@ EMCTestList kapcsoló tábla:
 		    ON UPDATE NO ACTION)
 		ENGINE = InnoDB;
 
-		CREATE INDEX `fk_TestList_has_ExcersiceMultipleChoise_ExcersiceMultipleCh_idx` ON `afpleva_test`.`EMCTestList` (`EMCTL_EMC_ID` ASC);
+		CREATE INDEX `fk_TestList_has_ExcersiceMultipleChoise_ExcersiceMultipleCh_idx` ON `afpleva_test`.`EMCTestList` 				(`EMCTL_EMC_ID` ASC);
 
 		CREATE INDEX `fk_TestList_has_ExcersiceMultipleChoise_TestList1_idx` ON `afpleva_test`.`EMCTestList` (`EMCTL_TL_ID` ASC);
 
@@ -339,7 +339,13 @@ EDTestList kapcsoló tábla:
 	EDTL_ED_ID mezőnév, egész típusú mező, elsődleges és idegen kulcs megkötéssel.
 	EDTL_TL_ID mezőnév, egész típusú mező, elsődleges és idegen kulcs megkötéssel. 
 
-	*Test-User: Több-a-többhöz kapcsolat (TUSer a kapcsoló tábla).
+	
+	
+	Az "ED_TestList" táblaban 2 mező található.
+	A mezők nevei "EDTL_ED_ID" amely egész típusú mező és rendelkezik elsődleges kulcs és idegen kulcs megszorítással.
+	A mezők nevei "EDTL_TL_ID" amely egész típusú mező és rendelkezik elsődleges kulcs és idegen kulcs megszorítással.
+	A tábla szerepét tekintve kapcsoló tábla, amely az "ExerciseDilemma" és a "TestList" táblákat kötik össze.
+	A kapcsolatott tekintve több-a-többhöz kapcsolatról beszélünk.
 	
 	SQL kód:
 	CREATE TABLE IF NOT EXISTS `afpleva_test`.`EDTestList` (
@@ -362,6 +368,7 @@ EDTestList kapcsoló tábla:
 
 		CREATE INDEX `fk_ExcersiseDilemma_has_TestList_ExcersiseDilemma1_idx` ON `afpleva_test`.`EDTestList` (`EDTL_ED_ID` ASC);
 
+*Test-User: Több-a-többhöz kapcsolat (TUSer a kapcsoló tábla).
 TUSer kapcsoló tábla:
 	Mezők:
 
