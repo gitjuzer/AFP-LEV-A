@@ -297,7 +297,7 @@ Kapcsolatok:
 	Test-TestList: Egy-az-egyhez kapcsolat (Test táblában a TE_TL_ID mező az idegen kulcs).
 	User-TestList: Egy-a-többhöz kapcsolat (TestList táblában a TL_U_ID mező az idegen kulcs).
 
-	*ExerciseMultipleChoice-TestList: Több-a-többhöz kapcsolat (EMCTestList a kapcsoló tábla).
+*ExerciseMultipleChoice-TestList: Több-a-többhöz kapcsolat (EMCTestList a kapcsoló tábla).
 EMCTestList kapcsoló tábla:
 	Mezők:
 
@@ -310,7 +310,7 @@ EMCTestList kapcsoló tábla:
 	A tábla szerepét tekintve egy kapcsoló tábla amely az "ExerciseMultipleChoice" és a "TestList" táblákat kötik össze.
 	A kapcsolatott tekintve több-a-többhöz kapcsolatról beszélünk.
 
-	*ExerciseDilemma-TestList: Több-a-többhöz kapcsolat (EDTestlist a kapcsoló tábla).
+	
 	
 	SQL kód:
 	CREATE TABLE IF NOT EXISTS `afpleva_test`.`EMCTestList` (
@@ -332,7 +332,8 @@ EMCTestList kapcsoló tábla:
 		CREATE INDEX `fk_TestList_has_ExcersiceMultipleChoise_ExcersiceMultipleCh_idx` ON `afpleva_test`.`EMCTestList` 				(`EMCTL_EMC_ID` ASC);
 
 		CREATE INDEX `fk_TestList_has_ExcersiceMultipleChoise_TestList1_idx` ON `afpleva_test`.`EMCTestList` (`EMCTL_TL_ID` ASC);
-
+		
+*ExerciseDilemma-TestList: Több-a-többhöz kapcsolat (EDTestlist a kapcsoló tábla).
 EDTestList kapcsoló tábla:
 	Mezők:
 
@@ -373,7 +374,14 @@ TUSer kapcsoló tábla:
 	Mezők:
 
 	TU_U_ID mezőnév, egész típusú mező, elsődleges és idegen kulcs megkötéssel.
-	TU_TE_ID mezőnév, egész típusú mező, elsődleges és idegen kulcs megkötéssel. 
+	TU_TE_ID mezőnév, egész típusú mező, elsődleges és idegen kulcs megkötéssel.
+	
+	Az "TUser" tábla mezőit tekintve 2 mezőből áll.
+	A mezők nevei "TU_U_ID" és a "TU_TE_ID".
+	A "TU_U_ID" mező egy egész típusú mező, amely rendelkezik elsődleges és idegen kulcs megkötéssel.
+	A "TU_TE_ID" mező egy egész típusú mező, amely rendelkezik elsődleges és idegen kulcs megkötéssel.
+	A tábla szerepét tekintve kapcsoló tábla, amely a "Test" és a "User" táblákat kötik össze.
+	A kapcsolatott tekintve több-a-többhöz kapcsolatról beszélünk.
 	
 	SQL kód:
 	CREATE TABLE IF NOT EXISTS `afpleva_test`.`TUSer` (
