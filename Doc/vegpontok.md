@@ -233,48 +233,47 @@
 
        Method: GET
 
-	- Lista tanár ID-re szűrve
+ - Lista tanár ID-re szűrve
 
-	    URL: https://nyusz.eu/afpleva/public/sapi/exerciseLists?teacher={id}
+       URL: https://nyusz.eu/afpleva/public/sapi/exerciseLists?teacher={id}
 
-	    Method: GET
+       Method: GET
 
-	- Adott id 
+ - Adott id 
 
-	    https://nyusz.eu/afpleva/public/sapi/exerciseList/{id}
+       https://nyusz.eu/afpleva/public/sapi/exerciseList/{id}
 
-	    Method: GET
+       Method: GET
 
-	- Törlés
+ - Törlés
+       
+       URL: https://nyusz.eu/afpleva/public/sapi/exerciseList/{id}
+       
+       Method: DELETE
 
-	    URL: https://nyusz.eu/afpleva/public/sapi/exerciseList/{id}
+ - Feladatok hozzárendelése
 
-	    Method: DELETE
+       URL: https://nyusz.eu/afpleva/public/sapi/exerciseList/{id}/assign
 
-	- Feladatok hozzárendelése
+       Method: POST
 
-		URL: https://nyusz.eu/afpleva/public/sapi/exerciseList/{id}/assign
+       Body Content Type: application/json
+       
+       Body Content példa jelenleg: 
 
-	    Method: POST
+       {"dilemma": [1,2,3,4,5]}
 
-	    Body Content Type: application/json
+       Body Content példa később, ha már tárolható lesz a másik feladattípus is:
 
-	    Body Content példa jelenleg: 
+       {"dilemma": [1,2,3,4,5], "multipleChoice": [1,2,3,4,5]}
+**Vagyis a hozzárendelendő feladatokat típusonként csoportosítva, az azonosítójukkal ellátva kell felsorolni.**
 
-		{"dilemma": [1,2,3,4,5]}
+##### Figyelem: az assign parancs jelenleg felülírja a listát, tehát mindig a teljes felsorolást csatold!
+ 
+ - Hozzárendelt feladatok megjelenítése (feladatsor lekérése a vizsgákhoz, nem lesz benne a helyes válasz)
 
-		Body Content példa később, ha már tárolható lesz a másik feladattípus is:
+       URL: https://nyusz.eu/afpleva/public/sapi/exerciseList/{id}/assigned
 
-			{"dilemma": [1,2,3,4,5], "multipleChoice": [1,2,3,4,5]}
+       Method: GET
 
-		Vagyis a hozzárendelendő feladatokat típusonként csoportosítva, az azonosítójukkal ellátva kell felsorolni.
-
-		##### Figyelem: az assign parancs jelenleg felülírja a listát, tehát mindig a teljes felsorolást csatold!
-
-	- Hozzárendelt feladatok megjelenítése (feladatsor lekérése a vizsgákhoz, nem lesz benne a helyes válasz)
-
-		URL: https://nyusz.eu/afpleva/public/sapi/exerciseList/{id}/assigned
-
-	    Method: GET
-
-	    Body Content Type: application/json
+       Body Content Type: application/json
