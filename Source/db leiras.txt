@@ -65,12 +65,6 @@ ExerciseMultipleChoice tábla:
 	-EMC_ID mezőnév, egész típusú mező, elsődleges kulcs.
 	-EMC_Question mezőnév, karakter típusú mező (VARCHAR(255)), NOT NULL megkötés.
 	-EMC_E_ID mezőnév, egész típusú mező, idegen kulcs.
-	
-	Az ExerciseMultipleChoice téábla 3 mezőből áll.
-	A tábla elsődleges kulcsa az "EMC_ID" mező tölti be, ami egy egész típusú mező.
-	Az "EMC_Question" mező egy karakter típusú mező, mely a kérdéseket fogja nekünk tárolni, ami mellé még egy NOT NULL megkötés 		tartalmaz.
-	Az "EMC_E_ID" egész típusú mező mely egy idegen kulcs megszorítással rendelkezik.
-	A tábla rendelkezik 3 egy-a-többhöz kapcsolattal is amely a "EMCAnswer", "EMCTestList" és a "Exercise" táblákat foglalja magában.
 
 EXErciseDilemma tábla:
 	Gondolkodtatós feladat esetén ebbe a táblába menti a feladatot.
@@ -80,3 +74,58 @@ EXErciseDilemma tábla:
 	-ED_Question mezőnév, karakter típusú mező (VARCHAR(255)), NOT NULL megkötés.
 	-ED_YesNo mezőnév, egész típusú mező (TINYINT), NOT NULL megkötés.
 	-ED_E_ID mezőnév, egész típusú mező, idegen kulcs.
+Test tábla:
+Mezők:
+
+-TE_ID mezőnév, egész típusú mező, elsődleges kulcs.
+-TE_Score mezőnév, egész típusú mező, NOT NULL megkötés.
+-TE_TL_ID mezőnév, egész típusú mező, idegen kulcs , NOT NULL megkötés.
+
+User tábla:
+Mezők:
+
+-U_ID mezőnév, egész típusú mező, elsődleges kulcs.
+-U_LoginName mezőnév, karakter típusú mező (VARCHAR (45)), UNIQUE megkötés.
+-U_Name mezőnév, karakter típusú mező (VARCHAR(50)), NOT NULL megkötés.
+-U_Email mezőnév, karakter típusú mező (VARCHAR(50)), NOT NULL megkötés.
+-U_Pass mezőnév, karakter típusú mező (VARCHAR(255)), NOT NULL megkötés.
+-U_Type mezőnév, ENUM típusú mező, NOT NULL megkötés.
+
+TestList tábla:
+	Mezők:
+
+	-TL_ID mezőnév, egész típusú mező, elsődleges kulcs.
+	-TL_Title mezőnév, karakter típusú mező (VARCHAR(45)), NOT NULL megkötés.
+	-TL_U_ID mezőnév, egész típusú mező, idegen kulcs.
+
+
+Kapcsolatok:
+
+Topic-Curriculum: Egy-a-többhöz kapcsolat (Curriculum táblában a C_T_ID mező az idegen kulcs).
+Topic-Exercise: Egy-az-egyhez kapcsolat (Exercise táblában a E_T_ID mező az idegen kulcs).
+Exercise-ExerciseDilemma: Egy-az-egyhez kapcsolat (ExerciseDilemma táblában a ED_E_ID mező az idegen kulcs.)
+Exercise-ExerciseMultipleChoice: Egy-az-egyhez kapcsolat (ExerciseMultipleChoice táblában az EMC_E_ID mező az idegen kulcs).
+ExerciseMultipleChoice-EMCAnswer: Egy-a-többhöz kapcsolat (EMCAnswer táblában az EMCA_EMC_ID mező az idegen kulcs).
+Test-TestList: Egy-az-egyhez kapcsolat (Test táblában a TE_TL_ID mező az idegen kulcs).
+User-TestList: Egy-a-többhöz kapcsolat (TestList táblában a TL_U_ID mező az idegen kulcs).
+
+*ExerciseMultipleChoice-TestList: Több-a-többhöz kapcsolat (EMCTestList a kapcsoló tábla).
+EMCTestList kapcsoló tábla:
+Mezők:
+
+EMCTL_TL_ID mezőnév, egész típusú mező, elsődleges és idegen kulcs megkötéssel.
+EMCTL_EMC_ID mezőnév, egész típusú mező, elsődleges és idegen kulcs megkötéssel.
+
+*ExerciseDilemma-TestList: Több-a-többhöz kapcsolat (EDTestlist a kapcsoló tábla).
+EDTestList kapcsoló tábla:
+Mezők:
+
+EDTL_ED_ID mezőnév, egész típusú mező, elsődleges és idegen kulcs megkötéssel.
+EDTL_TL_ID mezőnév, egész típusú mező, elsődleges és idegen kulcs megkötéssel. 
+
+*Test-User: Több-a-többhöz kapcsolat (TUSer a kapcsoló tábla).
+TUSer kapcsoló tábla:
+Mezők:
+
+TU_U_ID mezőnév, egész típusú mező, elsődleges és idegen kulcs megkötéssel.
+TU_TE_ID mezőnév, egész típusú mező, elsődleges és idegen kulcs megkötéssel. 
