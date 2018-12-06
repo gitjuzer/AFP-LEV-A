@@ -73,7 +73,7 @@ ExerciseMultipleChoice tábla:
 	A tábla rendelkezik 3 egy-a-többhöz kapcsolattal is amely a "EMCAnswer", "EMCTestList" és a "Exercise" táblákat foglalja magában.
 
 EXErciseDilemma tábla:
-	Gondolkodtatós feladat esetén ebbe a táblába menti a feladatot.
+	Gondolkodtatós feladat esetén ebbe a táblába menti a feladatot kérdését és a helyes választ (igen/nem).
 	Mezők:
 
 	-ED_ID mezőnév, egész típusú mező, elsődleges kulcs.
@@ -81,6 +81,7 @@ EXErciseDilemma tábla:
 	-ED_YesNo mezőnév, egész típusú mező (TINYINT), NOT NULL megkötés.
 	-ED_E_ID mezőnév, egész típusú mező, idegen kulcs.
 Test tábla:
+	Ebben a táblában tároljuk az egyes teszteket és az eredményeket.
 	Mezők:
 
 	-TE_ID mezőnév, egész típusú mező, elsődleges kulcs.
@@ -88,7 +89,7 @@ Test tábla:
 	-TE_TL_ID mezőnév, egész típusú mező, idegen kulcs , NOT NULL megkötés.
 
 User tábla:
-	
+	Ebben a táblában tároljuk a felhasználó adatait.
 	Mezők:
 
 	-U_ID mezőnév, egész típusú mező, elsődleges kulcs.
@@ -99,6 +100,7 @@ User tábla:
 	-U_Type mezőnév, ENUM típusú mező, NOT NULL megkötés.
 
 TestList tábla:
+	A különböző tesztek neveit tároljuk ebben a táblában.
 	Mezők:
 
 	-TL_ID mezőnév, egész típusú mező, elsődleges kulcs.
