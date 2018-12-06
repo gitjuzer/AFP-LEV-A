@@ -128,7 +128,13 @@ TestList tábla:
 	-TL_ID mezőnév, egész típusú mező, elsődleges kulcs.
 	-TL_Title mezőnév, karakter típusú mező (VARCHAR(45)), NOT NULL megkötés.
 	-TL_U_ID mezőnév, egész típusú mező, idegen kulcs.
-
+	
+	A TestList adat tábla 3 mezőből áll.
+	Melyeknek a nevei "TL_ID","TL_Title" és TL_U_ID".
+	A "TL_ID" mező a tábla elsődleges kulcsa, amely egész típusú mező.
+	A "TL_Title" mező egy karakter típusú mező amely a listák címeit fogja tárolni.
+	A "TL_U_ID" mező egész típusú idegen kulcsa megszorítással rendelkező mező.
+	A tábla kapcsolatait tekintve a 4 kapcsolattal rendelkezik.
 
 Kapcsolatok:
 
