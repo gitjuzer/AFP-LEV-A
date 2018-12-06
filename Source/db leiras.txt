@@ -4,30 +4,30 @@ Adatbázis feladata:
 Az adatbázis egy összetett program adatait kezeli le.
 
 Curriculum tábla
-  Mezők:
+	  Mezők:
 
-  -C_ID me‌zőnév, egész típusú mező, elsődleges kulcs.
-  -C_Title mezőnév, szöveg típusú mező (Varchar(99)), NOT NULL megkötés.
-  -C_Content mezőnév, szöveg típusú mező, NOT NULL megkötés.
-  -C_T_ID mezőnév, egész típusú mező, idegen kulcs.
+	  -C_ID me‌zőnév, egész típusú mező, elsődleges kulcs.
+	  -C_Title mezőnév, szöveg típusú mező (Varchar(99)), NOT NULL megkötés.
+	  -C_Content mezőnév, szöveg típusú mező, NOT NULL megkötés.
+	  -C_T_ID mezőnév, egész típusú mező, idegen kulcs.
 
 
-  A "Curriculum" tábla felépítés szempontjából 4 mezőből áll. Ezek a mezők
-  a "C_ID", "C_Title", "C_Content" és a "C_T_ID" mezők. Ezekből a mezőkből
-  a C_ID egész típusú és a tölti be az elsődleges kulcs szerepét. A C_Title
-  mező az adott tanmenet nevét, mely nem lehet NULL értékű és a maga a mezőtípusa
-  VARCHAR ami 99 hosszúságú. A tábla még tartalmaz egy C_T_ID mezőt mely idegen
-  kulcs szerepét tölti be, amely a Topic táblához kapcsolódik. A tábla
-  kapcsolatait tekintve csak a Topic táblához kapcsolódik egy a többhöz kapcsolattal.
+	  A "Curriculum" tábla felépítés szempontjából 4 mezőből áll. Ezek a mezők
+	  a "C_ID", "C_Title", "C_Content" és a "C_T_ID" mezők. Ezekből a mezőkből
+	  a C_ID egész típusú és a tölti be az elsődleges kulcs szerepét. A C_Title
+	  mező az adott tanmenet nevét, mely nem lehet NULL értékű és a maga a mezőtípusa
+	  VARCHAR ami 99 hosszúságú. A tábla még tartalmaz egy C_T_ID mezőt mely idegen
+	  kulcs szerepét tölti be, amely a Topic táblához kapcsolódik. A tábla
+	  kapcsolatait tekintve csak a Topic táblához kapcsolódik egy a többhöz kapcsolattal.
 
 
 Topic tábla
-  Ebben a táblában tároljuk a feladat fajtákat.
-  Mezők:
+	Ebben a táblában tároljuk a feladat fajtákat.
+  	Mezők:
 
-  -T_ID mezőnév, egész típusú, elsődleges kulcs.
-  -T_Name mezőnév, karakter típusú mező (VARCHAR (45)), UNIQUE megkötés.
-  -T_Desc mezőnév, szöveg típusú mező.
+  	-T_ID mezőnév, egész típusú, elsődleges kulcs.
+  	-T_Name mezőnév, karakter típusú mező (VARCHAR (45)), UNIQUE megkötés.
+  	-T_Desc mezőnév, szöveg típusú mező.
 
 Exercise tábla
 	Ebben a táblában tároljuk a feladatokat. A témakörök (topic) táblával van összekötve.
@@ -39,7 +39,7 @@ Exercise tábla
 	Az "Exercise" tábla felépítése csupán 2 mezőt foglal magában.
 	Az E_ID mező egész típusú, elsődleges kulcs megszorítással rendelkező mező.
 	Az E_T_ID mező egy egész típusú és idegen kulcs megszorítással rendelkező mező.
-	A tábla 3 kapcsolattal rendelkezik, melyek a "Topic","ExerciceMultipleChoice" és az "ExerciseDilemma" táblákat foglalják magukba.
+	A tábla 3 kapcsolattal rendelkezik, melyek a "Topic","ExerciceMultipleChoice" és az "ExerciseDilemma" táblákat foglalják 		magukba.
 	
 EMCAnswer tábla:
 	Ebben a táblában vannak elhelyezve a feladat válaszok.
@@ -81,21 +81,22 @@ EXErciseDilemma tábla:
 	-ED_YesNo mezőnév, egész típusú mező (TINYINT), NOT NULL megkötés.
 	-ED_E_ID mezőnév, egész típusú mező, idegen kulcs.
 Test tábla:
-Mezők:
+	Mezők:
 
--TE_ID mezőnév, egész típusú mező, elsődleges kulcs.
--TE_Score mezőnév, egész típusú mező, NOT NULL megkötés.
--TE_TL_ID mezőnév, egész típusú mező, idegen kulcs , NOT NULL megkötés.
+	-TE_ID mezőnév, egész típusú mező, elsődleges kulcs.
+	-TE_Score mezőnév, egész típusú mező, NOT NULL megkötés.
+	-TE_TL_ID mezőnév, egész típusú mező, idegen kulcs , NOT NULL megkötés.
 
 User tábla:
-Mezők:
+	
+	Mezők:
 
--U_ID mezőnév, egész típusú mező, elsődleges kulcs.
--U_LoginName mezőnév, karakter típusú mező (VARCHAR (45)), UNIQUE megkötés.
--U_Name mezőnév, karakter típusú mező (VARCHAR(50)), NOT NULL megkötés.
--U_Email mezőnév, karakter típusú mező (VARCHAR(50)), NOT NULL megkötés.
--U_Pass mezőnév, karakter típusú mező (VARCHAR(255)), NOT NULL megkötés.
--U_Type mezőnév, ENUM típusú mező, NOT NULL megkötés.
+	-U_ID mezőnév, egész típusú mező, elsődleges kulcs.
+	-U_LoginName mezőnév, karakter típusú mező (VARCHAR (45)), UNIQUE megkötés.
+	-U_Name mezőnév, karakter típusú mező (VARCHAR(50)), NOT NULL megkötés.
+	-U_Email mezőnév, karakter típusú mező (VARCHAR(50)), NOT NULL megkötés.
+	-U_Pass mezőnév, karakter típusú mező (VARCHAR(255)), NOT NULL megkötés.
+	-U_Type mezőnév, ENUM típusú mező, NOT NULL megkötés.
 
 TestList tábla:
 	Mezők:
@@ -107,31 +108,31 @@ TestList tábla:
 
 Kapcsolatok:
 
-Topic-Curriculum: Egy-a-többhöz kapcsolat (Curriculum táblában a C_T_ID mező az idegen kulcs).
-Topic-Exercise: Egy-az-egyhez kapcsolat (Exercise táblában a E_T_ID mező az idegen kulcs).
-Exercise-ExerciseDilemma: Egy-az-egyhez kapcsolat (ExerciseDilemma táblában a ED_E_ID mező az idegen kulcs.)
-Exercise-ExerciseMultipleChoice: Egy-az-egyhez kapcsolat (ExerciseMultipleChoice táblában az EMC_E_ID mező az idegen kulcs).
-ExerciseMultipleChoice-EMCAnswer: Egy-a-többhöz kapcsolat (EMCAnswer táblában az EMCA_EMC_ID mező az idegen kulcs).
-Test-TestList: Egy-az-egyhez kapcsolat (Test táblában a TE_TL_ID mező az idegen kulcs).
-User-TestList: Egy-a-többhöz kapcsolat (TestList táblában a TL_U_ID mező az idegen kulcs).
+	Topic-Curriculum: Egy-a-többhöz kapcsolat (Curriculum táblában a C_T_ID mező az idegen kulcs).
+	Topic-Exercise: Egy-az-egyhez kapcsolat (Exercise táblában a E_T_ID mező az idegen kulcs).
+	Exercise-ExerciseDilemma: Egy-az-egyhez kapcsolat (ExerciseDilemma táblában a ED_E_ID mező az idegen kulcs.)
+	Exercise-ExerciseMultipleChoice: Egy-az-egyhez kapcsolat (ExerciseMultipleChoice táblában az EMC_E_ID mező az idegen kulcs).
+	ExerciseMultipleChoice-EMCAnswer: Egy-a-többhöz kapcsolat (EMCAnswer táblában az EMCA_EMC_ID mező az idegen kulcs).
+	Test-TestList: Egy-az-egyhez kapcsolat (Test táblában a TE_TL_ID mező az idegen kulcs).
+	User-TestList: Egy-a-többhöz kapcsolat (TestList táblában a TL_U_ID mező az idegen kulcs).
 
-*ExerciseMultipleChoice-TestList: Több-a-többhöz kapcsolat (EMCTestList a kapcsoló tábla).
+	*ExerciseMultipleChoice-TestList: Több-a-többhöz kapcsolat (EMCTestList a kapcsoló tábla).
 EMCTestList kapcsoló tábla:
-Mezők:
+	Mezők:
 
-EMCTL_TL_ID mezőnév, egész típusú mező, elsődleges és idegen kulcs megkötéssel.
-EMCTL_EMC_ID mezőnév, egész típusú mező, elsődleges és idegen kulcs megkötéssel.
+	EMCTL_TL_ID mezőnév, egész típusú mező, elsődleges és idegen kulcs megkötéssel.
+	EMCTL_EMC_ID mezőnév, egész típusú mező, elsődleges és idegen kulcs megkötéssel.
 
-*ExerciseDilemma-TestList: Több-a-többhöz kapcsolat (EDTestlist a kapcsoló tábla).
+	*ExerciseDilemma-TestList: Több-a-többhöz kapcsolat (EDTestlist a kapcsoló tábla).
 EDTestList kapcsoló tábla:
-Mezők:
+	Mezők:
 
-EDTL_ED_ID mezőnév, egész típusú mező, elsődleges és idegen kulcs megkötéssel.
-EDTL_TL_ID mezőnév, egész típusú mező, elsődleges és idegen kulcs megkötéssel. 
+	EDTL_ED_ID mezőnév, egész típusú mező, elsődleges és idegen kulcs megkötéssel.
+	EDTL_TL_ID mezőnév, egész típusú mező, elsődleges és idegen kulcs megkötéssel. 
 
-*Test-User: Több-a-többhöz kapcsolat (TUSer a kapcsoló tábla).
+	*Test-User: Több-a-többhöz kapcsolat (TUSer a kapcsoló tábla).
 TUSer kapcsoló tábla:
-Mezők:
+	Mezők:
 
-TU_U_ID mezőnév, egész típusú mező, elsődleges és idegen kulcs megkötéssel.
-TU_TE_ID mezőnév, egész típusú mező, elsődleges és idegen kulcs megkötéssel. 
+	TU_U_ID mezőnév, egész típusú mező, elsődleges és idegen kulcs megkötéssel.
+	TU_TE_ID mezőnév, egész típusú mező, elsődleges és idegen kulcs megkötéssel. 
