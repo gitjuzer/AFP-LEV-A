@@ -70,7 +70,7 @@ Táblák:
 		- T_Desc, null
 
 - Tananyag tábla
-	- táblanév: Curiculum
+	- táblanév: Curriculum
 	- mező nevek: 
 		- C_ID, PK
 		- C_T_ID, FK
@@ -114,14 +114,14 @@ Táblák:
 		- TL_U_ID, FK (tanár)
 		
 - Igen/Nem teszt
-	- tábla neve: EDTest
+	- tábla neve: EDTestList
 	- mező nevek:
 		- EDT_ID, PK
 		- EDT_TL_ID, FK
 		- EDT_ED_ID, FK
 		
 - Felelet választó teszt
-	- tábla neve: EMCTest
+	- tábla neve: EMCTestList
 	- mező nevek:
 		- EMCT_ID, PK
 		- EMCT_TL_ID, FK
@@ -134,6 +134,11 @@ Táblák:
 		- TE_U_ID, FK (tanulók)
 		- TE_TL_ID, FK
 		- TE_Score
+- Tanulók által kitöltött tesztek
+	- tábla neve: TUser
+	- mező nevek:
+		-TU_U_ID, FK
+		-TU_TE_ID, FK
 		
 ##Funkció terv
 
