@@ -49,3 +49,18 @@ EMCAnswer tábla:
 	-EMCA_Answer mezőnév, karakter típusú mező (VARCHAR(255)), NOT NULL megkötés.
 	-EMCA_IsCorrect mezőnév, egész típusú mező(TINYINT), NOT NULL megkötés.
 	-EMCA_EMC_ID mezőnév, egész típusú mező, idegen kulcs.
+
+ExerciseMultipleChoice tábla:
+Mezők:
+
+-EMC_ID mezőnév, egész típusú mező, elsődleges kulcs.
+-EMC_Question mezőnév, karakter típusú mező (VARCHAR(255)), NOT NULL megkötés.
+-EMC_E_ID mezőnév, egész típusú mező, idegen kulcs.
+
+EXErciseDilemma tábla:
+Mezők:
+
+-ED_ID mezőnév, egész típusú mező, elsődleges kulcs.
+-ED_Question mezőnév, karakter típusú mező (VARCHAR(255)), NOT NULL megkötés.
+-ED_YesNo mezőnév, egész típusú mező (TINYINT), NOT NULL megkötés.
+-ED_E_ID mezőnév, egész típusú mező, idegen kulcs.
