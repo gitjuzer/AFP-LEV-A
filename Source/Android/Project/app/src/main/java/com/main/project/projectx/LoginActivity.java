@@ -204,7 +204,7 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
         }
     }
 
-    private String readStream(InputStream is) {
+    public static String readStream(InputStream is) {
         try {
             ByteArrayOutputStream bo = new ByteArrayOutputStream();
             int i = is.read();
