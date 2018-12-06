@@ -8,8 +8,10 @@ import java.io.IOException;
 
 import okhttp3.Call;
 import okhttp3.Callback;
+import okhttp3.MediaType;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
+import okhttp3.RequestBody;
 import okhttp3.Response;
 
 public class MainActivity extends AppCompatActivity {
@@ -31,6 +33,10 @@ public class MainActivity extends AppCompatActivity {
 
         // https://github.com/gitjuzer/AFP-LEV-A/blob/develop/Doc/vegpontok.md
         final Request request = new Request.Builder()
+                .header("Accept", "application/json")
+                .post(RequestBody.create(MediaType.parse("application/json"),
+                        "{\"email\": \"arjunphp@gmail.com\", \"password\": \"Arjun@123\"}"
+                ))
                 .url("https://nyusz.eu/afpleva/public/api/login")
                 .build();
 
