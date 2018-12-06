@@ -2,14 +2,14 @@
   <div class="login">
     <div>
       <el-row>
-        <el-col :span="16" :push="4">
+        <el-col :xs={span:24,offset:0} :sm={span:16,offset:4} >
           <el-card class="box-card">
           	<el-col>
           	  <h2>{{$t('Login')}}</h2>
             </el-col>
             <el-col>
               <el-form ref="loginForm" label-width="30%">
-                <el-form-item :label="$t('Username')">
+                <el-form-item :label="$t('E-mail')">
                   <el-input type="text" v-model="user.email">
                   </el-input>
                 </el-form-item>
@@ -50,13 +50,14 @@ export default {
   methods:{
     login: function(){
       var _this = this;
-      //this.$globals.loggedIn = true;
-      //this.$router.push("dashboard");
-      console.log(this.user.email,this.user.password)
       this.$http.post("/api/login",this.user).then((response) => {
         localStorage.setItem("token",response.data.payload.token);
-
-        _this.$notify.success('Sikeres bejelentkezés' + localStorage.token)
+       // _this.$globals.loggedIn = true;
+        //_this.$globals.user = {realName:_this.user.realName};
+        localStorage.setItem("realName", _this.user.email)
+        _this.$notify.success(_this.$t('Sikeres bejelentkezés'));
+        _this.$root.$emit('refresh-header');
+        _this.$router.push("dashboard");
       })
     }
 

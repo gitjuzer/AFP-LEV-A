@@ -66,14 +66,17 @@ export default {
     }
   },
   methods:{
-    login: function(){
+    getList: function(){
       var _this = this;
-      this.axios.post("/sapi/topics", this.user).then((response) => {
-        _this.$notify.success('Sikeres bejelentkezés')
+      this.$http("/sapi/topics", this.user).then((response) => {
+        console.log(response.data);
       })
     },
     handleNodeClick: function(){}
 
+  },
+  mounted(){
+    this.getList();
   },
   props: {
     msg: String

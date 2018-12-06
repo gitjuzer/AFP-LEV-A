@@ -2,19 +2,27 @@
   <div class="login">
     <div>
       <el-row>
-        <el-col :span="16" :push="4">
+        <el-col :xs={span:24,offset:0} :sm={span:16,offset:4} >
           <el-card class="box-card">
-          	<el-col>
+          	<el-col :span="24">
           	  <h2>{{$t('Registration')}}</h2>
           	</el-col>
-          	<el-col>
+          	<el-col :span="20" :push="2">
               <el-form ref="loginForm" :model="user" label-width="200px">
-                <el-form-item :label="$t('Username')">
-                  <el-input type="text" :model="user.username">
+                <el-form-item :label="$t('Real name')">
+                  <el-input type="text" v-model="user.realName">
+                  </el-input>
+                </el-form-item>
+                <el-form-item :label="$t('Login name')">
+                  <el-input type="text" v-model="user.loginName">
+                  </el-input>
+                </el-form-item>
+                <el-form-item :label="$t('E-mail')">
+                  <el-input type="text" v-model="user.email">
                   </el-input>
                 </el-form-item>
                 <el-form-item :label="$t('Password')">
-                  <el-input type="text" :model="user.password">
+                  <el-input type="password" v-model="user.password">
                   </el-input>
                 </el-form-item>
                 <el-form-item :label="$t('Language')">
@@ -41,8 +49,10 @@ export default {
   data: function(){
     return {
       user: {
-        username: null,
-        password: null
+        email: null,
+        password: null,
+        realName: null,
+        loginName: null,
       },
       languages: Object.keys(this.$i18n.messages),
     }
@@ -51,7 +61,10 @@ export default {
     register: function(){
       var _this = this;
       this.$http.post("/api/register", this.user).then((response) => {
-        _this.$notify.success('Sikeres bejelentkezés')
+        _this.$notify.success(_this.$t('Registration success'))
+        localStorage.setItem("token",response.data.payload.token);
+        _this.$globals.loggedIn = true;
+        _this.$router.push("dashboard");
       })
     }
 

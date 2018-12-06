@@ -5,7 +5,7 @@
       <el-menu-item index="dashboard" route="/dashboard"><font-awesome-icon icon="tasks" class="fa-icon"/><span>{{ $t('Dashboard') }}</span></el-menu-item>
       <el-submenu index="6" class="el-menu-right">
         <template slot="title">
-          <font-awesome-icon icon="user" class="fa-icon"/><span>XXX</span>
+          <font-awesome-icon icon="user" class="fa-icon"/><span>{{realName}}</span>
         </template>
         <el-menu-item index="logout" route="/logout">{{ $t('Logout') }}</el-menu-item>
       </el-submenu>
@@ -20,15 +20,20 @@ export default {
   data: function(){
     return {
       activeIndex: "0",
+      realName: localStorage.getItem("realName")
     }
   },
   methods:{
   },
   mounted(){
+    var _this = this;
     this.$nextTick(() => {
       this.activeIndex = this.$router.history.current.name.toLowerCase();
+      this.realName = localStorage.getItem("realName");
     })
-
+    _this.$root.$on('refresh-header', (data)=>{
+      _this.realName = localStorage.getItem("realName");
+    })
   }
 }
 

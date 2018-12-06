@@ -8,6 +8,7 @@ import store from './store'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { faFile, faProjectDiagram, faCopy, faUpload, faCog, faTasks, faTable, faUsers, faSitemap, faPlusCircle, faUser, faPlus, faChevronLeft, faEdit, faBan, faCode, faChalkboard, faLaptopCode, faSync, faUserPlus, faKey, faPlayCircle, faStopCircle, faRedo } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+Vue.use(require('vue-moment'));
 
 library.add(faFile, faProjectDiagram, faCopy, faUpload, faCog, faTasks, faTable, faUsers, faSitemap, faPlusCircle, faUser, faPlus, faChevronLeft, faEdit, faBan, faCode, faChalkboard, faLaptopCode, faSync, faUserPlus, faKey, faPlayCircle, faStopCircle, faRedo)
 Vue.component('font-awesome-icon', FontAwesomeIcon)
@@ -52,6 +53,42 @@ Vue.prototype.$httpBase = axios.create({
     "Accept-Language": 'en-EN,en;'
   }*/
 });
+
+var lastCheck = null;
+Vue.prototype.$checkLoggedIn = function(_this, callback, force){
+  _this.$globals.loggedIn = true;
+  //check only if last check diff bigger than 10 seconds
+  if (force== true || lastCheck == null || localStorage.loggedIn == false  || (_this.$moment().diff(lastCheck,'seconds') > 10)){
+    lastCheck = _this.$moment();
+    if(( localStorage.getItem('token') == null || localStorage.getItem('token') == 'undefined' ) && localStorage.loggedIn == false){
+      localStorage.clear();
+      _this.$router.push('/login');
+    }else{
+      let whoami = _this.$http.get('sapi/user')
+      .then(function (response) {
+        if(response.data !== ""){
+          _this.$isLoggedIn = true;
+          localStorage.loggedIn = true;
+          _this.$globals.user = response.data;
+          _this.$i18n.locale = response.data.language;
+          callback(null, response.data);
+        }else{
+          localStorage.clear();
+          _this.$isLoggedIn = false;
+          _this.$globals.user = null;
+          _this.$router.push('/login');
+        }
+      })
+      .catch(function (error) {
+        console.log('checkLoggedIn',"force:"+force, error.response)
+        //localStorage.clear();
+        _this.$isLoggedIn = false;
+        callback(error, null);
+      });
+    }
+  }
+};
+
 
 Vue.config.productionTip = false
 

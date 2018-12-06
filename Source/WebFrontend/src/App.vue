@@ -33,6 +33,7 @@ export default {
   },
   mounted(){
     var _this = this;
+    this.$checkLoggedIn(this, (err,data)=>{},true);
     setTimeout(function(){
       _this.loading2 = false
     },1000)
