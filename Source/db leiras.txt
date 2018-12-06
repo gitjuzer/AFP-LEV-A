@@ -59,6 +59,7 @@ EMCAnswer tábla:
 	A Tábla kapcsolati tekintve rendelkezik egy-a-többhöz kapcsolattal amit az ExerciceMultipleChoice táblával.
 
 ExerciseMultipleChoice tábla:
+	Feletválasztós játék esetén ebbe a táblába kerülnek a válaszok.
 	Mezők:
 
 	-EMC_ID mezőnév, egész típusú mező, elsődleges kulcs.
@@ -66,6 +67,7 @@ ExerciseMultipleChoice tábla:
 	-EMC_E_ID mezőnév, egész típusú mező, idegen kulcs.
 
 EXErciseDilemma tábla:
+	Gondolkodtatós feladat esetén ebbe a táblába menti a feladatot.
 	Mezők:
 
 	-ED_ID mezőnév, egész típusú mező, elsődleges kulcs.
