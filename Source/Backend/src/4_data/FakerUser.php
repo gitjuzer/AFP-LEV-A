@@ -26,4 +26,23 @@ class FakerUser
         ];
         return $row;
     }
+
+    public function findByEmail($email)
+    {
+        $type = $this->faker->randomElement([UserTypeEnum::ADMIN, UserTypeEnum::TEACHER, UserTypeEnum::STUDENT]);
+        $row = [
+            'id' => $this->faker->randomNumber(2),
+            'loginName' => $this->faker->userName,
+            'name' => $this->faker->name,
+            'email' => $email,
+            'password' => password_hash('Arjun@123', PASSWORD_DEFAULT),
+            'type' => $type
+        ];
+        return $row;
+    }
+
+    public function store($fakeData = null)
+    {
+        return $this->faker->randomNumber(2);
+    }
 }
