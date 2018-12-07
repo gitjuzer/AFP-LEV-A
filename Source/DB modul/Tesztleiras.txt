@@ -1,0 +1,35 @@
+                                                Adatbázis táblák teszt
+                                                
+                                                
+Táblanév:	    Mezők:	      Elvárás:	                                        Megfelelt:		
+Curriculum 					
+	              C_ID	      autómatikusan inkrementálódik, nem lehet üres	      Megfelelt:		
+	              C_Title	    kitöltése kötelező, text(99)	                      nem kitöltés esetén hiba, hossz esetén hiba, Megfelelt		
+	              C_Content	  kitöltése kötelező, text(255)	                      nem kitöltés esetén hiba, hossz esetén hiba, Megfelelt		
+Topic					
+					
+	              T_ID	      autómatikusan inkrementálódik, nem lehet üres	      feltöltés esetén kitöltődik, megfelelt	
+                T_Name	    Nem lehet két azonos nevű, hossz(45)	              hossz meghaladása esetén hiba, megfelel	
+                T_Desc	    szövegtípusú	                                      megfelet		
+User					
+	              U_ID	      autómatikusan inkrementálódik, nem lehet üres	      feltöltés esetén kitöltődik, megfelelt		
+	              U_LoginName	Nem lehet két azonos nevű, hossz(45)	              már létező nevet nem fogad el, megfelelt		
+                U_Name	    Hossza (45) kitöltése kötelező	                    hossz meghaladása esetén hiba, megfelelt		
+                U_Email	    Hossza (50) kitöltése kötelező	                    hossz meghaladása esetén hiba, muszály kitölteni, megfelelt		
+                U_Pass	    Hossza (255) kitöltése kötelező	                    hossz meghaladása esetén hiba, muszály kitölteni, megfelelt		
+                U_Type	    Megadása kötelező, Enum típus	Meg kell adni a tanar, diak, admin kifejezést		
+ExerciceMultipleChoice					
+                EMC_ID	    autómatikusan inkrementálódik, nem lehet üres	      feltöltés esetén kitöltődik, megfelelt		
+                EMC_Question	Hossza (255) kitöltése kötelező	                  hossz meghaladása esetén hiba, muszály kitölteni, megfelelt		
+                EMC_E_ID	Idegen kulcs az Exercise táblára mutat, megadása kötelező			
+Exercise					
+                E_ID	      autómatikusan inkrementálódik, nem lehet üres	
+                            feltöltés esetén kitöltődik,                        megfelelt		
+                E_T_ID	    Idegen kulcs, a Topic táblára mutat, megadása
+                            kötelező	muszály megadni,                          megfelelt		
+ExerciseDilemma					
+                ED_ID	      autómatikusan inkrementálódik, nem lehet üres			  feltöltés esetén kitöltődik, megfelelt	
+                ED_Question	Hossza (255) kitöltése kötelező	                    feltöltés esetén kitöltődik, megfelelt		
+                Ed_YesNo	  Logikai, igen/nem, kitöltése kötelező	csak 
+                            logikai típust fogad el                             megfelelt		
+                ED_E_ID	    Exercise tábla idegen kulcsa, megadása kötelező	    kihagyása esetén hiba, megfelelt		
