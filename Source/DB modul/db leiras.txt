@@ -1,0 +1,407 @@
+﻿##Adbázis MANUAL
+
+##Adatbázis feladata:
+Az adatbázis egy összetett program adatait kezeli le.
+
+-Curriculum tábla
+  -Mezők:
+
+	  -C_ID me‌zőnév, egész típusú mező, elsődleges kulcs.
+	  -C_Title mezőnév, szöveg típusú mező (Varchar(99)), NOT NULL megkötés.
+	  -C_Content mezőnév, szöveg típusú mező, NOT NULL megkötés.
+	  -C_T_ID mezőnév, egész típusú mező, idegen kulcs.
+
+
+	  A "Curriculum" tábla felépítés szempontjából 4 mezőből áll. Ezek a mezők
+	  a "C_ID", "C_Title", "C_Content" és a "C_T_ID" mezők. Ezekből a mezőkből
+	  a C_ID egész típusú és a tölti be az elsődleges kulcs szerepét. A C_Title
+	  mező az adott tanmenet nevét, mely nem lehet NULL értékű és a maga a mezőtípusa
+	  VARCHAR ami 99 hosszúságú. A tábla még tartalmaz egy C_T_ID mezőt mely idegen
+	  kulcs szerepét tölti be, amely a Topic táblához kapcsolódik. A tábla
+	  kapcsolatait tekintve csak a Topic táblához kapcsolódik egy a többhöz kapcsolattal.
+	  
+  -SQL kód:
+	CREATE TABLE IF NOT EXISTS `afpleva_test`.`Curriculum` (
+		`C_ID` INT NOT NULL AUTO_INCREMENT,
+		`C_Title` VARCHAR(99) NOT NULL,
+		`C_Content` TEXT NOT NULL,
+		`C_T_ID` INT NOT NULL,
+		  PRIMARY KEY (`C_ID`),
+		CONSTRAINT `fk_Curiculum_Topic1`
+		FOREIGN KEY (`C_T_ID`)
+		REFERENCES `afpleva_test`.`Topic` (`T_ID`)
+		ON DELETE NO ACTION
+		ON UPDATE NO ACTION)
+		ENGINE = InnoDB;
+
+		CREATE INDEX `fk_Curiculum_Topic1_idx` ON `afpleva_test`.`Curriculum` (`C_T_ID` ASC);
+
+
+
+-Topic tábla
+	Ebben a táblában tároljuk a feladat fajtákat.
+   -Mezők:
+
+  	-T_ID mezőnév, egész típusú, elsődleges kulcs.
+  	-T_Name mezőnév, karakter típusú mező (VARCHAR (45)), UNIQUE megkötés.
+  	-T_Desc mezőnév, szöveg típusú mező.
+	
+	A "Topic" tábla felépítése 3 mezőből áll. Ezek a mezők a "T_ID",  T_Name és a T_Desc.
+	A táblában az elsődleges kulcs szerepét a "T_ID" mező tölti be, mely egy egész típusú mező.
+	A tételek neveit a "T_Name" mező végzi el, mely egy karakter típusú mező ami 45 karakter hosszú és rendelkezik egy UNIQUE 		megszorítással.
+	A tábla rendelkezik még két darab kapcsolattal egy-a-többhöz típusú kapcsolatokról beszélünk.
+	Ezen két kapcsolat táblái az "Curriculum" tábla és az "Exercise" táblák. 
+	
+	SQL kód:
+	CREATE TABLE IF NOT EXISTS `afpleva_test`.`Topic` (
+		`T_ID` INT NOT NULL AUTO_INCREMENT,
+		`T_Name` VARCHAR(45) NULL,
+		`T_Desc` TEXT NULL,
+		PRIMARY KEY (`T_ID`))
+		ENGINE = InnoDB;
+
+		CREATE UNIQUE INDEX `T_Name_UNIQUE` ON `afpleva_test`.`Topic` (`T_Name` ASC);
+
+
+Exercise tábla
+	Ebben a táblában tároljuk a feladatokat. A témakörök (topic) táblával van összekötve.
+	Mezők:
+
+	-E_ID mezőnév, egész típusú mező, elsődleges kulcs.
+	-E_T_ID mezőnév, egész típusú mező, idegen kulcs.
+
+	Az "Exercise" tábla felépítése csupán 2 mezőt foglal magában.
+	Az E_ID mező egész típusú, elsődleges kulcs megszorítással rendelkező mező.
+	Az E_T_ID mező egy egész típusú és idegen kulcs megszorítással rendelkező mező.
+	A tábla 3 kapcsolattal rendelkezik, melyek a "Topic","ExerciceMultipleChoice" és az "ExerciseDilemma" táblákat foglalják 		magukba.
+	
+	SQL kód:
+	CREATE TABLE IF NOT EXISTS `afpleva_test`.`Exercise` (
+	  `E_ID` INT NOT NULL AUTO_INCREMENT,
+	  `E_T_ID` INT NOT NULL,
+	  PRIMARY KEY (`E_ID`),
+	  CONSTRAINT `fk_Excersise_Topic1`
+	    FOREIGN KEY (`E_T_ID`)
+	    REFERENCES `afpleva_test`.`Topic` (`T_ID`)
+	    ON DELETE NO ACTION
+	    ON UPDATE NO ACTION)
+	ENGINE = InnoDB;
+
+	CREATE INDEX `fk_Excersise_Topic1_idx` ON `afpleva_test`.`Exercise` (`E_T_ID` ASC);
+
+
+	
+EMCAnswer tábla:
+	Ebben a táblában vannak elhelyezve a feladat válaszok.
+	Mezők:
+
+	-EMCA_ID mezőnév, egész típusú mező, elsődleges kulcs.
+	-EMCA_Answer mezőnév, karakter típusú mező (VARCHAR(255)), NOT NULL megkötés.
+	-EMCA_IsCorrect mezőnév, egész típusú mező(TINYINT), NOT NULL megkötés.
+	-EMCA_EMC_ID mezőnév, egész típusú mező, idegen kulcs.
+	
+	Az "EMCAnswer" tábla felépítése 4 mezőből áll.
+	A táblai mezői "EMCA_ID","EMCA_Answer"."EMCA_IsCorrect" és a "EMCA_EMC_ID".
+	Az "EMCA_ID" mező lesz az elsődleges kulcs a táblában ez a mező egy egész típusú mező.
+	Az "EMCA_Answer" mező fogja tárolni magukat a kérdéseket, mely egy NOT NULL megszorítással rendelkezik.
+	Az "EMCA_IsCorrect" mező egész típusú mező, NOT NULL megkötéssel.
+	Az "EMCA_EMC_ID mező egész típusú, idegen kulcs megkötéssel.
+	A Tábla kapcsolati tekintve rendelkezik egy-a-többhöz kapcsolattal amit az ExerciceMultipleChoice táblával.
+	
+	SQL kód:
+	CREATE TABLE IF NOT EXISTS `afpleva_test`.`EMCAnswer` (
+		  `EMCA_ID` INT NOT NULL AUTO_INCREMENT,
+		  `EMCA_Answer` VARCHAR(255) NOT NULL,
+		  `EMCA_IsCorrect` TINYINT NOT NULL,
+		  `EMCA_EMC_ID` INT NOT NULL,
+		  PRIMARY KEY (`EMCA_ID`),
+		  CONSTRAINT `fk_EMCAnswer_ExcersiceMultipleChoise1`
+		    FOREIGN KEY (`EMCA_EMC_ID`)
+		    REFERENCES `afpleva_test`.`ExerciceMultipleChoice` (`EMC_ID`)
+		    ON DELETE NO ACTION
+		    ON UPDATE NO ACTION)
+		ENGINE = InnoDB;
+
+		CREATE INDEX `fk_EMCAnswer_ExcersiceMultipleChoise1_idx` ON `afpleva_test`.`EMCAnswer` (`EMCA_EMC_ID` ASC);
+
+
+ExerciseMultipleChoice tábla:
+	Feletválasztós játék esetén ebbe a táblába kerülnek a válaszok.
+	Mezők:
+
+	-EMC_ID mezőnév, egész típusú mező, elsődleges kulcs.
+	-EMC_Question mezőnév, karakter típusú mező (VARCHAR(255)), NOT NULL megkötés.
+	-EMC_E_ID mezőnév, egész típusú mező, idegen kulcs.
+	
+	Az ExerciseMultipleChoice téábla 3 mezőből áll.
+	A tábla elsődleges kulcsa az "EMC_ID" mező tölti be, ami egy egész típusú mező.
+	Az "EMC_Question" mező egy karakter típusú mező, mely a kérdéseket fogja nekünk tárolni, ami mellé még egy NOT NULL megkötés 		tartalmaz.
+	Az "EMC_E_ID" egész típusú mező mely egy idegen kulcs megszorítással rendelkezik.
+	A tábla rendelkezik 3 egy-a-többhöz kapcsolattal is amely a "EMCAnswer", "EMCTestList" és a "Exercise" táblákat foglalja 		magában.
+	
+	SQL kód:
+	CREATE TABLE IF NOT EXISTS `afpleva_test`.`ExerciceMultipleChoice` (
+		  `EMC_ID` INT NOT NULL AUTO_INCREMENT,
+		  `EMC_Question` VARCHAR(255) NOT NULL,
+		  `EMC_E_ID` INT NOT NULL,
+		  PRIMARY KEY (`EMC_ID`),
+		  CONSTRAINT `fk_ExcersiceMultipleChoise_Excersise1`
+		    FOREIGN KEY (`EMC_E_ID`)
+		    REFERENCES `afpleva_test`.`Exercise` (`E_ID`)
+		    ON DELETE NO ACTION
+		    ON UPDATE NO ACTION)
+		ENGINE = InnoDB;
+
+		CREATE INDEX `fk_ExcersiceMultipleChoise_Excersise1_idx` ON `afpleva_test`.`ExerciceMultipleChoice` (`EMC_E_ID` ASC);
+
+
+
+EXErciseDilemma tábla:
+	Gondolkodtatós feladat esetén ebbe a táblába menti a feladatot kérdését és a helyes választ (igen/nem).
+	Mezők:
+
+	-ED_ID mezőnév, egész típusú mező, elsődleges kulcs.
+	-ED_Question mezőnév, karakter típusú mező (VARCHAR(255)), NOT NULL megkötés.
+	-ED_YesNo mezőnév, egész típusú mező (TINYINT), NOT NULL megkötés.
+	-ED_E_ID mezőnév, egész típusú mező, idegen kulcs.
+	
+	Az adat tábla 4 mezőből áll.
+	Ezen mezők nevei "ED_ID","ED_Question","ED_YesNo" és a "ED_E_ID".
+	Az "ED_ID" mező egy egész típusú és elsődleges kulcs megszorítással rendelkező mező.
+	Az "ED_Question" mező karakter típusú, 255 hosszú mező amely a kérdéseket tárolja, NOT NULL megkötéssel.
+	Az "ED_YesNo mező egy egész típusú mező, NOT NULL megkötéssel.
+	Az "ED_E_ID" mező egy egész típusú mező amely az "Exercise" tábla és az "ExerciseDilemma
+	" tábla egy-a-többhöz kapcsolatából származik, egy idegen kulcs megköttéssel.
+	A tábla rendelkezik még egy egy-a-többhöz kapcsolattal ami az "EDTestList" tábla között van.
+	
+	SQL kód:
+	CREATE TABLE IF NOT EXISTS `afpleva_test`.`ExerciseDilemma` (
+		  `ED_ID` INT NOT NULL AUTO_INCREMENT,
+		  `ED_Question` VARCHAR(255) NOT NULL,
+		  `ED_YesNo` TINYINT NOT NULL,
+		  `ED_E_ID` INT NOT NULL,
+		  PRIMARY KEY (`ED_ID`),
+		  CONSTRAINT `fk_ExcersiseDilemma_Excersise1`
+		    FOREIGN KEY (`ED_E_ID`)
+		    REFERENCES `afpleva_test`.`Exercise` (`E_ID`)
+		    ON DELETE NO ACTION
+		    ON UPDATE NO ACTION)
+		ENGINE = InnoDB;
+
+		CREATE INDEX `fk_ExcersiseDilemma_Excersise1_idx` ON `afpleva_test`.`ExerciseDilemma` (`ED_E_ID` ASC);
+
+	
+Test tábla:
+	Ebben a táblában tároljuk az egyes teszteket és az eredményeket.
+	Mezők:
+
+	-TE_ID mezőnév, egész típusú mező, elsődleges kulcs.
+	-TE_Score mezőnév, egész típusú mező, NOT NULL megkötés.
+	-TE_TL_ID mezőnév, egész típusú mező, idegen kulcs , NOT NULL megkötés.
+	
+	A Test adat tábla 3 mezőből áll.
+	A mezők név szerint "TE_ID","TE_Score" és a "TE_TL_ID" mezők.
+	A "TE_ID" mező egy egész típusú mező, elsődleges kulcs megszorítással.
+	A "TE_Score" mezp egy egész típusú mező amely a tesztek ponjait tárolja el, mely még rendelkezik egy NOT NULL megszorítással.
+	A "TE_TL_ID" mező egész típusú mező, idegen kulcs megszorítással, amely a "TestList" tábla kapcsolatából vonatkoztatható.
+	
+	SQL kód:
+	CREATE TABLE IF NOT EXISTS `afpleva_test`.`Test` (
+		  `TE_ID` INT NOT NULL AUTO_INCREMENT,
+		  `TE_Score` INT NOT NULL,
+		  `TE_TL_ID` INT NOT NULL,
+		  PRIMARY KEY (`TE_ID`),
+		  CONSTRAINT `fk_Test_TestList1`
+		    FOREIGN KEY (`TE_TL_ID`)
+		    REFERENCES `afpleva_test`.`TestList` (`TL_ID`)
+		    ON DELETE NO ACTION
+		    ON UPDATE NO ACTION)
+		ENGINE = InnoDB;
+
+		CREATE INDEX `fk_Test_TestList1_idx` ON `afpleva_test`.`Test` (`TE_TL_ID` ASC);
+
+
+
+User tábla:
+	Ebben a táblában tároljuk a felhasználó adatait.
+	Mezők:
+
+	-U_ID mezőnév, egész típusú mező, elsődleges kulcs.
+	-U_LoginName mezőnév, karakter típusú mező (VARCHAR (45)), UNIQUE megkötés.
+	-U_Name mezőnév, karakter típusú mező (VARCHAR(50)), NOT NULL megkötés.
+	-U_Email mezőnév, karakter típusú mező (VARCHAR(50)), NOT NULL megkötés.
+	-U_Pass mezőnév, karakter típusú mező (VARCHAR(255)), NOT NULL megkötés.
+	-U_Type mezőnév, ENUM típusú mező, NOT NULL megkötés.
+	
+	Az "User" tábla 6 mezőt tartalmaz.
+	Melyeknek a nevei "U_ID","U_LoginName","U_Name","U_Email","U_Pass" és az "U_Type".
+	A tábla "U_ID" mezője az elsődleges kulcs megszorítással rendelkezik a mező egész típusú.
+	A "U_LoginName" mező egy karakter típusú mező amely az felhasználók, felhasználó neveiknek eltárolására használ.
+	A "U_Name" mező szintén karakater típusú mező, amely a felhasználók neveinek eltárolására használatos.
+	A "U_Email" mező karakter típusú, a felhasználók e-mail címeinek eltárolására használatos.
+	A "U_Pass" mező karakter típusú, a felhasználók jelszavait tárolja.
+	A "U_Type" mező egy enum típusú mező, amely a felhasználók "típusát" tárolja, azaz adott felhasználó tanár vagy diák vagy egyéb enum 		típus.
+	
+	SQL kód:
+	CREATE TABLE IF NOT EXISTS `afpleva_test`.`User` (
+		`U_ID` INT NOT NULL AUTO_INCREMENT,
+		`U_LoginName` VARCHAR(45) NULL,
+		`U_Name` VARCHAR(50) NOT NULL,
+		`U_Email` VARCHAR(50) NOT NULL,
+		`U_Pass` VARCHAR(255) NOT NULL,
+		`U_Type` ENUM('Tanár','Diák','Admin') NOT NULL,
+		PRIMARY KEY (`U_ID`))
+		ENGINE = InnoDB;
+
+		CREATE UNIQUE INDEX `U_LoginName_UNIQUE` ON `afpleva_test`.`User` (`U_LoginName` ASC);
+
+
+TestList tábla:
+	A különböző tesztek neveit tároljuk ebben a táblában.
+	Mezők:
+
+	-TL_ID mezőnév, egész típusú mező, elsődleges kulcs.
+	-TL_Title mezőnév, karakter típusú mező (VARCHAR(45)), NOT NULL megkötés.
+	-TL_U_ID mezőnév, egész típusú mező, idegen kulcs.
+	
+	A TestList adat tábla 3 mezőből áll.
+	Melyeknek a nevei "TL_ID","TL_Title" és TL_U_ID".
+	A "TL_ID" mező a tábla elsődleges kulcsa, amely egész típusú mező.
+	A "TL_Title" mező egy karakter típusú mező amely a listák címeit fogja tárolni.
+	A "TL_U_ID" mező egész típusú idegen kulcsa megszorítással rendelkező mező.
+	A tábla kapcsolatait tekintve a 4 kapcsolattal rendelkezik.
+	
+	SQL kód:
+	CREATE TABLE IF NOT EXISTS `afpleva_test`.`TestList` (
+		  `TL_ID` INT NOT NULL AUTO_INCREMENT,
+		  `TL_Title` VARCHAR(45) NOT NULL,
+		  `TL_U_ID` INT NOT NULL,
+		  PRIMARY KEY (`TL_ID`),
+		  CONSTRAINT `fk_TestList_User1`
+		    FOREIGN KEY (`TL_U_ID`)
+		    REFERENCES `afpleva_test`.`User` (`U_ID`)
+		    ON DELETE NO ACTION
+		    ON UPDATE NO ACTION)
+		ENGINE = InnoDB;
+
+		CREATE INDEX `fk_TestList_User1_idx` ON `afpleva_test`.`TestList` (`TL_U_ID` ASC);
+
+
+Kapcsolatok:
+
+	Topic-Curriculum: Egy-a-többhöz kapcsolat (Curriculum táblában a C_T_ID mező az idegen kulcs).
+	Topic-Exercise: Egy-az-egyhez kapcsolat (Exercise táblában a E_T_ID mező az idegen kulcs).
+	Exercise-ExerciseDilemma: Egy-az-egyhez kapcsolat (ExerciseDilemma táblában a ED_E_ID mező az idegen kulcs.)
+	Exercise-ExerciseMultipleChoice: Egy-az-egyhez kapcsolat (ExerciseMultipleChoice táblában az EMC_E_ID mező az idegen kulcs).
+	ExerciseMultipleChoice-EMCAnswer: Egy-a-többhöz kapcsolat (EMCAnswer táblában az EMCA_EMC_ID mező az idegen kulcs).
+	Test-TestList: Egy-az-egyhez kapcsolat (Test táblában a TE_TL_ID mező az idegen kulcs).
+	User-TestList: Egy-a-többhöz kapcsolat (TestList táblában a TL_U_ID mező az idegen kulcs).
+
+*ExerciseMultipleChoice-TestList: Több-a-többhöz kapcsolat (EMCTestList a kapcsoló tábla).
+EMCTestList kapcsoló tábla:
+	Mezők:
+
+	EMCTL_TL_ID mezőnév, egész típusú mező, elsődleges és idegen kulcs megkötéssel.
+	EMCTL_EMC_ID mezőnév, egész típusú mező, elsődleges és idegen kulcs megkötéssel.
+	
+	Az EMCTestList táblaban 2 mező van.
+	Az "EMCTL_TL_ID" mező amely egész típusú, megszorításokat tekintve elsődleges és idegen kulcs megszorításokkal rendelkezik.
+	Az "EMCTL_EMC_ID" mező szintén egész típusú, megszorításokat tekintve elsődleges és idegen kulcs megszorításokkal rendelkezik.
+	A tábla szerepét tekintve egy kapcsoló tábla amely az "ExerciseMultipleChoice" és a "TestList" táblákat kötik össze.
+	A kapcsolatott tekintve több-a-többhöz kapcsolatról beszélünk.
+
+	
+	
+	SQL kód:
+	CREATE TABLE IF NOT EXISTS `afpleva_test`.`EMCTestList` (
+		  `EMCTL_TL_ID` INT NOT NULL,
+		  `EMCTL_EMC_ID` INT NOT NULL,
+		  PRIMARY KEY (`EMCTL_TL_ID`, `EMCTL_EMC_ID`),
+		  CONSTRAINT `fk_TestList_has_ExcersiceMultipleChoise_TestList1`
+		    FOREIGN KEY (`EMCTL_TL_ID`)
+		    REFERENCES `afpleva_test`.`TestList` (`TL_ID`)
+		    ON DELETE NO ACTION
+		    ON UPDATE NO ACTION,
+		  CONSTRAINT `fk_TestList_has_ExcersiceMultipleChoise_ExcersiceMultipleChoi1`
+		    FOREIGN KEY (`EMCTL_EMC_ID`)
+		    REFERENCES `afpleva_test`.`ExerciceMultipleChoice` (`EMC_ID`)
+		    ON DELETE NO ACTION
+		    ON UPDATE NO ACTION)
+		ENGINE = InnoDB;
+
+		CREATE INDEX `fk_TestList_has_ExcersiceMultipleChoise_ExcersiceMultipleCh_idx` ON `afpleva_test`.`EMCTestList` 				(`EMCTL_EMC_ID` ASC);
+
+		CREATE INDEX `fk_TestList_has_ExcersiceMultipleChoise_TestList1_idx` ON `afpleva_test`.`EMCTestList` (`EMCTL_TL_ID` ASC);
+		
+*ExerciseDilemma-TestList: Több-a-többhöz kapcsolat (EDTestlist a kapcsoló tábla).
+EDTestList kapcsoló tábla:
+	Mezők:
+
+	EDTL_ED_ID mezőnév, egész típusú mező, elsődleges és idegen kulcs megkötéssel.
+	EDTL_TL_ID mezőnév, egész típusú mező, elsődleges és idegen kulcs megkötéssel. 
+
+	
+	
+	Az "ED_TestList" táblaban 2 mező található.
+	A mezők nevei "EDTL_ED_ID" amely egész típusú mező és rendelkezik elsődleges kulcs és idegen kulcs megszorítással.
+	A mezők nevei "EDTL_TL_ID" amely egész típusú mező és rendelkezik elsődleges kulcs és idegen kulcs megszorítással.
+	A tábla szerepét tekintve kapcsoló tábla, amely az "ExerciseDilemma" és a "TestList" táblákat kötik össze.
+	A kapcsolatott tekintve több-a-többhöz kapcsolatról beszélünk.
+	
+	SQL kód:
+	CREATE TABLE IF NOT EXISTS `afpleva_test`.`EDTestList` (
+		  `EDTL_ED_ID` INT NOT NULL,
+		  `EDTL_TL_ID` INT NOT NULL,
+		  PRIMARY KEY (`EDTL_ED_ID`, `EDTL_TL_ID`),
+		  CONSTRAINT `fk_ExcersiseDilemma_has_TestList_ExcersiseDilemma1`
+		    FOREIGN KEY (`EDTL_ED_ID`)
+		    REFERENCES `afpleva_test`.`ExerciseDilemma` (`ED_ID`)
+		    ON DELETE NO ACTION
+		    ON UPDATE NO ACTION,
+		  CONSTRAINT `fk_ExcersiseDilemma_has_TestList_TestList1`
+		    FOREIGN KEY (`EDTL_TL_ID`)
+		    REFERENCES `afpleva_test`.`TestList` (`TL_ID`)
+		    ON DELETE NO ACTION
+		    ON UPDATE NO ACTION)
+		ENGINE = InnoDB;
+
+		CREATE INDEX `fk_ExcersiseDilemma_has_TestList_TestList1_idx` ON `afpleva_test`.`EDTestList` (`EDTL_TL_ID` ASC);
+
+		CREATE INDEX `fk_ExcersiseDilemma_has_TestList_ExcersiseDilemma1_idx` ON `afpleva_test`.`EDTestList` (`EDTL_ED_ID` ASC);
+
+*Test-User: Több-a-többhöz kapcsolat (TUSer a kapcsoló tábla).
+TUSer kapcsoló tábla:
+	Mezők:
+
+	TU_U_ID mezőnév, egész típusú mező, elsődleges és idegen kulcs megkötéssel.
+	TU_TE_ID mezőnév, egész típusú mező, elsődleges és idegen kulcs megkötéssel.
+	
+	Az "TUser" tábla mezőit tekintve 2 mezőből áll.
+	A mezők nevei "TU_U_ID" és a "TU_TE_ID".
+	A "TU_U_ID" mező egy egész típusú mező, amely rendelkezik elsődleges és idegen kulcs megkötéssel.
+	A "TU_TE_ID" mező egy egész típusú mező, amely rendelkezik elsődleges és idegen kulcs megkötéssel.
+	A tábla szerepét tekintve kapcsoló tábla, amely a "Test" és a "User" táblákat kötik össze.
+	A kapcsolatott tekintve több-a-többhöz kapcsolatról beszélünk.
+	
+	SQL kód:
+	CREATE TABLE IF NOT EXISTS `afpleva_test`.`TUSer` (
+		  `TU_U_ID` INT NOT NULL,
+		  `TU_TE_ID` INT NOT NULL,
+		  PRIMARY KEY (`TU_U_ID`, `TU_TE_ID`),
+		  CONSTRAINT `fk_User_has_Test_User1`
+		    FOREIGN KEY (`TU_U_ID`)
+		    REFERENCES `afpleva_test`.`User` (`U_ID`)
+		    ON DELETE NO ACTION
+		    ON UPDATE NO ACTION,
+		  CONSTRAINT `fk_User_has_Test_Test1`
+		    FOREIGN KEY (`TU_TE_ID`)
+		    REFERENCES `afpleva_test`.`Test` (`TE_ID`)
+		    ON DELETE NO ACTION
+		    ON UPDATE NO ACTION)
+		ENGINE = InnoDB;
+
+		CREATE INDEX `fk_User_has_Test_Test1_idx` ON `afpleva_test`.`TUSer` (`TU_TE_ID` ASC);
+
+		CREATE INDEX `fk_User_has_Test_User1_idx` ON `afpleva_test`.`TUSer` (`TU_U_ID` ASC);
+
+
