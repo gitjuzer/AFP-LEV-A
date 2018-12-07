@@ -143,8 +143,15 @@ Táblák:
 ##Funkció terv
 
 1. Bejelentkezés/regisztráció/jelszócsere
-	A felhasználónak be kell jelentkeznie, erre lehetőség van regisztrációra. Ha szeretne kódot is változtathat. Az adatok az User táblába kerülnek.
-	Bejelentkezést követően a felhasználónak lehetősége van kiválasztani a feladattípust a Topic táblában tárolt lehetőségek közül. Ezen fajtáit is kiválaszthatja, Feletválasztós, Teszt, igen/nem. A teszt végén megkapja a teszt eredményét is, amelyet a rendszer elment.
+	A felhasználónak be kell jelentkeznie, erre lehetőség van regisztrációra. Ha szeretne kódot is változtathat. Az adatok 		az User táblába kerülnek.
+	Bejelentkezést követően a felhasználónak lehetősége van kiválasztani a feladattípust a Topic táblában tárolt lehetőségek 	közül. 
+	Ezen fajtáit is kiválaszthatja, Feletválasztós, Teszt, igen/nem. A teszt végén megkapja a teszt eredményét is, amelyet a 	rendszer elment.
+	A rendszer támogatja az új diák, avagy új tanár felvételét a programba.
+	Ezt a funkciót a a "Regisztráció" menüpont valósítja meg.
+	A regisztráció során a beírt adatok az InnoDB által kezelt mysql adatbázisban kerülnek eltárolásra.
+	A rendszer támogatja a jelszó cserét is amely az bejelentkezés után válik elérhetővé.
+	Mely az adott felhasználó, kedve szerint lecserélheti.
+	
 - Web
 	- Tanár
 	- Diák
