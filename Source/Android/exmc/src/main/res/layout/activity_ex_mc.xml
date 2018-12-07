@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ExMC">
+
+    <TextView
+        android:id="@+id/tv_tantargy"
+        android:layout_width="170dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="70dp"
+        android:text="@string/tv_tantargy"
+        app:layout_constraintBottom_toTopOf="@+id/btn1_valasz"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="spread_inside"
+        app:layout_goneMarginLeft="10dp" />
+
+    <TextView
+        android:id="@+id/tv_feladatszam"
+        android:layout_width="170dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="200dp"
+        android:layout_marginLeft="200dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/tv_feladatszam"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_goneMarginLeft="10dp" />
+
+    <TextView
+        android:id="@+id/tv_kerdes"
+        android:layout_width="360dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="70dp"
+        android:gravity="center_horizontal"
+        android:text="@string/tv_kerdes"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_goneMarginLeft="10dp" />
+
+    <Button
+        android:id="@+id/btn1_valasz"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="22dp"
+        android:text="@string/btn1_valasz"
+        app:layout_constraintBottom_toTopOf="@+id/btn2_valasz"
+        app:layout_constraintEnd_toEndOf="@+id/btn3_valasz"
+        app:layout_constraintStart_toStartOf="@+id/btn3_valasz"
+        app:layout_constraintTop_toBottomOf="@+id/tv_tantargy" />
+
+    <Button
+        android:id="@+id/btn2_valasz"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="22dp"
+        android:text="@string/btn2_valasz"
+        app:layout_constraintBottom_toTopOf="@+id/btn3_valasz"
+        app:layout_constraintStart_toStartOf="@+id/btn1_valasz"
+        app:layout_constraintTop_toBottomOf="@+id/btn1_valasz" />
+
+    <Button
+        android:id="@+id/btn3_valasz"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="22dp"
+        android:text="@string/btn3_valasz"
+        app:layout_constraintBottom_toTopOf="@+id/btn4_valasz"
+        app:layout_constraintStart_toStartOf="@+id/btn4_valasz"
+        app:layout_constraintTop_toBottomOf="@+id/btn2_valasz" />
+
+    <Button
+        android:id="@+id/btn4_valasz"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="103dp"
+        android:text="@string/btn4_valasz"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn3_valasz" />
+
+</android.support.constraint.ConstraintLayout>

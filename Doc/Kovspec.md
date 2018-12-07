@@ -23,6 +23,7 @@ A diákok gyakorlása végig digitális, interaktív kultúrájukba illeszkedik 
 Tesztkérdések, feladatsorok helyes megoldásait tárolja, a tanuló válaszait tárolja, ellenőrizze. (felhasználónként) Feladatokhoz időlimitet, pontokat is lehessen rendelni, amikből kiszámolja az összpontszámot, százalékot és érdemjegyet.
 2. A kitöltött feladatsorok pdf-be áttehetők legyenek. 
 3. Mobiltelefonon bejelentkezhessenek a userek (diákok és tanárok egyeránt), a feladatsorok kitöltése mobilon kell hogy működjön. Mobilon fogják elsősorban kitölteni.
+4. A rendszer használjon adatbázist az adatok és eredmények tárolásához, így azok bármikor visszakereshetőek. A rendszer MySQl adatbázist használjon és az egyes részek legyenek szétszedve önálló táblákra.
 
 ###### Megrendelői "atomi" igényspecifikáció:
 
@@ -93,7 +94,7 @@ Egy felhasználó lehet admin, tanár vagy tanuló.
 5. Feltételrendszer
 
 6. Technikai feltételek
-A rendszer támogassa a mysql x.x adatbáziskezelőt és a php x.x verziót használó alkalmazás szerver platformot.
+A rendszer támogassa a mysql InnoDB adatbáziskezelőt és a php x.x verziót használó alkalmazás szerver platformot.
 A rendszer használatát Android 4.1 verziótól szükséges támogatni.
 A rendszer támogassa a Google Chrome, Firefox, MS Edge böngészőket.
 

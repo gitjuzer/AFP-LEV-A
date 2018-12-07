@@ -39,7 +39,9 @@ export default new Router({
       meta: {requiresAuth: false},
       beforeEnter: function(to, from, next){
         localStorage.clear();
+        next("login")
         location.reload();
+        //this.$router.push("login");
       }
     },
     {

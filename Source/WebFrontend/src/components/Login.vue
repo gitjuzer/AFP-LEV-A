@@ -2,28 +2,31 @@
   <div class="login">
     <div>
       <el-row>
-        <el-col :span="12" :push="6">
+        <el-col :xs={span:24,offset:0} :sm={span:16,offset:4} >
           <el-card class="box-card">
           	<el-col>
           	  <h2>{{$t('Login')}}</h2>
             </el-col>
             <el-col>
-              <el-form ref="loginForm" :model="user" label-width="30%">
-                <el-form-item :label="$t('Username')">
-                  <el-input type="text" :model="user.username">
+              <el-form ref="loginForm" label-width="30%">
+                <el-form-item :label="$t('E-mail')">
+                  <el-input type="text" v-model="user.email">
                   </el-input>
                 </el-form-item>
                 <el-form-item :label="$t('Password')">
-                  <el-input type="text" :model="user.password">
+                  <el-input type="password" v-model="user.password">
                   </el-input>
                 </el-form-item>
-                <el-form-item :label="$t('Select language')">
-                  <el-select :placeholder="locale" v-model="$i18n.locale">
-                    <el-option v-for="(lang,index) in languages" :key="index" :label="lang" :value="lang"></el-option>
-                  </el-select>
-                </el-form-item>
               </el-form>
-          	</el-col>
+              <el-col>
+                <el-col class="login-button" :span="12" :push="6">
+                  <el-button v-on:click="login">{{$t('Login')}}</el-button>
+                </el-col>
+                <el-col class="registration-link" :span="21">
+                  <a v-on:click="$router.push('registration')">{{$t('If you dont have account, click here to register')}}</a>
+                </el-col>
+              </el-col>
+            </el-col>
           </el-card>
         </el-col>
       </el-row>
@@ -38,7 +41,7 @@ export default {
   data: function(){
     return {
       user: {
-        username: null,
+        email: null,
         password: null
       },
       languages: Object.keys(this.$i18n.messages),
@@ -47,8 +50,14 @@ export default {
   methods:{
     login: function(){
       var _this = this;
-      this.axios.post("/login", this.user).then((response) => {
-        _this.$notify.success('Sikeres bejelentkezés')
+      this.$http.post("/api/login",this.user).then((response) => {
+        localStorage.setItem("token",response.data.payload.token);
+       // _this.$globals.loggedIn = true;
+        //_this.$globals.user = {realName:_this.user.realName};
+        localStorage.setItem("realName", _this.user.email)
+        _this.$notify.success(_this.$t('Sikeres bejelentkezés'));
+        _this.$root.$emit('refresh-header');
+        _this.$router.push("dashboard");
       })
     }
 
@@ -66,5 +75,16 @@ h3 {
 }
 h2{
   color: #000;
+}
+.el-card{
+  padding: 20px;
+}
+.registration-link{
+  cursor: pointer;
+  margin: 30px;
+  text-align: center;
+}
+.login-button > div{
+  width: 100%;
 }
 </style>

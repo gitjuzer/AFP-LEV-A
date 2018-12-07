@@ -428,3 +428,4 @@ ASALocalRun/
 !Source/Backend/core/config/config_sample.php
 /Source/Backend/vendor/
 nbproject/*
+*.DS_Store

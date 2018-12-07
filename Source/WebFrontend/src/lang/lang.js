@@ -6,7 +6,7 @@ import hu from './hu.json'
 
 Vue.use(VueI18n)
 
-const locale = 'en'
+const locale = 'hu'
 
 const messages = {
   en,

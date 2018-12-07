@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_tananyagok"
+            android:icon="@drawable/ic_menu_camera"
+            android:title="Tanagyagok" />
+        <item
+            android:id="@+id/nav_feladatok"
+            android:icon="@drawable/ic_menu_gallery"
+            android:title="Feladatok" />
+        <item
+            android:id="@+id/nav_tesztjeim"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="Tesztjeim" />
+        <item
+            android:id="@+id/nav_settings"
+            android:icon="@drawable/ic_menu_manage"
+            android:title="Beállítások" />
+    </group>
+
+    <item android:title="Egyéb">
+        <menu>
+            <item
+                android:id="@+id/nav_share"
+                android:icon="@drawable/ic_menu_share"
+                android:title="Megosztás" />
+            <item
+                android:id="@+id/nav_logout"
+                android:icon="@drawable/ic_exit_to_app_black_24dp"
+                android:title="Kijelentkezés" />
+        </menu>
+    </item>
+
+</menu>
