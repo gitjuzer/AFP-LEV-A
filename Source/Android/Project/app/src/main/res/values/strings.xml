@@ -27,4 +27,5 @@
     <string name="biologia">Biológia</string>
     <string name="info">Informatika</string>
     <string name="nyelvtan">Nyelvtan</string>
+    <string name="title_activity_curriculum_activity">curriculum_activity</string>
 </resources>
