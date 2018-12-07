@@ -6,11 +6,11 @@ import CancelToken from 'axios'
 import i18n from './lang/lang'
 import store from './store'
 import { library } from '@fortawesome/fontawesome-svg-core'
-import { faFile, faProjectDiagram, faCopy, faUpload, faCog, faTasks, faTable, faUsers, faSitemap, faPlusCircle, faUser, faPlus, faChevronLeft, faEdit, faBan, faCode, faChalkboard, faLaptopCode, faSync, faUserPlus, faKey, faPlayCircle, faStopCircle, faRedo } from '@fortawesome/free-solid-svg-icons'
+import { faPlusSquare ,faFile, faProjectDiagram, faCopy, faUpload, faCog, faTasks, faTable, faUsers, faSitemap, faPlusCircle, faUser, faPlus, faChevronLeft, faEdit, faBan, faCode, faChalkboard, faLaptopCode, faSync, faUserPlus, faKey, faPlayCircle, faStopCircle, faRedo } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 Vue.use(require('vue-moment'));
 
-library.add(faFile, faProjectDiagram, faCopy, faUpload, faCog, faTasks, faTable, faUsers, faSitemap, faPlusCircle, faUser, faPlus, faChevronLeft, faEdit, faBan, faCode, faChalkboard, faLaptopCode, faSync, faUserPlus, faKey, faPlayCircle, faStopCircle, faRedo)
+library.add(faPlusSquare ,faFile, faProjectDiagram, faCopy, faUpload, faCog, faTasks, faTable, faUsers, faSitemap, faPlusCircle, faUser, faPlus, faChevronLeft, faEdit, faBan, faCode, faChalkboard, faLaptopCode, faSync, faUserPlus, faKey, faPlayCircle, faStopCircle, faRedo)
 Vue.component('font-awesome-icon', FontAwesomeIcon)
 
 import ElementUI from 'element-ui'

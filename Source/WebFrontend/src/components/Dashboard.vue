@@ -2,14 +2,36 @@
   <div class="dashboard">
     <div>
       <el-row class="dashboard-section">
-        <el-col :span="10" class="left-side">
-          <el-tree :data="dataAll" :props="defaultProps" @node-click="handleNodeClick"></el-tree>
+        <el-col :span="6" class="left-side">
+          <el-col v-for="topic in list.topics" :key="topic.id" class="topic-item">
+              <el-button v-on:click="loadTopicData(topic.id)" plain>{{topic.name!=null?topic.name:topic.id}}</el-button>
+          </el-col>
         </el-col>
-        <el-col :span="14" class="right-side">
-          dataview
+        <el-col :span="18" class="right-side">
+          <h3>{{$t('List')}}</h3>
+          <el-col class="curricula">
+            <el-col v-for="cur in list.curricula" :key="cur.id">
+              <router-link :to="{ name: 'curricula', params: {id:cur.id}  }">{{cur.title}}</router-link>
+            </el-col>
+          </el-col>
         </el-col>
       </el-row>
     </div>
+
+  <el-dialog
+    :title="$t('New topic')"
+    :visible.sync="newTopicDialog.visible"
+    width="30%"
+    :before-close="closeTaskDialog">
+    <el-form-item :label="$t('Login name')">
+      <el-input type="text" v-model="user.loginName">
+      </el-input>
+    </el-form-item>
+    <span slot="footer" class="dialog-footer">
+      <el-button @click="dialogVisible = false">{{$t('Cancel')}}</el-button>
+      <el-button type="primary" @click="dialogVisible = false">{{$t('Save')}}</el-button>
+    </span>
+  </el-dialog>
   </div>
 </template>
 
@@ -19,46 +41,17 @@ export default {
   name: 'Dashboard',
   data: function(){
     return {
+      newTopicDialog:{
+        visible: false,
+      },
       user: {
         username: null,
         password: null
       },
-      dataAll: 
-        [{
-          label: 'Nyelvtan',
-          children: [{
-            label: 'Level two 1-1',
-            children: [{
-              label: 'Level three 1-1-1'
-            }]
-          }]
-        }, {
-          label: 'Programozás',
-          children: [{
-            label: 'Level two 2-1',
-            children: [{
-              label: 'Level three 2-1-1'
-            }]
-          }, {
-            label: 'Level two 2-2',
-            children: [{
-              label: 'Level three 2-2-1'
-            }]
-          }]
-        }, {
-          label: 'Matematika',
-          children: [{
-            label: 'Level two 3-1',
-            children: [{
-              label: 'Level three 3-1-1'
-            }]
-          }, {
-            label: 'Level two 3-2',
-            children: [{
-              label: 'Level three 3-2-1'
-            }]
-          }]
-        }],
+      list: {
+        topics: {},
+        curricula: {}
+      },
       defaultProps: {
         children: 'children',
         label: 'name'
@@ -66,11 +59,21 @@ export default {
     }
   },
   methods:{
+    closeTaskDialog: function(){
+      this.visible = false;
+    },
     getList: function(){
       var _this = this;
-      this.$http("/sapi/topics", this.user).then((response) => {
-        console.log(response.data);
-        _this.dataAll = response.data.payload;
+      this.$http.get("/sapi/topics", this.user).then((response) => {
+        console.log("topics:",response.data.payload );
+        _this.list.topics = response.data.payload;
+      })
+    },
+    loadTopicData: function(id){
+      var _this = this;
+      this.$http.get("/sapi/curricula?topic="+id).then((response) => {
+        console.log("curricula:",response.data.payload);
+        _this.list.curricula = response.data.payload;
       })
     },
     handleNodeClick: function(){}
@@ -98,5 +101,19 @@ h2{
 }
 .left-side{
   padding-top: 50px;
+}
+.topic-item{
+  text-align: left; 
+  padding: 5px;
+}
+.topic-item > a{
+  text-decoration: none;
+}
+.curricula{
+  text-align: left;
+}
+.curricula a{
+  text-decoration: none;
+  margin: 10px;
 }
 </style>

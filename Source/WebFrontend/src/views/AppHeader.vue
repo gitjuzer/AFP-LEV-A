@@ -3,6 +3,12 @@
     <el-menu :default-active="activeIndex" class="el-menu-left" mode="horizontal" :router="true">
       <el-menu-item index="0" route="/"><img src="@/assets/books_open.jpg" class="logo" alt="Project X logo"><span class="logo_title">Project X</span></el-menu-item>
       <el-menu-item index="dashboard" route="/dashboard"><font-awesome-icon icon="tasks" class="fa-icon"/><span>{{ $t('Dashboard') }}</span></el-menu-item>
+      <el-menu-item index="new-topic" route="/new-topic"><font-awesome-icon icon="plus" class="fa-icon"/><span>{{ $t('New topic') }}</span></el-menu-item>
+      <el-menu-item class="el-menu-right">
+        <el-select class="languages" :placeholder="locale" v-model="$i18n.locale">
+          <el-option v-for="(lang,index) in languages" :key="index" :label="lang" :value="lang"></el-option>
+        </el-select>
+      </el-menu-item>
       <el-submenu index="6" class="el-menu-right">
         <template slot="title">
           <font-awesome-icon icon="user" class="fa-icon"/><span>{{realName}}</span>
@@ -20,7 +26,8 @@ export default {
   data: function(){
     return {
       activeIndex: "0",
-      realName: localStorage.getItem("realName")
+      realName: localStorage.getItem("realName"),
+      languages: Object.keys(this.$i18n.messages),
     }
   },
   methods:{
@@ -55,5 +62,8 @@ export default {
   font-weight: bold;
   font-size: 24px;
   color: #004890;
+}
+.languages{
+  width: 80px;
 }
 </style>

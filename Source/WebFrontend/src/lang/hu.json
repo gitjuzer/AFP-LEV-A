@@ -6,5 +6,9 @@
   "Logout": "Kijelentkezés",
   "Language": "Nyelv",
   "Registration": "Regisztráció",
-  "If you dont have account, click here to register": "Ha még nem regisztrált ide kattintva megteheti"
+  "If you dont have account, click here to register": "Ha még nem regisztrált ide kattintva megteheti",
+  "Save": "Mentés",
+  "List": "Lista",
+  "Dashboard": "Főoldal",
+  "New topic": "Új topic"
 }

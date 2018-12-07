@@ -3,6 +3,7 @@ import Router from 'vue-router'
 import Login from '@/components/Login'
 import Registration from '@/components/Registration'
 import Dashboard from '@/components/Dashboard'
+import Curricula from '@/components/Curricula'
 
 Vue.use(Router)
 
@@ -18,6 +19,12 @@ export default new Router({
       path: '/dashboard',
       name: 'dashboard',
       component: Dashboard,
+      meta: {requiresAuth: true},
+    },
+    {
+      path: '/curricula/:id',
+      name: 'curricula',
+      component: Curricula,
       meta: {requiresAuth: true},
     },
     {
