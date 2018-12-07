@@ -111,10 +111,25 @@ public class MainActivity extends AppCompatActivity
             LinearLayout.LayoutParams lparams2 = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT);
             frame.setLayoutParams(lparams2);
             ImageButton button = new ImageButton(this);
-            button.setTag(item.id);
+            if(item.name == null){
+                item.name = "nem null";
+            }
+
+
+               button.setTag(item.name);
+
+
             button.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
+                    Intent intent = new Intent(MainActivity.this,curriculum_activity.class);
+                    if(v.getTag() != null) {
+
+                        intent.putExtra("topicname", v.getTag().toString());
+                    }
+
+                    startActivity(intent);
+
                     GombReakcio(v.getTag().toString());
                 }
             });
