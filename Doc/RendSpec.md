@@ -143,6 +143,7 @@ Táblák:
 ##Funkció terv
 
 1. Bejelentkezés/regisztráció/jelszócsere
+	A felhasználónak be kell jelentkeznie, erre lehetőség van regisztrációra. Ha szeretne kódot is változtathat. Az adatok az User táblába kerülnek.
 - Web
 	- Tanár
 	- Diák
