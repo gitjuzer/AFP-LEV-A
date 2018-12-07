@@ -2,53 +2,67 @@
 
 namespace Afp\Domain;
 
-/* Az alapértelmezett model leírása itt található */
+
 use Afp\Domain\Base\BaseModel;
 
-/* A tananyag leírását megvalósító osztály. */
-class Curriculum extends BaseModel
-{	
+class Curriculum extends BaseModel implements \JsonSerializable
+{
+    private $title;
+    private $content;
+    private $topic;
 
-	/* Téma lekérdezése. */
-    public function getTopic()
+    public function __construct($curriculum = null)
     {
-        return $this->_topic;
+        if ($curriculum) {
+            $this->id = (int)$curriculum['id'];
+            $this->setContent($curriculum['content']);
+            $this->setTitle($curriculum['title']);
+            $this->setTopic((int)$curriculum['topic']);
+        }
     }
 
-    /* Téma beállítása, a paraméterben kapott értékre. */
+    public function getTopic()
+    {
+        return $this->topic;
+    }
+
     public function setTopic($topic)
     {
         parent::checkPropertyIsInteger($topic);
-        $this->_topic = $topic;
+        $this->topic = $topic;
     }
 
-    /* Tananyag címének lekérdezése. */
     public function getTitle()
     {
-        return $this->_title;
+        return $this->title;
     }
 
-	/* Tananyag címének beállítása. */
     public function setTitle($title)
     {
         parent::checkPropertyIsString($title);
-        $this->_title = $title;
+        $this->title = $title;
     }
 
-	/* Tananyag tartalmának lekérdezése. */ 
-    public function getContext()
+    public function getContent()
     {
-        return $this->_context;
+        return $this->content;
     }
 
-	/* Tananyag tartalmának beállítása. */
-    public function setContext($context)
+    public function setContent($context)
     {
         parent::checkPropertyIsString($context);
-        $this->_context = $context;
+        $this->content = $context;
     }
-	
-    private $_title;
-    private $_context;
-    private $_topic;
+
+    /**
+     * @return array|mixed
+     * @codeCoverageIgnore
+     */
+    public function jsonSerialize()
+    {
+        $vars = get_object_vars($this);
+        unset($vars['password']);
+
+        return $vars;
+    }
 }

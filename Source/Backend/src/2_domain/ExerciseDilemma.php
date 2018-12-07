@@ -5,49 +5,61 @@ namespace Afp\Domain;
 
 use Afp\Domain\Base\BaseModel;
 
-/* Igen/Nem feleletválasztós feladatokat leíró osztály. */
-class ExerciseDilemma extends BaseModel
+class ExerciseDilemma extends BaseModel implements \JsonSerializable
 {
-	/* Feladat lekérdezése. */
-    public function getExercise()
+    private $question;
+    private $yesNo;
+    private $topic;
+
+    public function __construct($exerciseDilemma = null)
     {
-        return $this->_exercise;
+        if ($exerciseDilemma) {
+            $this->id = (int)$exerciseDilemma['id'];
+            $this->setQuestion($exerciseDilemma['question']);
+            $this->setYesNo((int)$exerciseDilemma['yesNo']);
+            $this->setTopic((int)$exerciseDilemma['topic']);
+        }
     }
 
-	/* Feladat beállítása. */
-    public function setExercise($exercise)
+    public function getTopic()
     {
-        parent::checkPropertyIsInteger($exercise);
-        $this->_exercise = $exercise;
+        return $this->topic;
     }
 
-	/* Kérdés lekérdezése. */
+    public function setTopic($topic)
+    {
+        parent::checkPropertyIsInteger($topic);
+        $this->topic = $topic;
+    }
+
     public function getQuestion()
     {
-        return $this->_question;
+        return $this->question;
     }
 
-	/* Kérdés beállítása. */
     public function setQuestion($question)
     {
         parent::checkPropertyIsString($question);
-        $this->_question = $question;
+        $this->question = $question;
     }
 
-	/* Válasz lekérdezése. */
     public function getYesNo()
     {
-        return $this->_yesNo;
+        return $this->yesNo;
     }
 
-	/* Válasz beállítása. */
     public function setYesNo($yesNo)
     {
         parent::checkPropertyIsInteger($yesNo);
-        $this->_yesNo = $yesNo;
+        $this->yesNo = $yesNo;
     }
-	
-    private $_question;
-    private $_yesNo;
-    private $_exercise;
+
+    /**
+     * @return array|mixed
+     * @codeCoverageIgnore
+     */
+    public function jsonSerialize()
+    {
+        return get_object_vars($this);
+    }
 }

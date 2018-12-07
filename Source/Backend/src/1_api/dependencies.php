@@ -1,45 +1,58 @@
 <?php
 
-use Afp\Api\Action\LoginAction;
-use Afp\Api\Action\RegisterAction;
-use Afp\Api\Controller\PracticeController;
-use Afp\Shared\Factory\DaoFactoryFactory;
-use Afp\Repository\UserRepository;
+
+use Afp\Shared\Factory\DaoFactory;
 use Afp\Api\Controller\UserController;
+use Afp\Api\Controller\AuthController;
+use Afp\Api\Controller\TopicController;
+use Afp\Api\Controller\CurriculumController;
+use Afp\Api\Controller\ExerciseDilemmaController;
+use Afp\Api\Controller\ExerciseListController;
 
 $container = $app->getContainer();
 
 $container['mysql'] = function ($c) {
     $settings = $c->get('settings')['mysql'];
-    $pdo = new PDO("mysql:host=" . $settings['host'] . ";dbname=" . $settings['dbname'].';charset=utf8',
-        $settings['user'], $settings['pass']);
+    $dsn = sprintf('mysql:host=%s;dbname=%s;charset=utf8;', $settings['host'], $settings['dbname']);
+    $pdo = new PDO($dsn, $settings['user'], $settings['pass']);
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     $pdo->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
     return $pdo;
 };
 
 $container['daoFactory'] = function ($c) {
-    $daoFactory = new DaoFactoryFactory($c);
+    $daoFactory = new DaoFactory($c);
     return $daoFactory::getFactory();
 };
 
-//TODO make factory, to decrease of the container number
-//TODO create dirs, for factory types. Make it more simple.
-$container['userRepository'] = function ($c) {
-    $userRepository = new UserRepository($c->get('daoFactory'));
-    return $userRepository;
-};
-
 $container[UserController::class] = function ($c) {
-    return new UserController($c->get('userRepository'));
+    $userRepository = new \Afp\Repository\UserRepository($c->get('daoFactory'));
+    return new UserController($userRepository);
 };
 
-$container[LoginAction::class] = function ($c) {
-    return new LoginAction($c->get('mysql'), $c->get('settings'));
+$container[AuthController::class] = function ($c) {
+    $repo = new \Afp\Repository\UserRepository($c->get('daoFactory'));
+    return new AuthController($c->get('settings'), $repo);
 };
 
-$container[RegisterAction::class] = function ($c) {
-    return new RegisterAction($c->get('mysql'), $c->get('settings'));
+$container[TopicController::class] = function ($c) {
+    $repo = new \Afp\Repository\TopicRepository($c->get('daoFactory'));
+    return new TopicController($repo);
+};
+
+$container[CurriculumController::class] = function ($c) {
+    $repo = new \Afp\Repository\CurriculumRepository($c->get('daoFactory'));
+    return new CurriculumController($repo);
+};
+
+$container[ExerciseDilemmaController::class] = function ($c) {
+    $repo = new \Afp\Repository\ExerciseDilemmaRepository($c->get('daoFactory'));
+    return new ExerciseDilemmaController($repo);
+};
+
+$container[ExerciseListController::class] = function ($c) {
+    $repo = new \Afp\Repository\ExerciseListRepository($c->get('daoFactory'));
+    return new ExerciseListController($repo);
 };
 
 $container['notFoundHandler'] = function ($c) {

@@ -10,34 +10,36 @@ class UserController
 {
     private $_repo;
 
-
     public function __construct($repo)
     {
         $this->_repo = $repo;
     }
 
+
+    //TODO return appropriate error message
     public function user(Request $request, Response $response, $args)
     {
-        $user = $this->_repo->findById($args['id']);
+        $this->_repo->findById($args['id']);
 
         $jsonResponse = [
             'status' => 'success',
             'code' => $response->getStatusCode(),
-            'payload' => $user->jsonSerialize()
+            'payload' => $this->_repo->getInstance()->jsonSerialize()
         ];
 
         return $response->withJson($jsonResponse);
     }
 
+    //TODO return appropriate error message
     public function fromToken(Request $request, Response $response, $args)
     {
         $id = $request->getAttribute('decoded_token_data')['id'];
-        $user = $this->_repo->findById($id);
+        $this->_repo->findById($id);
 
         $jsonResponse = [
             'status' => 'success',
             'code' => $response->getStatusCode(),
-            'payload' => $user
+            'payload' =>  $this->_repo->getInstance()->jsonSerialize()
         ];
 
         return $response->withJson($jsonResponse);

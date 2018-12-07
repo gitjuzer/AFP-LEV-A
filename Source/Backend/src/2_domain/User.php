@@ -5,14 +5,18 @@ namespace Afp\Domain;
 use Afp\Domain\Base\BaseModel;
 use Afp\Shared\Helpers\UserTypeEnum;
 
-/* Felhasználó objektum megvalósítását leíró osztály. */
 class User extends BaseModel implements \JsonSerializable
 {
-	/* Konstruktor, ami ha megkapja a felhasznáói adatokat, akkor beállítja a saját változóiba. */
+    private $loginName;
+    private $name;
+    private $email;
+    private $password;
+    private $type;
+
     public function __construct($user = null)
     {
         if ($user) {
-            $this->id = $user['id'];
+            $this->id = (int)$user['id'];
             $this->setLoginName($user['loginName']);
             $this->setName($user['name']);
             $this->setEmail($user['email']);
@@ -21,68 +25,65 @@ class User extends BaseModel implements \JsonSerializable
         }
     }
 
-	/* Felhasználó login nevének lekérdezése. */
     public function getLoginName()
     {
         return $this->loginName;
     }
 
-	/* Felhasználó login nevének beállítása. */
     public function setLoginName($loginName)
     {
         parent::checkPropertyIsString($loginName);
         $this->loginName = $loginName;
     }
 
-	/* Felhasználó nevének lekérdezése. */
     public function getName()
     {
         return $this->name;
     }
 
-	/* Felhasználó nevének beállítása. */
     public function setName($name)
     {
         parent::checkPropertyIsString($name);
         $this->name = $name;
     }
 
-	/* Felhasználó emailcímének lekérdezése. */
     public function getEmail()
     {
         return $this->email;
     }
 
-	/* Felhasználó emailcímének beállítása. */
     public function setEmail($email)
     {
         parent::checkPropertyIsString($email);
         $this->email = $email;
     }
 
-	/* Felhasználó jelszavának beállítása. */
     public function setPassword($password)
     {
         parent::checkPropertyIsString($password);
         $this->password = $password;
     }
 
-	/* Felhasználó típusának lekérdezése. (tanár, diák, admin) */
     public function getType()
     {
         return $this->type;
     }
 
-	/* Felhasználó típusának beállítása. */
     public function setType($type)
     {
-        if (!UserTypeEnum::isValidValue($type)) {
+        /*if (!UserTypeEnum::isValidValue($type)) {
             throw new \InvalidArgumentException(self::class . '\'s type must be UserTypeEnum');
-        }
+        }*/
         $this->type = $type;
     }
 
+    public function verifyPassword($password)
+    {
+        return password_verify($password, $this->password);
+    }
+
     /**
+     * @return array|mixed
      * @codeCoverageIgnore
      */
     public function jsonSerialize()
@@ -93,9 +94,4 @@ class User extends BaseModel implements \JsonSerializable
         return $vars;
     }
 
-    private $loginName;
-    private $name;
-    private $email;
-    private $password;
-    private $type;	
 }

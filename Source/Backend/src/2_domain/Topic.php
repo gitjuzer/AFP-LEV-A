@@ -5,35 +5,48 @@ namespace Afp\Domain;
 
 use Afp\Domain\Base\BaseModel;
 
-/* Tantárgyat leíró osztály. */
-class Topic extends BaseModel
+class Topic extends BaseModel implements \JsonSerializable
 {
-	/* Tantárgy nevének lekérdezése. */
-    public function getName()
+    private $name;
+    private $description;
+
+    public function __construct($topic = null)
     {
-        return $this->_name;
+        if ($topic) {
+            $this->id = (int)$topic['id'];
+            $this->setName($topic['name']);
+            $this->setDescription($topic['description']);
+        }
     }
 
-	/* Tantárgy nevének beállítása. */
+    public function getName()
+    {
+        return $this->name;
+    }
+
     public function setName($name)
     {
         parent::checkPropertyIsString($name);
-        $this->_name = $name;
+        $this->name = $name;
     }
 
-	/* Tantárgy leírásának lekérdezése. */
     public function getDescription()
     {
-        return $this->_description;
+        return $this->description;
     }
 
-	/* Tantárgy leírásának beállítása. */
     public function setDescription($description)
     {
         parent::checkPropertyIsString($description);
-        $this->_description = $description;
+        $this->description = $description;
     }
-	
-    private $_name;
-    private $_description;
+
+    /**
+     * @return array|mixed
+     * @codeCoverageIgnore
+     */
+    public function jsonSerialize()
+    {
+        return get_object_vars($this);
+    }
 }

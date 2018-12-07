@@ -11,7 +11,7 @@ return [
         'DaoFactory' => 'MySqlFactory', //MySqlFactory, FakerFactory
 
 
-        'mysql' => [
+        'db' => [
             'host' => 'localhost',
             'dbname' => 'jwt',
             'user' => 'root',

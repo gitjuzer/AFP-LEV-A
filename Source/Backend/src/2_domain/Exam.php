@@ -5,36 +5,43 @@ namespace Afp\Domain;
 
 use Afp\Domain\Base\BaseModel;
 
-/* Tanulók által kitöltött teszt eredmények tábla. */
-class Exam extends BaseModel
+class Exam extends BaseModel implements \JsonSerializable
 {
-	/* Teszt lista lekérdezése. */
-    public function getTestList()
+    private $_score;
+    private $_exerciseList;
+
+    public function getExerciseList()
     {
-        return $this->_testList;
+        return $this->_exerciseList;
     }
 
-	/* Teszt lista beállítása. */
-    public function setTestList($testList)
+    public function setExerciseList($testList)
     {
         parent::checkPropertyIsInteger($testList);
-        $this->_testList = $testList;
+        $this->_exerciseList = $testList;
     }
 
-	/* Teszt eredmény lekérdezése. */
     public function getScore()
     {
         return $this->_score;
     }
 
-	/* Teszt eredmény beállítása. */
     public function setScore($score)
     {
         parent::checkPropertyIsInteger($score);
         $this->_score = $score;
     }
 
-    private $_score;
-    private $_testList;
-	
+    /**
+     * @return array|mixed
+     * @codeCoverageIgnore
+     */
+    public function jsonSerialize()
+    {
+        $vars = get_object_vars($this);
+        unset($vars['password']);
+
+        return $vars;
+    }
+
 }
