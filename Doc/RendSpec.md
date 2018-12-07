@@ -144,6 +144,7 @@ Táblák:
 
 1. Bejelentkezés/regisztráció/jelszócsere
 	A felhasználónak be kell jelentkeznie, erre lehetőség van regisztrációra. Ha szeretne kódot is változtathat. Az adatok az User táblába kerülnek.
+	Bejelentkezést követően a felhasználónak lehetősége van kiválasztani a feladattípust a Topic táblában tárolt lehetőségek közül. Ezen fajtáit is kiválaszthatja, Feletválasztós, Teszt, igen/nem. A teszt végén megkapja a teszt eredményét is, amelyet a rendszer elment.
 - Web
 	- Tanár
 	- Diák
