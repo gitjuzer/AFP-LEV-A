@@ -54,19 +54,6 @@ Feladat és oktatási anyagtípusok:
 -------------------------------------------------------------------------------
 
 
-# Fejlesztői igényspecifikáció:
-
-## Fejlesztői vízió (Vágyálom):
-
-## Fejlesztői cél: 
-
-## Fejlesztői követelmény:
-
-
-
-
-
-
 
 # Korábbi követelményspecifikáció:
 
