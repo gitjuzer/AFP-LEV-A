@@ -44,15 +44,7 @@ import javax.net.ssl.HttpsURLConnection;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
-    ImageButton Matek_Button;
-    ImageButton Irodalom_Button;
-    ImageButton Nyelvtan_Button;
-    ImageButton Fizika_Button;
-    ImageButton Tori_Button;
-    ImageButton Info_Button;
-    ImageButton Kemia_Button;
-    ImageButton Biologia_Button;
-    ImageButton Rajz_Button;
+
     int duration;
     public static List<Topic> TopicList;
     Context context;
@@ -68,7 +60,7 @@ public class MainActivity extends AppCompatActivity
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+                Snackbar.make(view, "Hiba küldése ", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
             }
         });
@@ -85,7 +77,7 @@ public class MainActivity extends AppCompatActivity
         Runnable r = new Runnable() {
             @Override
             public void run() {
-                feltoltFlex();
+                feltoltTopics();
             }
         };
         Thread t = new Thread(r);
@@ -116,16 +108,18 @@ public class MainActivity extends AppCompatActivity
             }
 
 
-               button.setTag(item.name);
+               button.setTag(item.id);
 
 
             button.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Intent intent = new Intent(MainActivity.this,curriculum_activity.class);
+
+                    Intent intent = new Intent(MainActivity.this,tananyagok.class);
                     if(v.getTag() != null) {
 
-                        intent.putExtra("topicname", v.getTag().toString());
+                        intent.putExtra("topicid", v.getTag().toString());
+                        intent.putExtra("topicname", GetTopicNameById(Integer.parseInt(v.getTag().toString())));
                     }
 
                     startActivity(intent);
@@ -159,12 +153,17 @@ public class MainActivity extends AppCompatActivity
             linearLayout.addView(frame);
             linearLayout.addView(titleView);
             topics.addView(linearLayout);
-
-
         }
 
     }
-    private  void feltoltFlex(){
+    private String GetTopicNameById(int id){
+        for(Topic item:TopicList){
+            if(item.id == id) return item.name;
+
+        }
+        return "";
+    }
+    private  void feltoltTopics(){
         Gson gson= new Gson();
         try {
 
@@ -209,10 +208,6 @@ public class MainActivity extends AppCompatActivity
         }catch (Exception e){
             Log.w("Api error: ",e);
         }
-
-
-        // TODO: register the new account here.
-
     }
     void GombReakcio(String nev){
         Toast.makeText(context, nev, duration).show();
