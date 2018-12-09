@@ -119,7 +119,7 @@ A teszteket az alábbi minta alapján végezzük:
 - **Megjegyzések:**	
 
 
-#### Eset 3 - Menüsor elemek
+#### Eset 4 - Menüsor elemek
 - **A teszt-eset leírás és célja:** Menüsor elemeinek működése
 - **A tesztelt folyamat/funkció leírása:** Menü elemek megnyomása esetén oldal navigálás/művelet végzés.
 - **A tesztelés előfeltételei:** Belépett felhasználó, szerver kapcsolat, elérhető topic-ok/gombok. 
@@ -131,7 +131,7 @@ A teszteket az alábbi minta alapján végezzük:
 - **A tesztelés eredménye:** Megfelelt / Nem felelt meg / Megfelelt megjegyzésekkel
 - **Megjegyzések:**	
 	
-#### Eset 4 - Formátum
+#### Eset 5 - Formátum
 - **A teszt-eset leírás és célja:** Fromátumok tesztelése.
 - **A tesztelt folyamat/funkció leírása:**	A tananyagok oldalról egy tananyagra navigálunk.
 - **A tesztelés előfeltételei:** Belépett felhasználó, szerver kapcsolat, elérhető topic-ok/gombok. 
