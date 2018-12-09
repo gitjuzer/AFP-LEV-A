@@ -1,4 +1,4 @@
-# Tesztelési Jegyzőkönyv
+# Tesztelési Terv
 
 ## Bevezetés
 A tesztelők a tesztforgatókönyvnek megfelelően elvégzik a tesztelést és az eredményt a tesztelési jegyzőkönyvben dokumentálják. 
