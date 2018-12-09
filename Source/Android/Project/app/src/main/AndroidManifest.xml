@@ -28,7 +28,8 @@
             android:name=".MainActivity"
             android:label="@string/title_activity_main"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".tananyagok"></activity>
+        <activity android:name=".tananyagok" />
+        <activity android:name=".Tananyag"/>
     </application>
 
 </manifest>

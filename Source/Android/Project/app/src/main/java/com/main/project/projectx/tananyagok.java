@@ -7,6 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Gravity;
+import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -55,12 +56,22 @@ public class tananyagok extends AppCompatActivity {
         }catch (Exception e){
 
         }
-        for (Curriculum item: CurriculumsList) {
+        for (final Curriculum item: CurriculumsList) {
             TextView titleView = new TextView(this);
             titleView.setText(item.title);
-            titleView.setTextSize(20);
+            titleView.setTextSize(getResources().getDimension(R.dimen.tananyagok_lista_szovegmeret));
             titleView.setTextColor(getResources().getColor(R.color.curriculum_color));
             titleView.setGravity(Gravity.CENTER);
+            titleView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(v.getContext(),Tananyag.class);
+                    intent.putExtra("title", item.title);
+                    intent.putExtra("content", item.content);
+                    startActivity(intent);
+
+                }
+            });
             // TODO: onclick navigáció hozzáadása
             curriculumsListLayout.addView(titleView);
         }
