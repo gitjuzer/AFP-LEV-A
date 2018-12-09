@@ -315,10 +315,15 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
         Matcher matcher = VALID_EMAIL_ADDRESS_REGEX.matcher(email);
         return matcher.find();
     }
-
-    private boolean isPasswordValid(String password) {
-        //TODO: Replace this with your own logic
-        return password.length() > 4;
+    protected static final Pattern VALID_PASSWORD_ADDRESS_REGEX =
+            Pattern.compile("^((?=.*[a-z])+(?=.[0-9])+(?=.*[A-Z]))$");
+    protected static boolean isPasswordValid(String password) {
+        Pattern pattern;
+        Matcher matcher;
+        String jelszo_pattern = "^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=\\S+$).{6,}$";
+        pattern = Pattern.compile(jelszo_pattern);
+        matcher = pattern.matcher(password);
+        return matcher.matches();
     }
 
     /**
