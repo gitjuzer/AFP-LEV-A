@@ -1,4 +1,4 @@
-# Tesztelési Terv
+﻿# Tesztelési Terv
 
 ## Bevezetés
 A tesztelők a tesztforgatókönyvnek megfelelően elvégzik a tesztelést és az eredményt a tesztelési jegyzőkönyvben dokumentálják. 
@@ -36,24 +36,24 @@ A teszteket az alábbi minta alapján végezzük:
 - **A teszt-eset leírás és célja:** Login megfelelő működése
 - **A tesztelt folyamat/funkció leírása:** Login utáni oldal váltás.
 - **A tesztelés előfeltételei:** Nincs
-- **A tesztelés dátuma és időpontja:**
+- **A tesztelés dátuma és időpontja:** 2018.12.12. 13:47
 - **A tesztadatok típusa:**	Szerver oldalon rögzített test userek.
-- **A tesztet végző személy(ek):**
+- **A tesztet végző személy(ek):** Renyhárt Gábor
 - **A tesztelt rendszer beállításai:**
 - **A teszt-eset elvárt eredménye:** Sikeres login után főoldal betöltése.
-- **A tesztelés eredménye:** Megfelelt / Nem felelt meg / Megfelelt megjegyzésekkel
+- **A tesztelés eredménye:** Megfelelt ~~/ Nem felelt meg / Megfelelt megjegyzésekkel~~
 - **Megjegyzések:**	
 	
 #### Eset 2 - Regisztráció működése
 - **A teszt-eset leírás és célja:** Regisztráció megfelelő működése
 - **A tesztelt folyamat/funkció leírása:** Regisztráció utáni oldal váltás.
 - **A tesztelés előfeltételei:** Nincs.
-- **A tesztelés dátuma és időpontja:**
+- **A tesztelés dátuma és időpontja:** 2018.12.12. 13:49
 - **A tesztadatok típusa:**	Nincs
-- **A tesztet végző személy(ek):**
+- **A tesztet végző személy(ek):** Renyhárt Gábor
 - **A tesztelt rendszer beállításai:**
 - **A teszt-eset elvárt eredménye:** Sikeres regisztráció esetén a főoldal betöltése
-- **A tesztelés eredménye:** Megfelelt / Nem felelt meg / Megfelelt megjegyzésekkel
+- **A tesztelés eredménye:** Megfelelt ~~/ Nem felelt meg / Megfelelt megjegyzésekkel~~
 - **Megjegyzések:**	
 	
 #### Eset 3 - Hibajelzések megfelelő működése
@@ -69,15 +69,15 @@ A teszteket az alábbi minta alapján végezzük:
 - **Megjegyzések:**	
 
 #### Eset 4 - Formátum
-- **A teszt-eset leírás és célja:** Fromátumok tesztelése.
-- **A tesztelt folyamat/funkció leírása:**	Login oldalrol a főoldalra navigálás
+- **A teszt-eset leírás és célja:** Formátumok tesztelése.
+- **A tesztelt folyamat/funkció leírása:** Login oldalról a főoldalra navigálás
 - **A tesztelés előfeltételei:** Nincs
-- **A tesztelés dátuma és időpontja:**
+- **A tesztelés dátuma és időpontja:** 2018.12.12. 13:51
 - **A tesztadatok típusa:**	Szerver oldalon rögzített test userek.
-- **A tesztet végző személy(ek):**
+- **A tesztet végző személy(ek):** Renyhárt Gábor
 - **A tesztelt rendszer beállításai:**
 - **A teszt-eset elvárt eredménye:** Gombok pirossal jelennek meg illetve háttér betöltése.
-- **A tesztelés eredménye:** Megfelelt / Nem felelt meg / Megfelelt megjegyzésekkel
+- **A tesztelés eredménye:** Megfelelt ~~/ Nem felelt meg / Megfelelt megjegyzésekkel~~
 - **Megjegyzések:**	
 	
 ### Főoldal (MainAcitivity.java)
