@@ -315,8 +315,7 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
         Matcher matcher = VALID_EMAIL_ADDRESS_REGEX.matcher(email);
         return matcher.find();
     }
-    protected static final Pattern VALID_PASSWORD_ADDRESS_REGEX =
-            Pattern.compile("^((?=.*[a-z])+(?=.[0-9])+(?=.*[A-Z]))$");
+
     protected static boolean isPasswordValid(String password) {
         Pattern pattern;
         Matcher matcher;

@@ -69,7 +69,6 @@ public class tananyagok extends AppCompatActivity {
                     intent.putExtra("title", item.title);
                     intent.putExtra("content", item.content);
                     startActivity(intent);
-
                 }
             });
             // TODO: onclick navigáció hozzáadása
