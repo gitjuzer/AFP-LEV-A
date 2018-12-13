@@ -182,7 +182,7 @@
 - **A tesztet végző személy(ek):** Takácsné Mihók Orsolya Klára
 - **A tesztelt rendszer beállításai:** Android Nexus 5X
 - **A teszt-eset elvárt eredménye:** Megfelelő mennyiségű gomb jelenik meg.
-- **A tesztelés eredménye:** Megfelelt / Nem felelt meg / Megfelelt megjegyzésekkel
+- **A tesztelés eredménye:** Megfelelt ~~/ Nem felelt meg / Megfelelt megjegyzésekkel~~
 - **Megjegyzések:**	Három gomb jelent meg.
 	
 #### Eset 2 - Gombok működése
