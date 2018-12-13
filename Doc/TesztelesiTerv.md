@@ -35,7 +35,7 @@ A teszteket az alábbi minta alapján végezzük:
 - **A tesztet végző személy(ek):**
 - **A tesztelt rendszer beállításai:**
 - **A teszt-eset elvárt eredménye:** Beérkező kérésre 200-as státuszú válasz.
-- **A tesztelés eredménye:** Megfelelt ~~/ Nem felelt meg / Megfelelt megjegyzésekkel~~
+- **A tesztelés eredménye:** Megfelelt / Nem felelt meg / Megfelelt megjegyzésekkel
 - **Megjegyzések:** Megfelelt
 
 #### Eset 2 - Api működése(api/routes.php)
@@ -47,7 +47,7 @@ A teszteket az alábbi minta alapján végezzük:
 - **A tesztet végző személy(ek):**
 - **A tesztelt rendszer beállításai:**
 - **A teszt-eset elvárt eredménye:** Beérkező kérésre 200-as státuszú válasz.
-- **A tesztelés eredménye:** Megfelelt ~~/ Nem felelt meg / Megfelelt megjegyzésekkel~~
+- **A tesztelés eredménye:** Megfelelt / Nem felelt meg / Megfelelt megjegyzésekkel
 - **Megjegyzések:** Megfelelt
 
 #### Eset 3 - HTTP werb-ek működése működése(api/routes.php)
@@ -59,7 +59,7 @@ A teszteket az alábbi minta alapján végezzük:
 - **A tesztet végző személy(ek):**
 - **A tesztelt rendszer beállításai:**
 - **A teszt-eset elvárt eredménye:** Beérkező kérésre 200-as státuszú válasz.
-- **A tesztelés eredménye:** Megfelelt ~~/ Nem felelt meg / Megfelelt megjegyzésekkel~~
+- **A tesztelés eredménye:** Megfelelt / Nem felelt meg / Megfelelt megjegyzésekkel
 - **Megjegyzések:** Megfelelt
 
 
@@ -72,7 +72,7 @@ A teszteket az alábbi minta alapján végezzük:
 - **A tesztet végző személy(ek):**
 - **A tesztelt rendszer beállításai:**
 - **A teszt-eset elvárt eredménye:** Beérkező kérésre 504 státuszú válasz
-- **A tesztelés eredménye:** Megfelelt ~~/ Nem felelt meg / Megfelelt megjegyzésekkel~~
+- **A tesztelés eredménye:** Megfelelt / Nem felelt meg / Megfelelt megjegyzésekkel
 - **Megjegyzések:** Megfelelt
 
 
@@ -85,7 +85,7 @@ A teszteket az alábbi minta alapján végezzük:
 - **A tesztet végző személy(ek):**
 - **A tesztelt rendszer beállításai:**
 - **A teszt-eset elvárt eredménye:** Beérkező kérésre 404 státuszú válasz
-- **A tesztelés eredménye:** Megfelelt ~~/ Nem felelt meg / Megfelelt megjegyzésekkel~~
+- **A tesztelés eredménye:** Megfelelt / Nem felelt meg / Megfelelt megjegyzésekkel
 - **Megjegyzések:** Megfelelt
 
 ## Adatbázis
@@ -101,7 +101,7 @@ A teszteket az alábbi minta alapján végezzük:
 - **A tesztet végző személy(ek):**
 - **A tesztelt rendszer beállításai:**
 - **A teszt-eset elvárt eredménye:** Sikeres regisztráció esetén a főoldal betöltése, majd kijelentkezés után sikeres újboli bejelentkezés;
-- **A tesztelés eredménye:** Megfelelt ~~/ Nem felelt meg / Megfelelt megjegyzésekkel~~
+- **A tesztelés eredménye:** Megfelelt / Nem felelt meg / Megfelelt megjegyzésekkel
 - **Megjegyzések:**	
 	
 #### Eset 2 - Login működése
@@ -113,7 +113,7 @@ A teszteket az alábbi minta alapján végezzük:
 - **A tesztet végző személy(ek):**
 - **A tesztelt rendszer beállításai:**
 - **A teszt-eset elvárt eredménye:** Sikeres login után főoldal betöltése.
-- **A tesztelés eredménye:** Megfelelt ~~/ Nem felelt meg / Megfelelt megjegyzésekkel~~
+- **A tesztelés eredménye:** Megfelelt / Nem felelt meg / Megfelelt megjegyzésekkel
 - **Megjegyzések:**	
 
 #### Eset 3 - Hibajelzések megfelelő működése
@@ -137,7 +137,7 @@ A teszteket az alábbi minta alapján végezzük:
 - **A tesztet végző személy(ek):**
 - **A tesztelt rendszer beállításai:**
 - **A teszt-eset elvárt eredménye:** 
-- **A tesztelés eredménye:** Megfelelt ~~/ Nem felelt meg / Megfelelt megjegyzésekkel~~
+- **A tesztelés eredménye:** Megfelelt / Nem felelt meg / Megfelelt megjegyzésekkel
 - **Megjegyzések:**	
 
 
@@ -154,7 +154,7 @@ A teszteket az alábbi minta alapján végezzük:
 - **A tesztet végző személy(ek):**
 - **A tesztelt rendszer beállításai:**
 - **A teszt-eset elvárt eredménye:** Sikeres login után főoldal betöltése.
-- **A tesztelés eredménye:** Megfelelt ~~/ Nem felelt meg / Megfelelt megjegyzésekkel~~
+- **A tesztelés eredménye:** Megfelelt / Nem felelt meg / Megfelelt megjegyzésekkel
 - **Megjegyzések:**	
 	
 #### Eset 2 - Regisztráció működése
@@ -166,7 +166,7 @@ A teszteket az alábbi minta alapján végezzük:
 - **A tesztet végző személy(ek):**
 - **A tesztelt rendszer beállításai:**
 - **A teszt-eset elvárt eredménye:** Sikeres regisztráció esetén a főoldal betöltése
-- **A tesztelés eredménye:** Megfelelt ~~/ Nem felelt meg / Megfelelt megjegyzésekkel~~
+- **A tesztelés eredménye:** Megfelelt / Nem felelt meg / Megfelelt megjegyzésekkel
 - **Megjegyzések:**	
 	
 #### Eset 3 - Hibajelzések megfelelő működése
@@ -190,7 +190,7 @@ A teszteket az alábbi minta alapján végezzük:
 - **A tesztet végző személy(ek):**
 - **A tesztelt rendszer beállításai:**
 - **A teszt-eset elvárt eredménye:** Gombok pirossal jelennek meg illetve háttér betöltése.
-- **A tesztelés eredménye:** Megfelelt ~~/ Nem felelt meg / Megfelelt megjegyzésekkel~~
+- **A tesztelés eredménye:** Megfelelt / Nem felelt meg / Megfelelt megjegyzésekkel
 - **Megjegyzések:**	
 	
 ### Főoldal (MainAcitivity.java)
