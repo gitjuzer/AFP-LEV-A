@@ -81,8 +81,11 @@ Egy felhasználó lehet admin, tanár vagy tanuló.
 5. Feltételrendszer
 
 6. Technikai feltételek
+
 A rendszer támogassa a mysql InnoDB adatbáziskezelőt és a php x.x verziót használó alkalmazás szerver platformot.
-A rendszer használatát Android 4.1 verziótól szükséges támogatni.
+
+A rendszer használatát Android 4.3 verziótól szükséges támogatni (API 18).
+
 A rendszer támogassa a Google Chrome, Firefox, MS Edge böngészőket.
 
 7. Követelménylista
