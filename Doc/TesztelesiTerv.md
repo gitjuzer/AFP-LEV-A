@@ -116,6 +116,29 @@ A teszteket az alábbi minta alapján végezzük:
 - **A tesztelés eredménye:** Megfelelt ~~/ Nem felelt meg / Megfelelt megjegyzésekkel~~
 - **Megjegyzések:**	
 
+#### Eset 3 - Hibajelzések megfelelő működése
+- **A teszt-eset leírás és célja:** Login és Regisztráláskor elkövetett "hibák"
+- **A tesztelt folyamat/funkció leírása:** Hiba jelzések arra a pontra mutatnak-e ahol a felhasználó a hibát vétette.
+- **A tesztelés előfeltételei:** Nincs
+- **A tesztelés dátuma és időpontja:**
+- **A tesztadatok típusa:**	Szerver oldalon rögzített test userek.
+- **A tesztet végző személy(ek):**
+- **A tesztelt rendszer beállításai:**
+- **A teszt-eset elvárt eredménye:** Hibák előugrása hibás adat bevitelekor
+- **A tesztelés eredménye:** Megfelelt / Nem felelt meg / Megfelelt megjegyzésekkel
+- **Megjegyzések:**	
+
+#### Eset 4 - Formátum
+- **A teszt-eset leírás és célja:** Formátumok tesztelése.
+- **A tesztelt folyamat/funkció leírása:** Login oldalról a főoldalra navigálás
+- **A tesztelés előfeltételei:** Sikeres login
+- **A tesztelés dátuma és időpontja:** 2018.12.13. 19:40
+- **A tesztadatok típusa:**	Szerver oldalon rögzített test userek.
+- **A tesztet végző személy(ek):** Albach Zsolt
+- **A tesztelt rendszer beállításai:**
+- **A teszt-eset elvárt eredménye:** 
+- **A tesztelés eredménye:** Megfelelt ~~/ Nem felelt meg / Megfelelt megjegyzésekkel~~
+- **Megjegyzések:**	
 
 
 ## Android Frontend
