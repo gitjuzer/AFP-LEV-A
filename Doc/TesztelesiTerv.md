@@ -24,6 +24,70 @@ A teszteket az alábbi minta alapján végezzük:
 
 ## Backend
 
+### Homepage funkció (api/routes.php)
+	
+#### Eset 1 - Api működése(api/routes.php)
+- **A teszt-eset leírás és célja:** Api megfelelő működése paraméter nékül
+- **A tesztelt folyamat/funkció leírása:** A gyökér végpont felé indított http requestek válaszainak elemzése
+- **A tesztelés előfeltételei:** Slim api telepítése
+- **A tesztelés dátuma és időpontja:** 2018.11.10. 10:30
+- **A tesztadatok típusa:**	-
+- **A tesztet végző személy(ek):** Nagy Tibor
+- **A tesztelt rendszer beállításai:**
+- **A teszt-eset elvárt eredménye:** Beérkező kérésre 200-as státuszú válasz.
+- **A tesztelés eredménye:** Megfelelt ~~/ Nem felelt meg / Megfelelt megjegyzésekkel~~
+- **Megjegyzések:** Megfelelt
+
+#### Eset 2 - Api működése(api/routes.php)
+- **A teszt-eset leírás és célja:** Api megfelelő működése paraméterrel
+- **A tesztelt folyamat/funkció leírása:** A paraméterezett végpont felé indított http requestek válaszainak elemzése
+- **A tesztelés előfeltételei:** Slim api telepítése
+- **A tesztelés dátuma és időpontja:** 2018.11.10. 10:30
+- **A tesztadatok típusa:**	-
+- **A tesztet végző személy(ek):** Nagy Tibor
+- **A tesztelt rendszer beállításai:**
+- **A teszt-eset elvárt eredménye:** Beérkező kérésre 200-as státuszú válasz.
+- **A tesztelés eredménye:** Megfelelt ~~/ Nem felelt meg / Megfelelt megjegyzésekkel~~
+- **Megjegyzések:** Megfelelt
+
+#### Eset 3 - HTTP werb-ek működése működése(api/routes.php)
+- **A teszt-eset leírás és célja:** Post method működése
+- **A tesztelt folyamat/funkció leírása:** A gyökér végpont felé indított POST típusú http requestek válaszainak elemzése
+- **A tesztelés előfeltételei:** Slim api telepítése
+- **A tesztelés dátuma és időpontja:** 2018.11.10. 10:30
+- **A tesztadatok típusa:**	-
+- **A tesztet végző személy(ek):** Nagy Tibor
+- **A tesztelt rendszer beállításai:**
+- **A teszt-eset elvárt eredménye:** Beérkező kérésre 200-as státuszú válasz.
+- **A tesztelés eredménye:** Megfelelt ~~/ Nem felelt meg / Megfelelt megjegyzésekkel~~
+- **Megjegyzések:** Megfelelt
+
+
+#### Eset 4 - Tiltott metódusok letiltása(api/routes.php)
+- **A teszt-eset leírás és célja:** Tiltott metódusok letiltása
+- **A tesztelt folyamat/funkció leírása:** A gyökér végpont felé indított nem regisztrált típusú http requestek válaszainak elemzése
+- **A tesztelés előfeltételei:** Slim api telepítése
+- **A tesztelés dátuma és időpontja:** 2018.11.10. 10:30
+- **A tesztadatok típusa:**	-
+- **A tesztet végző személy(ek):** Nagy Tibor
+- **A tesztelt rendszer beállításai:**
+- **A teszt-eset elvárt eredménye:** Beérkező kérésre 504 státuszú válasz
+- **A tesztelés eredménye:** Megfelelt ~~/ Nem felelt meg / Megfelelt megjegyzésekkel~~
+- **Megjegyzések:** Megfelelt
+
+
+#### Eset 5 - Nem létező útvonalak(api/routes.php)
+- **A teszt-eset leírás és célja:** Nem létező útvonalak
+- **A tesztelt folyamat/funkció leírása:** A gyökér végpont felé indított nem regisztrált végpontú http requestek válaszainak elemzése
+- **A tesztelés előfeltételei:** Slim api telepítése
+- **A tesztelés dátuma és időpontja:** 2018.11.10. 10:30
+- **A tesztadatok típusa:**	-
+- **A tesztet végző személy(ek):** Nagy Tibor
+- **A tesztelt rendszer beállításai:**
+- **A teszt-eset elvárt eredménye:** Beérkező kérésre 404 státuszú válasz
+- **A tesztelés eredménye:** Megfelelt ~~/ Nem felelt meg / Megfelelt megjegyzésekkel~~
+- **Megjegyzések:** Megfelelt
+
 ## Adatbázis
 
 ## Web Frontend
