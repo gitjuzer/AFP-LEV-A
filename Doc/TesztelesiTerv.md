@@ -104,6 +104,18 @@ A teszteket az alábbi minta alapján végezzük:
 - **A tesztelés eredménye:** Megfelelt ~~/ Nem felelt meg / Megfelelt megjegyzésekkel~~
 - **Megjegyzések:**	
 	
+#### Eset 2 - Login működése
+- **A teszt-eset leírás és célja:** Login sikeres működése
+- **A tesztelt folyamat/funkció leírása:** Login utáni oldal váltás.
+- **A tesztelés előfeltételei:** Sikeres regisztráció
+- **A tesztelés dátuma és időpontja:** 2018.12.13. 19:10
+- **A tesztadatok típusa:**	Szerver oldalon rögzített test userek.
+- **A tesztet végző személy(ek):** Albach Zsolt
+- **A tesztelt rendszer beállításai:**
+- **A teszt-eset elvárt eredménye:** Sikeres login után főoldal betöltése.
+- **A tesztelés eredménye:** Megfelelt ~~/ Nem felelt meg / Megfelelt megjegyzésekkel~~
+- **Megjegyzések:**	
+
 
 
 ## Android Frontend
