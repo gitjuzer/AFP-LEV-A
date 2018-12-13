@@ -91,6 +91,20 @@ A teszteket az alábbi minta alapján végezzük:
 ## Adatbázis
 
 ## Web Frontend
+### Login funkció 
+#### Eset 1 - Regisztráció működése
+- **A teszt-eset leírás és célja:** Regisztráció siekres működése
+- **A tesztelt folyamat/funkció leírása:** Regisztráció utáni oldal váltás.
+- **A tesztelés előfeltételei:** Nincs.
+- **A tesztelés dátuma és időpontja:** 2018.12.13. 18:49
+- **A tesztadatok típusa:**	Nincs
+- **A tesztet végző személy(ek):** Albach Zsolt
+- **A tesztelt rendszer beállításai:**
+- **A teszt-eset elvárt eredménye:** Sikeres regisztráció esetén a főoldal betöltése, majd kijelentkezés után sikeres újboli bejelentkezés;
+- **A tesztelés eredménye:** Megfelelt ~~/ Nem felelt meg / Megfelelt megjegyzésekkel~~
+- **Megjegyzések:**	
+	
+
 
 ## Android Frontend
 
