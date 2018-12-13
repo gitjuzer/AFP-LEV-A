@@ -30,9 +30,9 @@ A teszteket az alábbi minta alapján végezzük:
 - **A teszt-eset leírás és célja:** Api megfelelő működése paraméter nékül
 - **A tesztelt folyamat/funkció leírása:** A gyökér végpont felé indított http requestek válaszainak elemzése
 - **A tesztelés előfeltételei:** Slim api telepítése
-- **A tesztelés dátuma és időpontja:** 2018.11.10. 10:30
+- **A tesztelés dátuma és időpontja:**
 - **A tesztadatok típusa:**	-
-- **A tesztet végző személy(ek):** Nagy Tibor
+- **A tesztet végző személy(ek):**
 - **A tesztelt rendszer beállításai:**
 - **A teszt-eset elvárt eredménye:** Beérkező kérésre 200-as státuszú válasz.
 - **A tesztelés eredménye:** Megfelelt ~~/ Nem felelt meg / Megfelelt megjegyzésekkel~~
@@ -42,9 +42,9 @@ A teszteket az alábbi minta alapján végezzük:
 - **A teszt-eset leírás és célja:** Api megfelelő működése paraméterrel
 - **A tesztelt folyamat/funkció leírása:** A paraméterezett végpont felé indított http requestek válaszainak elemzése
 - **A tesztelés előfeltételei:** Slim api telepítése
-- **A tesztelés dátuma és időpontja:** 2018.11.10. 10:30
+- **A tesztelés dátuma és időpontja:**
 - **A tesztadatok típusa:**	-
-- **A tesztet végző személy(ek):** Nagy Tibor
+- **A tesztet végző személy(ek):**
 - **A tesztelt rendszer beállításai:**
 - **A teszt-eset elvárt eredménye:** Beérkező kérésre 200-as státuszú válasz.
 - **A tesztelés eredménye:** Megfelelt ~~/ Nem felelt meg / Megfelelt megjegyzésekkel~~
@@ -54,9 +54,9 @@ A teszteket az alábbi minta alapján végezzük:
 - **A teszt-eset leírás és célja:** Post method működése
 - **A tesztelt folyamat/funkció leírása:** A gyökér végpont felé indított POST típusú http requestek válaszainak elemzése
 - **A tesztelés előfeltételei:** Slim api telepítése
-- **A tesztelés dátuma és időpontja:** 2018.11.10. 10:30
+- **A tesztelés dátuma és időpontja:**
 - **A tesztadatok típusa:**	-
-- **A tesztet végző személy(ek):** Nagy Tibor
+- **A tesztet végző személy(ek):**
 - **A tesztelt rendszer beállításai:**
 - **A teszt-eset elvárt eredménye:** Beérkező kérésre 200-as státuszú válasz.
 - **A tesztelés eredménye:** Megfelelt ~~/ Nem felelt meg / Megfelelt megjegyzésekkel~~
@@ -67,9 +67,9 @@ A teszteket az alábbi minta alapján végezzük:
 - **A teszt-eset leírás és célja:** Tiltott metódusok letiltása
 - **A tesztelt folyamat/funkció leírása:** A gyökér végpont felé indított nem regisztrált típusú http requestek válaszainak elemzése
 - **A tesztelés előfeltételei:** Slim api telepítése
-- **A tesztelés dátuma és időpontja:** 2018.11.10. 10:30
+- **A tesztelés dátuma és időpontja:**
 - **A tesztadatok típusa:**	-
-- **A tesztet végző személy(ek):** Nagy Tibor
+- **A tesztet végző személy(ek):**
 - **A tesztelt rendszer beállításai:**
 - **A teszt-eset elvárt eredménye:** Beérkező kérésre 504 státuszú válasz
 - **A tesztelés eredménye:** Megfelelt ~~/ Nem felelt meg / Megfelelt megjegyzésekkel~~
@@ -80,9 +80,9 @@ A teszteket az alábbi minta alapján végezzük:
 - **A teszt-eset leírás és célja:** Nem létező útvonalak
 - **A tesztelt folyamat/funkció leírása:** A gyökér végpont felé indított nem regisztrált végpontú http requestek válaszainak elemzése
 - **A tesztelés előfeltételei:** Slim api telepítése
-- **A tesztelés dátuma és időpontja:** 2018.11.10. 10:30
+- **A tesztelés dátuma és időpontja:**
 - **A tesztadatok típusa:**	-
-- **A tesztet végző személy(ek):** Nagy Tibor
+- **A tesztet végző személy(ek):**
 - **A tesztelt rendszer beállításai:**
 - **A teszt-eset elvárt eredménye:** Beérkező kérésre 404 státuszú válasz
 - **A tesztelés eredménye:** Megfelelt ~~/ Nem felelt meg / Megfelelt megjegyzésekkel~~
@@ -96,9 +96,9 @@ A teszteket az alábbi minta alapján végezzük:
 - **A teszt-eset leírás és célja:** Regisztráció siekres működése
 - **A tesztelt folyamat/funkció leírása:** Regisztráció utáni oldal váltás.
 - **A tesztelés előfeltételei:** Nincs.
-- **A tesztelés dátuma és időpontja:** 2018.12.13. 18:49
+- **A tesztelés dátuma és időpontja:**
 - **A tesztadatok típusa:**	Nincs
-- **A tesztet végző személy(ek):** Albach Zsolt
+- **A tesztet végző személy(ek):**
 - **A tesztelt rendszer beállításai:**
 - **A teszt-eset elvárt eredménye:** Sikeres regisztráció esetén a főoldal betöltése, majd kijelentkezés után sikeres újboli bejelentkezés;
 - **A tesztelés eredménye:** Megfelelt ~~/ Nem felelt meg / Megfelelt megjegyzésekkel~~
@@ -108,9 +108,9 @@ A teszteket az alábbi minta alapján végezzük:
 - **A teszt-eset leírás és célja:** Login sikeres működése
 - **A tesztelt folyamat/funkció leírása:** Login utáni oldal váltás.
 - **A tesztelés előfeltételei:** Sikeres regisztráció
-- **A tesztelés dátuma és időpontja:** 2018.12.13. 19:10
+- **A tesztelés dátuma és időpontja:**
 - **A tesztadatok típusa:**	Szerver oldalon rögzített test userek.
-- **A tesztet végző személy(ek):** Albach Zsolt
+- **A tesztet végző személy(ek):**
 - **A tesztelt rendszer beállításai:**
 - **A teszt-eset elvárt eredménye:** Sikeres login után főoldal betöltése.
 - **A tesztelés eredménye:** Megfelelt ~~/ Nem felelt meg / Megfelelt megjegyzésekkel~~
@@ -132,9 +132,9 @@ A teszteket az alábbi minta alapján végezzük:
 - **A teszt-eset leírás és célja:** Formátumok tesztelése.
 - **A tesztelt folyamat/funkció leírása:** Login oldalról a főoldalra navigálás
 - **A tesztelés előfeltételei:** Sikeres login
-- **A tesztelés dátuma és időpontja:** 2018.12.13. 19:40
+- **A tesztelés dátuma és időpontja:**
 - **A tesztadatok típusa:**	Szerver oldalon rögzített test userek.
-- **A tesztet végző személy(ek):** Albach Zsolt
+- **A tesztet végző személy(ek):**
 - **A tesztelt rendszer beállításai:**
 - **A teszt-eset elvárt eredménye:** 
 - **A tesztelés eredménye:** Megfelelt ~~/ Nem felelt meg / Megfelelt megjegyzésekkel~~
@@ -149,9 +149,9 @@ A teszteket az alábbi minta alapján végezzük:
 - **A teszt-eset leírás és célja:** Login megfelelő működése
 - **A tesztelt folyamat/funkció leírása:** Login utáni oldal váltás.
 - **A tesztelés előfeltételei:** Nincs
-- **A tesztelés dátuma és időpontja:** 2018.12.12. 13:47
+- **A tesztelés dátuma és időpontja:**
 - **A tesztadatok típusa:**	Szerver oldalon rögzített test userek.
-- **A tesztet végző személy(ek):** Renyhárt Gábor
+- **A tesztet végző személy(ek):**
 - **A tesztelt rendszer beállításai:**
 - **A teszt-eset elvárt eredménye:** Sikeres login után főoldal betöltése.
 - **A tesztelés eredménye:** Megfelelt ~~/ Nem felelt meg / Megfelelt megjegyzésekkel~~
@@ -161,9 +161,9 @@ A teszteket az alábbi minta alapján végezzük:
 - **A teszt-eset leírás és célja:** Regisztráció megfelelő működése
 - **A tesztelt folyamat/funkció leírása:** Regisztráció utáni oldal váltás.
 - **A tesztelés előfeltételei:** Nincs.
-- **A tesztelés dátuma és időpontja:** 2018.12.12. 13:49
+- **A tesztelés dátuma és időpontja:**
 - **A tesztadatok típusa:**	Nincs
-- **A tesztet végző személy(ek):** Renyhárt Gábor
+- **A tesztet végző személy(ek):**
 - **A tesztelt rendszer beállításai:**
 - **A teszt-eset elvárt eredménye:** Sikeres regisztráció esetén a főoldal betöltése
 - **A tesztelés eredménye:** Megfelelt ~~/ Nem felelt meg / Megfelelt megjegyzésekkel~~
@@ -185,9 +185,9 @@ A teszteket az alábbi minta alapján végezzük:
 - **A teszt-eset leírás és célja:** Formátumok tesztelése.
 - **A tesztelt folyamat/funkció leírása:** Login oldalról a főoldalra navigálás
 - **A tesztelés előfeltételei:** Nincs
-- **A tesztelés dátuma és időpontja:** 2018.12.12. 13:51
+- **A tesztelés dátuma és időpontja:**
 - **A tesztadatok típusa:**	Szerver oldalon rögzített test userek.
-- **A tesztet végző személy(ek):** Renyhárt Gábor
+- **A tesztet végző személy(ek):**
 - **A tesztelt rendszer beállításai:**
 - **A teszt-eset elvárt eredménye:** Gombok pirossal jelennek meg illetve háttér betöltése.
 - **A tesztelés eredménye:** Megfelelt ~~/ Nem felelt meg / Megfelelt megjegyzésekkel~~
@@ -246,7 +246,7 @@ A teszteket az alábbi minta alapján végezzük:
 	
 #### Eset 5 - Formátum
 - **A teszt-eset leírás és célja:** Fromátumok tesztelése.
-- **A tesztelt folyamat/funkció leírása:**	A tananyagok oldalról egy tananyagra navigálunk.
+- **A tesztelt folyamat/funkció leírása:**	Gomb képek.
 - **A tesztelés előfeltételei:** Belépett felhasználó, szerver kapcsolat, elérhető topic-ok/gombok. 
 - **A tesztelés dátuma és időpontja:**
 - **A tesztadatok típusa:**	Szerver oldalon rögzített teszt adatok.
