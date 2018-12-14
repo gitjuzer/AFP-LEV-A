@@ -66,6 +66,98 @@
 - **A tesztelés eredménye:** Megfelelt ~~/ Nem felelt meg / Megfelelt megjegyzésekkel~~
 - **Megjegyzések:** Megfelelt
 
+
+### afp/domain/curriculum class 
+	
+#### Eset 1 - Helyes kiterjesztés
+- **A teszt-eset leírás és célja:** A base modell öröklődése
+- **A tesztelt folyamat/funkció leírása:** Is base modell
+- **A tesztelés előfeltételei:** -
+- **A tesztelés dátuma és időpontja:** 2018.12 14.
+- **A tesztadatok típusa:**	-
+- **A tesztet végző személy(ek):** Bajzát Zoltán
+- **A tesztelt rendszer beállításai:**
+- **A teszt-eset elvárt eredménye:** passed
+- **A tesztelés eredménye:** Megfelelt ~~ / Nem felelt meg / Megfelelt megjegyzésekkel ~~
+- **Megjegyzések:** 
+
+#### Eset 2 - Cím beállítás
+- **A teszt-eset leírás és célja:** Set title működés tesztelése
+- **A tesztelt folyamat/funkció leírása:** Értékadások
+- **A tesztelés előfeltételei:** -
+- **A tesztelés dátuma és időpontja:** 2018.12 14.
+- **A tesztadatok típusa:**	-
+- **A tesztet végző személy(ek):** Bajzát Zoltán
+- **A tesztelt rendszer beállításai:**
+- **A teszt-eset elvárt eredménye:** passed
+- **A tesztelés eredménye:** Megfelelt ~~ / Nem felelt meg / Megfelelt megjegyzésekkel ~~
+- **Megjegyzések:** 
+
+#### Eset 3 - Cím visszaadás
+- **A teszt-eset leírás és célja:** Get title működés tesztelése
+- **A tesztelt folyamat/funkció leírása:** Értékadások ellenőrzése
+- **A tesztelés előfeltételei:** -
+- **A tesztelés dátuma és időpontja:** 2018.12 14.
+- **A tesztadatok típusa:**	-
+- **A tesztet végző személy(ek):** Bajzát Zoltán
+- **A tesztelt rendszer beállításai:**
+- **A teszt-eset elvárt eredménye:** passed
+- **A tesztelés eredménye:** Megfelelt ~~ / Nem felelt meg / Megfelelt megjegyzésekkel ~~
+- **Megjegyzések:** 
+
+
+#### Eset 4 - Context beállítás
+- **A teszt-eset leírás és célja:** Set context működés tesztelése
+- **A tesztelt folyamat/funkció leírása:** Értékadások
+- **A tesztelés előfeltételei:** -
+- **A tesztelés dátuma és időpontja:** 2018.12 14.
+- **A tesztadatok típusa:**	-
+- **A tesztet végző személy(ek):** Bajzát Zoltán
+- **A tesztelt rendszer beállításai:**
+- **A teszt-eset elvárt eredménye:** passed
+- **A tesztelés eredménye:** Megfelelt ~~ / Nem felelt meg / Megfelelt megjegyzésekkel ~~
+- **Megjegyzések:** 
+
+
+#### Eset 5 - Context visszaadás
+- **A teszt-eset leírás és célja:** Get context működés tesztelése
+- **A tesztelt folyamat/funkció leírása:** Értékadások ellenőrzése
+- **A tesztelés előfeltételei:** -
+- **A tesztelés dátuma és időpontja:** 2018.12 14.
+- **A tesztadatok típusa:**	-
+- **A tesztet végző személy(ek):** Bajzát Zoltán
+- **A tesztelt rendszer beállításai:**
+- **A teszt-eset elvárt eredménye:** passed
+- **A tesztelés eredménye:** Megfelelt ~~ / Nem felelt meg / Megfelelt megjegyzésekkel ~~
+- **Megjegyzések:** 
+
+
+#### Eset 6 - Tobic beállítás
+- **A teszt-eset leírás és célja:** Set topic működés tesztelése
+- **A tesztelt folyamat/funkció leírása:** Értékadások
+- **A tesztelés előfeltételei:** -
+- **A tesztelés dátuma és időpontja:** 2018.12 14.
+- **A tesztadatok típusa:**	-
+- **A tesztet végző személy(ek):** Bajzát Zoltán
+- **A tesztelt rendszer beállításai:**
+- **A teszt-eset elvárt eredménye:** passed
+- **A tesztelés eredménye:** Megfelelt ~~ / Nem felelt meg / Megfelelt megjegyzésekkel ~~
+- **Megjegyzések:** 
+
+
+#### Eset 7 - Topic visszaadás
+- **A teszt-eset leírás és célja:** Get topic működés tesztelése
+- **A tesztelt folyamat/funkció leírása:** Értékadások ellenőrzése
+- **A tesztelés előfeltételei:** -
+- **A tesztelés dátuma és időpontja:** 2018.12 14.
+- **A tesztadatok típusa:**	-
+- **A tesztet végző személy(ek):** Bajzát Zoltán
+- **A tesztelt rendszer beállításai:**
+- **A teszt-eset elvárt eredménye:** passed
+- **A tesztelés eredménye:** Megfelelt ~~ / Nem felelt meg / Megfelelt megjegyzésekkel ~~
+- **Megjegyzések:** 
+
+
 ## Adatbázis
 
 ## Web Frontend
