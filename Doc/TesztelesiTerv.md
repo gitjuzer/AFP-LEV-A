@@ -270,6 +270,96 @@ A teszteket az alábbi minta alapján végezzük:
 - **A tesztelés eredménye:** Megfelelt / Nem felelt meg / Megfelelt megjegyzésekkel
 - **Megjegyzések:** 
 
+### Afp\Domain\ExerciseDilemmaDilemma 
+	
+#### Eset 1 - Base öröklése
+- **A teszt-eset leírás és célja:** A base modell öröklődése
+- **A tesztelt folyamat/funkció leírása:** Is base modell
+- **A tesztelés előfeltételei:** -
+- **A tesztelés dátuma és időpontja:** 
+- **A tesztadatok típusa:**	-
+- **A tesztet végző személy(ek):**
+- **A tesztelt rendszer beállításai:**
+- **A teszt-eset elvárt eredménye:** passed
+- **A tesztelés eredménye:** Megfelelt / Nem felelt meg / Megfelelt megjegyzésekkel
+- **Megjegyzések:** 
+
+#### Eset 2 - Válasz beállítása
+- **A teszt-eset leírás és célja:** Set question működés tesztelése
+- **A tesztelt folyamat/funkció leírása:** Értékadás
+- **A tesztelés előfeltételei:** -
+- **A tesztelés dátuma és időpontja:**
+- **A tesztadatok típusa:**	-
+- **A tesztet végző személy(ek):**
+- **A tesztelt rendszer beállításai:**
+- **A teszt-eset elvárt eredménye:** passed
+- **A tesztelés eredménye:** Megfelelt / Nem felelt meg / Megfelelt megjegyzésekkel
+- **Megjegyzések:** 
+
+#### Eset 3 - Válasz lekérdezése
+- **A teszt-eset leírás és célja:** Get question működés tesztelése
+- **A tesztelt folyamat/funkció leírása:** Értékadás ellenőrzése
+- **A tesztelés előfeltételei:** -
+- **A tesztelés dátuma és időpontja:**
+- **A tesztadatok típusa:**	-
+- **A tesztet végző személy(ek):**
+- **A tesztelt rendszer beállításai:**
+- **A teszt-eset elvárt eredménye:** passed
+- **A tesztelés eredménye:** Megfelelt / Nem felelt meg / Megfelelt megjegyzésekkel
+- **Megjegyzések:** 
+
+
+#### Eset 4 - Helyesség beállítása
+- **A teszt-eset leírás és célja:** Set score működés tesztelése
+- **A tesztelt folyamat/funkció leírása:** Értékadás
+- **A tesztelés előfeltételei:** -
+- **A tesztelés dátuma és időpontja:**
+- **A tesztadatok típusa:**	-
+- **A tesztet végző személy(ek):**
+- **A tesztelt rendszer beállításai:**
+- **A teszt-eset elvárt eredménye:** passed
+- **A tesztelés eredménye:** Megfelelt / Nem felelt meg / Megfelelt megjegyzésekkel
+- **Megjegyzések:** 
+
+
+#### Eset 5 - Helyesség lekérdezése
+- **A teszt-eset leírás és célja:** Get score működés tesztelése
+- **A tesztelt folyamat/funkció leírása:** Értékadás ellenőrzése
+- **A tesztelés előfeltételei:** -
+- **A tesztelés dátuma és időpontja:**
+- **A tesztadatok típusa:**	-
+- **A tesztet végző személy(ek):**
+- **A tesztelt rendszer beállításai:**
+- **A teszt-eset elvárt eredménye:** passed
+- **A tesztelés eredménye:** Megfelelt / Nem felelt meg / Megfelelt megjegyzésekkel
+- **Megjegyzések:** 
+
+
+#### Eset 6 - Parent id beállítás
+- **A teszt-eset leírás és célja:** Set exercise id működés tesztelése
+- **A tesztelt folyamat/funkció leírása:** Értékadás
+- **A tesztelés előfeltételei:** -
+- **A tesztelés dátuma és időpontja:**
+- **A tesztadatok típusa:**	-
+- **A tesztet végző személy(ek):**
+- **A tesztelt rendszer beállításai:**
+- **A teszt-eset elvárt eredménye:** passed
+- **A tesztelés eredménye:** Megfelelt / Nem felelt meg / Megfelelt megjegyzésekkel
+- **Megjegyzések:** 
+
+
+#### Eset 7 - Parent id visszaadás
+- **A teszt-eset leírás és célja:** Get topic működés tesztelése
+- **A tesztelt folyamat/funkció leírása:** Értékadás ellenőrzése
+- **A tesztelés előfeltételei:** -
+- **A tesztelés dátuma és időpontja:**
+- **A tesztadatok típusa:**	-
+- **A tesztet végző személy(ek):**
+- **A tesztelt rendszer beállításai:**
+- **A teszt-eset elvárt eredménye:** passed
+- **A tesztelés eredménye:** Megfelelt / Nem felelt meg / Megfelelt megjegyzésekkel
+- **Megjegyzések:** 
+
 ## Adatbázis
 
 ## Web Frontend
