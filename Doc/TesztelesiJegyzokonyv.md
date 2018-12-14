@@ -158,6 +158,98 @@
 - **Megjegyzések:** 
 
 
+### afp/domain/EMCAnswer 
+	
+#### Eset 1 - Base öröklése
+- **A teszt-eset leírás és célja:** A base modell öröklődése
+- **A tesztelt folyamat/funkció leírása:** Is base modell
+- **A tesztelés előfeltételei:** -
+- **A tesztelés dátuma és időpontja:** 2018.12.08.
+- **A tesztadatok típusa:**	-
+- **A tesztet végző személy(ek):** Dancsó Sándor
+- **A tesztelt rendszer beállításai:** -
+- **A teszt-eset elvárt eredménye:** passed
+- **A tesztelés eredménye:** Megfelelt ~~ / Nem felelt meg / Megfelelt megjegyzésekkel ~~
+- **Megjegyzések:** 
+
+#### Eset 2 - Válasz beállítása
+- **A teszt-eset leírás és célja:** Set answer működés tesztelése
+- **A tesztelt folyamat/funkció leírása:** Értékadás
+- **A tesztelés előfeltételei:** -
+- **A tesztelés dátuma és időpontja:** 2018.12.08.
+- **A tesztadatok típusa:**	-
+- **A tesztet végző személy(ek):** Dancsó Sándor
+- **A tesztelt rendszer beállításai:** -
+- **A teszt-eset elvárt eredménye:** passed
+- **A tesztelés eredménye:** Megfelelt ~~ / Nem felelt meg / Megfelelt megjegyzésekkel ~~
+- **Megjegyzések:** 
+
+#### Eset 3 - Válasz lekérdezése
+- **A teszt-eset leírás és célja:** Get answer működés tesztelése
+- **A tesztelt folyamat/funkció leírása:** Értékadás ellenőrzése
+- **A tesztelés előfeltételei:** -
+- **A tesztelés dátuma és időpontja:** 2018.12.08.
+- **A tesztadatok típusa:**	-
+- **A tesztet végző személy(ek):** Dancsó Sándor
+- **A tesztelt rendszer beállításai:** -
+- **A teszt-eset elvárt eredménye:** passed
+- **A tesztelés eredménye:** Megfelelt ~~ / Nem felelt meg / Megfelelt megjegyzésekkel ~~
+- **Megjegyzések:** 
+
+
+#### Eset 4 - Helyesség beállítása
+- **A teszt-eset leírás és célja:** Set is correct működés tesztelése
+- **A tesztelt folyamat/funkció leírása:** Értékadás
+- **A tesztelés előfeltételei:** -
+- **A tesztelés dátuma és időpontja:** 2018.12.08.
+- **A tesztadatok típusa:**	-
+- **A tesztet végző személy(ek):** Dancsó Sándor
+- **A tesztelt rendszer beállításai:** -
+- **A teszt-eset elvárt eredménye:** passed
+- **A tesztelés eredménye:** Megfelelt ~~ / Nem felelt meg / Megfelelt megjegyzésekkel ~~
+- **Megjegyzések:** 
+
+
+#### Eset 5 - Helyesség lekérdezése
+- **A teszt-eset leírás és célja:** Get is correct működés tesztelése
+- **A tesztelt folyamat/funkció leírása:** Értékadás ellenőrzése
+- **A tesztelés előfeltételei:** -
+- **A tesztelés dátuma és időpontja:** 2018.12.08.
+- **A tesztadatok típusa:**	-
+- **A tesztet végző személy(ek):** Dancsó Sándor
+- **A tesztelt rendszer beállításai:** -
+- **A teszt-eset elvárt eredménye:** passed
+- **A tesztelés eredménye:** Megfelelt ~~ / Nem felelt meg / Megfelelt megjegyzésekkel ~~
+- **Megjegyzések:** 
+
+
+#### Eset 6 - Parent id beállítás
+- **A teszt-eset leírás és célja:** Set parent id működés tesztelése
+- **A tesztelt folyamat/funkció leírása:** Értékadás
+- **A tesztelés előfeltételei:** -
+- **A tesztelés dátuma és időpontja:** 2018.12.08.
+- **A tesztadatok típusa:**	-
+- **A tesztet végző személy(ek):** Dancsó Sándor
+- **A tesztelt rendszer beállításai:** -
+- **A teszt-eset elvárt eredménye:** passed
+- **A tesztelés eredménye:** Megfelelt ~~ / Nem felelt meg / Megfelelt megjegyzésekkel ~~
+- **Megjegyzések:** 
+
+
+#### Eset 7 - Parent id visszaadás
+- **A teszt-eset leírás és célja:** Get parent id működés tesztelése
+- **A tesztelt folyamat/funkció leírása:** Értékadás ellenőrzése
+- **A tesztelés előfeltételei:** -
+- **A tesztelés dátuma és időpontja:** 2018.12.08.
+- **A tesztadatok típusa:**	-
+- **A tesztet végző személy(ek):** Dancsó Sándor
+- **A tesztelt rendszer beállításai:** -
+- **A teszt-eset elvárt eredménye:** passed
+- **A tesztelés eredménye:** Megfelelt ~~ / Nem felelt meg / Megfelelt megjegyzésekkel ~~
+- **Megjegyzések:** 
+
+
+
 ## Adatbázis
 
 ## Web Frontend
