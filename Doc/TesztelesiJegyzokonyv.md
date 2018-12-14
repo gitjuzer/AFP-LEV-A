@@ -236,6 +236,43 @@
 
 ### Tananyagok listája (tananyagok.java)
 
+#### Eset 1 - Gombok betöltése
+- **A teszt-eset leírás és célja:** Gomb adatok letöltése
+- **A tesztelt folyamat/funkció leírása:** A gombok a kiválasztott topic után oldalváltás. Szövegek megjelenése.
+- **A tesztelés előfeltételei:** Belépett felhasználó, szerver kapcsolat, elérhető topic-ok. 
+- **A tesztelés dátuma és időpontja:**2018.12.14
+- **A tesztadatok típusa:**	Szerver oldalon rögzített teszt adatok.
+- **A tesztet végző személy(ek):** Pekár Mihály
+- **A tesztelt rendszer beállításai:** Android Nexus 5X
+- **A teszt-eset elvárt eredménye:** Megfelelő tananyag cím megjelenése.
+- **A tesztelés eredménye:** Megfelelt / ~~Nem felelt meg / ~~Megfelelt megjegyzésekkel
+- **Megjegyzések:** 
+	
+#### Eset 2 - Gombok működése
+- **A teszt-eset leírás és célja:** Gombok megfelelő helyre irányítása
+- **A tesztelt folyamat/funkció leírása:** Gomb lenyomása után oldalváltás.
+- **A tesztelés előfeltételei:** Belépett felhasználó, szerver kapcsolat, elérhető tananyag-ok/gombok. 
+- **A tesztelés dátuma és időpontja:**2018.12.14
+- **A tesztadatok típusa:**	Szerver oldalon rögzített teszt adatok.
+- **A tesztet végző személy(ek):**Pekár Mihály
+- **A tesztelt rendszer beállításai:** Android Nexus 5X
+- **A teszt-eset elvárt eredménye:** A gombok a nevükkel megegyező tananyag-ra irányítanak.
+- **A tesztelés eredménye:** Megfelelt / ~~Nem felelt meg / ~~Megfelelt megjegyzésekkel
+- **Megjegyzések:**	
+
+
+#### Eset 3 - Formátum
+- **A teszt-eset leírás és célja:** Fromátumok tesztelése.
+- **A tesztelt folyamat/funkció leírása:**	Gomb szöveg.
+- **A tesztelés előfeltételei:** Belépett felhasználó, szerver kapcsolat, elérhető topic-ok/gombok. 
+- **A tesztelés dátuma és időpontja:**2018.12.14
+- **A tesztadatok típusa:**	Szerver oldalon rögzített teszt adatok.
+- **A tesztet végző személy(ek):**Pekár Mihály
+- **A tesztelt rendszer beállításai:** Android Nexus 5X
+- **A teszt-eset elvárt eredménye:** A gomb a topic-val megegyező képpel jelenik meg.
+- **A tesztelés eredménye:** ~~Megfelelt / ~~Nem felelt meg / Megfelelt megjegyzésekkel
+- **Megjegyzések:**	Túl nagy szöveg méret.
+
 ### Tananyag (Tananyag.java)
 
 #### Eset 1 - Cím
