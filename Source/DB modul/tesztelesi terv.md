@@ -48,21 +48,21 @@ Ez a fejezet a teszteléshez szükséges erőforrásokat fejti ki.
 
 Feladatkörök és felelősségek
 Feladatkör	Felelősség/tevékenység	Személy
-Tesztelő:		A teszt végrehajtása
-	Észrevételek dokumentálása
-	Teszt dokumentáció archiválása	
+Tesztelő:		A teszt végrehajtása
+	Észrevételek dokumentálása
+	Teszt dokumentáció archiválása	
 Szakértő:	A szakértő az észrevételek elemzi és megoldást javasol.	
-Teszt-koordinátor:		Teszt terv készítése
-	A tesztterv jóváhagyatása a projektmenedzserrel
-	Teszt forgatókönyvek létrehozása
-	Inkonzisztenciák kezelése 
-	Helyes és időbeni hibakezelés 
-	Szükség esetén problémák eszkalálása a projekt menedzsernek 
-	Végső riport készítése
-	Teszt dokumentum archiválása
-	Az észrevételek státuszának követése, ill. dokumentálása	
-Projektvezető:		Teszt terv jóváhagyása 
-	Teszt forgatókönyv (testscript)	
+Teszt-koordinátor:		Teszt terv készítése
+	A tesztterv jóváhagyatása a projektmenedzserrel
+	Teszt forgatókönyvek létrehozása
+	Inkonzisztenciák kezelése 
+	Helyes és időbeni hibakezelés 
+	Szükség esetén problémák eszkalálása a projekt menedzsernek 
+	Végső riport készítése
+	Teszt dokumentum archiválása
+	Az észrevételek státuszának követése, ill. dokumentálása	
+Projektvezető:		Teszt terv jóváhagyása 
+	Teszt forgatókönyv (testscript)	
 
 2.2	Tesztkörnyezet
 
@@ -117,8 +117,8 @@ Az alábbi elvárások szerepelnek az üzleti illetve fejlesztői specifikáció
 4.4	Elfogadási kritériumok
 
 A teszt sikerességének kritériumai:
-	Technikai, a teszt forgatókönyvben leírtak szerint. 
-	A projekt menedzser jóváhagyása a teszt leszállítandókra. 
+	Technikai, a teszt forgatókönyvben leírtak szerint. 
+	A projekt menedzser jóváhagyása a teszt leszállítandókra. 
 4.5	Kockázat kezelés
 
 #	Kockázat	Hatás
@@ -133,7 +133,7 @@ Tesztelési jelentés*
 
 
 
-	Megfelelt/élesíthető
-	Nem felelt meg
-	Megfelelt megjegyzésekkel
+	Megfelelt/élesíthető
+	Nem felelt meg
+	Megfelelt megjegyzésekkel
 
