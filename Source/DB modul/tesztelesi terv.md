@@ -3,7 +3,7 @@
 AFP-LEV-A Project
 
 Dokumentum címe: Tesztelési leírás |n	
-Minősítés: jóváhagyott \n
+Minősítés: jóváhagyott /n
 Verziószám: 1.1	\n
 Projekt név: AFP-LEV-A DB modul	\n
 Készítette:	
