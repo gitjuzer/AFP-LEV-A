@@ -155,7 +155,7 @@ Tesztelési jelentés*
 
 
 
-	Megfelelt/élesíthető
+	Megfelelt/élesíthető ✔ 
 	Nem felelt meg
 	Megfelelt megjegyzésekkel
 
