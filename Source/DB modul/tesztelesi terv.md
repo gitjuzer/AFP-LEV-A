@@ -102,7 +102,10 @@ A backend oldalon lévő konfliktusok kiszürése.
 
 ##	3.2	Prototípus (modul) teszt
 
-A prototípustesztelés (vagy másik nevén modultesztelés) célja a rendszer már működő moduljainak önálló tesztelése, a modulon belüli hibák azonosításának és kiküszöbölésének érdekében. Módszere:...
+Az adatbázisunkat 3 modulra lehetne osztani, amelyek a következők: táblák, kapcsolatok és maga az adatok.
+A táblák helyes adatbevitelei, esetleges hibák kiszürése.
+A kapcsolatok megfelelő müködése, kapcsoló táblák megfelelő müködése.
+Az adatok mennyisége. 
 
 #	4	Tesztelési jegyzőkönyv és tesztelési jelentés
 ##	4.1	Tesztelési jegyzőkönyv
