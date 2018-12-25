@@ -90,7 +90,12 @@ A teszt elvárt eredményeit/sikerességének kritériumai a Tesztleiras.txt-ben
 
 ##	3.1	Fejlesztői teszt
 
-A fejlesztői tesztelés célja a rendszer alapvető funkcióinak ellenőrzése, a hibakezelés és az alapvető funkciók működésének vizsgálata. Módszere:...
+A teszt az adatbázis alapvető funkcióit ellenőrzi.
+Amelyek magába foglalják az adatok felvitele, adatok lekérdezése és törlése.
+Ez a hozzá készített szerveroldali megvalósítással.
+Az esetleges hibák feljegyzzése.
+A backend oldalon lévő konfliktusok kiszürése.
+
 ##	3.2	Prototípus (modul) teszt
 
 A prototípustesztelés (vagy másik nevén modultesztelés) célja a rendszer már működő moduljainak önálló tesztelése, a modulon belüli hibák azonosításának és kiküszöbölésének érdekében. Módszere:...
