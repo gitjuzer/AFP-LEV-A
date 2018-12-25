@@ -30,7 +30,7 @@ Verzió	Dátum	Készítette	Megjegyzés
 			
 
 ###	A dokumentumot megkapják
-Funkció
+A megrendelő, Tajti Tibor, a Backend, Frontend csapat tagjai.
 
 
 
