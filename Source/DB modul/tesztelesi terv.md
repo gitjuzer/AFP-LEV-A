@@ -45,7 +45,9 @@ A teszt végrehajtásáért a projekt menedzser felel <projekt menedzser neve>, 
 
 #	2	Szükséges erőforrások
 
-Ez a fejezet a teszteléshez szükséges erőforrásokat fejti ki. 
+Teszt adatbázis szerver.
+Random adatok.
+
 ##	2.1	Feladatkörök és felelősségek (tesztcsapat meghatározása)
 
 Feladatkörök és felelősségek
