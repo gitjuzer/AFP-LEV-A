@@ -94,6 +94,7 @@ A prototípustesztelés (vagy másik nevén modultesztelés) célja a rendszer m
 
 #	4	Tesztelési jegyzőkönyv és tesztelési jelentés
 ##	4.1	Tesztelési jegyzőkönyv
+Az adatbázis modeljének elkészítése. A Backend nem fogadta el a tervet. Szükséges módosítások végrehajtása. Ezen módosítások dokumntálva a Trellón. A második logikai tervet a Backend elfogadta. Adatbázis létrehozása és feltöltése a tesztszerverre. Addattípusok ellenőrzése és dokumentálása.
 
 A tesztelők a tesztforgatókönyvnek megfelelően elvégzik a tesztelést és az eredményt tesztjegyzőkönyvekben dokumentálják. A teszt kimenetelést minden esetben jelenteni kell a tesztkoordinátornak. A tesztkoordinátor a szakértőkkel együtt megoldást keres a problémákra, majd frissíti a tesztforgatókönyvet. Ha a problémát megoldották, a tesztelő újrakezdheti a tesztelést, majd dokumentálja az eredményeket. Ha a hiba továbbra is fennáll, és harmadik félen múlik a megoldása eszkalálni kell a problémát a projekt menedzsernek. 
 ##	4.2	Tesztelési jelentés
