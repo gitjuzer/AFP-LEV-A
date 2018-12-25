@@ -2,16 +2,24 @@
 
 AFP-LEV-A Project
 
-Dokumentum címe: Tesztelési leírás |n	
-Minősítés: jóváhagyott /n
-Verziószám: 1.1	\n
-Projekt név: AFP-LEV-A DB modul	\n
+Dokumentum címe: Tesztelési leírás
+
+Minősítés: jóváhagyott
+
+Verziószám: 1.1
+
+Projekt név: AFP-LEV-A DB modul
+
 Készítette:	
 		Madarász Zsolt
 		Szobonya Gergő
+		
 Utolsó mentés kelte: 2018.12.25	
-Dokumentum célja: Tesztelési terv leírása	
+
+Dokumentum célja: Tesztelési terv leírása
+
 Fájlnév:	tesztelesi terv.md
+
 
 ###	Változtatások jegyzéke
 Verzió	Dátum	Készítette	Megjegyzés
