@@ -67,6 +67,7 @@ Projektvezető:		Teszt terv jóváhagyása
 	Teszt forgatókönyv (testscript)	
 
 ##	2.2	Tesztkörnyezet
+Az adatbázist MySQL Workbench-ben tervezzük meg, ezután a EER diagrammot átadjuk a Backend-csapatnak, amennyiben elfogadja létrehozzuk az adatbázist és elkezdjük annak tesztelését. Bármely probléma esetén javítjuk a hibákat és megint átadjuk elfogadásra, ezt addig ismételgetjük ,amíg szükséges.
 
 Ebben a részben meg kell határozni, hogy a tesztelés milyen környezetben történjen (fejlesztői vagy tesztkörnyezet), a környezetek hogyan érhetőek el, továbbá a tesztelők milyen hozzáféréssel végezzék a tesztelést.
 
