@@ -113,24 +113,33 @@ Az adatbázis modeljének elkészítése. A Backend nem fogadta el a tervet. Sz�
 
 ##	4.2	Tesztelési jelentés
 
-A tesztelési jelentést a tesztkoordinátor készíti el. Ez egy részletes áttekintése a lefutott teszteknek, azok eredményeinek, státuszának és a megjegyzéseknek.
-A tesztkoordinátor juttatja el a projektmenedzsernek a tesztelési jelentést. 
+A tesztelés során keletkezett hibák, javítása folyamatban van.
+Az adatok bevitele során nagyobb komplikációk nem léptek fel. 
+Olyan hibák nem léptek fel a tesztlés során amelyek nagyobb erőfeszítést igényelnének a javításuk.
+A kapcsolatok megfelelően müködnek.
+
 ##	4.3	Tesztelt elvárások 
 
 Az alábbi funkcionális elvárások szerepelnek az üzleti illetve fejlesztői specifikációban, amelyek tesztelésre is kerültek: 
 
 #	Leírás
-1.	Adatbázis MySql-ben
-2.	Megadott táblák használata
-3.	Tábláknál megadott előtagok használata
-4.	Mezőtípusok megfelelő beállítása
-5.	Adatbázis tesztszerverre való feltöltése
-6.	Funkcionális teszt
+1.	
+2.	
+3.	
+4.	
+5.	
+6.	
+7.	
+
+Az alábbi nem-funkcionális elvárások szerepelnek az üzleti illetve fejlesztői specifikációban, amelyek tesztelésre is kerültek: 
+
+#	Leírás
+1.	
+2.	
+3.	
+4.	
 
 Az alábbi elvárások szerepelnek az üzleti illetve fejlesztői specifikációban, amelyek nem kerültek tesztelésre: 
-#	Leírás
-1.	nagy mennyisegű adatokkal végzett lekérdezések
-
 
 ##	4.4	Elfogadási kritériumok
 A teszt sikerességének kritériumai: Az elvárások hiba mentes teljesítése.Csak adott adattípus elfogadása a tábla funkciójának megfelelően. Téves adat esetén hibaüzenet kiíratása.
