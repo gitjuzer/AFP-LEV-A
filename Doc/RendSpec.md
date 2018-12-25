@@ -7,6 +7,8 @@ Az ütemterv első része az alábbiakat tartalmazza.
 - A rendszer funkcióit csak bejelentkezett felhasználó használhatja.
 - Webes, bizonyos funkciókhoz androidos felület.
 - Adattárolás MySQL adatbázison.
+- Adatbázis szétszedése táblákra.
+- Tábláknak megadott előtagok használata
 
 ## Az alkalmazásokkal szemben támasztott funkcionális követelmények
 - Felhasználókezelés
