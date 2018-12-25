@@ -30,6 +30,7 @@ Egy több táblából álló adatbázis létrehozása MySQL-ben. A kész adatbá
 
 Ebben a fejezetben a tesztterv célja, hatóköre és felépítése található.
 ##	1.1	Tesztelési terv hatóköre, célja 
+A tesztelési terv az adatbázis felépítésére terjed ki. Annak megfelelő adattípus rögzítésére. Az élesteszteket a Backend és Frontend csdapat végzi az általuk megírt kóddal. Hiba esetén a válzotatásokat az Adatbázis részleg módosítja a megadott szempontok szerint.
 
 A tesztelési terv célja a tesztelés teljes körűségének biztosítása, a tesztelés során alkalmazott eljárások és megoldások meghatározásával.
 
