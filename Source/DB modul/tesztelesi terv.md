@@ -84,6 +84,7 @@ Környezet neve és feladata	A hozzáférés módja	Konfiguráció	Kapcsolattart
 #	3	Tesztelési terv
 
 Ez a fejezet leírja a teszt típusát, a metodológiáját és a riport készítés módszerét. Emellett meghatározza a teszt elvárásokat, a teszt-esetek elvárt eredményeit, sikerességének kritériumait, a kockázatok kezelését és a hatáskörön kívül eseteket.
+
 ##	3.1	Fejlesztői teszt
 
 A fejlesztői tesztelés célja a rendszer alapvető funkcióinak ellenőrzése, a hibakezelés és az alapvető funkciók működésének vizsgálata. Módszere:...
@@ -124,9 +125,7 @@ Az alábbi elvárások szerepelnek az üzleti illetve fejlesztői specifikáció
 
 ##	4.4	Elfogadási kritériumok
 
-A teszt sikerességének kritériumai:
-	Technikai, a teszt forgatókönyvben leírtak szerint. 
-	A projekt menedzser jóváhagyása a teszt leszállítandókra. 
+	A teszt sikerességének kritériumai: Az elvárások hiba mentes teljesítése.
 ##	4.5	Kockázat kezelés
 
 #	Kockázat	Hatás
