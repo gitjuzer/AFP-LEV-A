@@ -120,23 +120,17 @@ A tesztkoordinátor juttatja el a projektmenedzsernek a tesztelési jelentést.
 Az alábbi funkcionális elvárások szerepelnek az üzleti illetve fejlesztői specifikációban, amelyek tesztelésre is kerültek: 
 
 #	Leírás
-1.	
-2.	
-3.	
-4.	
-5.	
-6.	
-7.	
-
-Az alábbi nem-funkcionális elvárások szerepelnek az üzleti illetve fejlesztői specifikációban, amelyek tesztelésre is kerültek: 
-
-#	Leírás
-1.	
-2.	
-3.	
-4.	
+1.	Adatbázis MySql-ben
+2.	Megadott táblák használata
+3.	Tábláknál megadott előtagok használata
+4.	Mezőtípusok megfelelő beállítása
+5.	Adatbázis tesztszerverre való feltöltése
+6.	Funkcionális teszt
 
 Az alábbi elvárások szerepelnek az üzleti illetve fejlesztői specifikációban, amelyek nem kerültek tesztelésre: 
+#	Leírás
+1.	nagy mennyisegű adatokkal végzett lekérdezések
+
 
 ##	4.4	Elfogadási kritériumok
 A teszt sikerességének kritériumai: Az elvárások hiba mentes teljesítése.Csak adott adattípus elfogadása a tábla funkciójának megfelelően. Téves adat esetén hibaüzenet kiíratása.
