@@ -2,20 +2,21 @@
 
 AFP-LEV-A Project
 
-Dokumentum címe: (azonosítója)	
-Minősítés: (állapot)
-(tervezet, jóváhagyott, stb.)	
-Verziószám:	
-Projekt név:	
+Dokumentum címe: Tesztelési leírás	
+Minősítés: jóváhagyott
+Verziószám: 1.1	
+Projekt név: AFP-LEV-A DB modul	
 Készítette:	
-Telefon:	
-Utolsó mentés kelte:	
-Dokumentum célja:	
-Fájlnév:	
+	Madarász Zsolt
+	Szobonya Gergő
+Utolsó mentés kelte: 2018.12.25	
+Dokumentum célja: Tesztelési terv leírása	
+Fájlnév:	tesztelesi terv.md
 
 ###	Változtatások jegyzéke
 Verzió	Dátum	Készítette	Megjegyzés
-			
+1.0	2018.10.30 	Madarász Zsolt	 adatbázis model terv elkészítése
+1.1	2018.11.18	Madarász Zsolt	Adatbázis modell módosítása a Backend elvárasi szerint
 			
 			
 			
@@ -28,13 +29,9 @@ Funkció
 #	1	Bevezetés
 Egy több táblából álló adatbázis létrehozása MySQL-ben. A kész adatbázist letesztelni megfelelő szempontok szerint, például adott változtípusok elfogadása. A kész adatbázist átadni az illetékes csoportoknak további tesztelés céljából.
 
-Ebben a fejezetben a tesztterv célja, hatóköre és felépítése található.
+
 ##	1.1	Tesztelési terv hatóköre, célja 
 A tesztelési terv az adatbázis felépítésére terjed ki. Annak megfelelő adattípus rögzítésére. Az élesteszteket a Backend és Frontend csdapat végzi az általuk megírt kóddal. Hiba esetén a válzotatásokat az Adatbázis részleg módosítja a megadott szempontok szerint.
-
-A tesztelési terv célja a tesztelés teljes körűségének biztosítása, a tesztelés során alkalmazott eljárások és megoldások meghatározásával.
-
-A teszt végrehajtásáért a projekt menedzser felel <projekt menedzser neve>, és a tesztcsapat hajtja végre a 2.1. fejezetben meghatározott módon.
 
 ##	1.2	Elvárások
 
@@ -74,7 +71,6 @@ Projektvezető:		Teszt terv jóváhagyása
 ##	2.2	Tesztkörnyezet
 Az adatbázist MySQL Workbench-ben tervezzük meg, ezután a EER diagrammot átadjuk a Backend-csapatnak, amennyiben elfogadja létrehozzuk az adatbázist és elkezdjük annak tesztelését. Bármely probléma esetén javítjuk a hibákat és megint átadjuk elfogadásra, ezt addig ismételgetjük ,amíg szükséges.
 
-Ebben a részben meg kell határozni, hogy a tesztelés milyen környezetben történjen (fejlesztői vagy tesztkörnyezet), a környezetek hogyan érhetőek el, továbbá a tesztelők milyen hozzáféréssel végezzék a tesztelést.
 
 Tesztkörnyezet
 Környezet neve és feladata	A hozzáférés módja	Konfiguráció	Kapcsolattartó személyek
@@ -104,7 +100,6 @@ A prototípustesztelés (vagy másik nevén modultesztelés) célja a rendszer m
 ##	4.1	Tesztelési jegyzőkönyv
 Az adatbázis modeljének elkészítése. A Backend nem fogadta el a tervet. Szükséges módosítások végrehajtása. Ezen módosítások dokumntálva a Trellón. A második logikai tervet a Backend elfogadta. Adatbázis létrehozása és feltöltése a tesztszerverre. Addattípusok ellenőrzése és dokumentálása.
 
-A tesztelők a tesztforgatókönyvnek megfelelően elvégzik a tesztelést és az eredményt tesztjegyzőkönyvekben dokumentálják. A teszt kimenetelést minden esetben jelenteni kell a tesztkoordinátornak. A tesztkoordinátor a szakértőkkel együtt megoldást keres a problémákra, majd frissíti a tesztforgatókönyvet. Ha a problémát megoldották, a tesztelő újrakezdheti a tesztelést, majd dokumentálja az eredményeket. Ha a hiba továbbra is fennáll, és harmadik félen múlik a megoldása eszkalálni kell a problémát a projekt menedzsernek. 
 ##	4.2	Tesztelési jelentés
 
 A tesztelési jelentést a tesztkoordinátor készíti el. Ez egy részletes áttekintése a lefutott teszteknek, azok eredményeinek, státuszának és a megjegyzéseknek.
