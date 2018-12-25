@@ -26,9 +26,10 @@ Funkció
 
 
 #	1	Bevezetés
+Egy több táblából álló adatbázis létrehozása MySQL-ben. A kész adatbázist letesztelni megfelelő szempontok szerint, például adott változtípusok elfogadása. A kész adatbázist átadni az illetékes csoportoknak további tesztelés céljából.
 
 Ebben a fejezetben a tesztterv célja, hatóköre és felépítése található.
-1.1	Tesztelési terv hatóköre, célja 
+##	1.1	Tesztelési terv hatóköre, célja 
 
 A tesztelési terv célja a tesztelés teljes körűségének biztosítása, a tesztelés során alkalmazott eljárások és megoldások meghatározásával.
 
