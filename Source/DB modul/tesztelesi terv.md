@@ -38,13 +38,16 @@ A teszt végrehajtásáért a projekt menedzser felel <projekt menedzser neve>, 
 
 ##	1.2	Elvárások
 
- Az alábbi alap elvárások képezik ennek a teszttervnek az alapját:
-•	Az olvasó ismeri az alapdokumentumokat, amelyek meghatározzák a rendszert. 
-•	Az xxx szervezeti egység/ projektcsapat felelős a tesztadatok előállításáért.  
-•	A tesztprogram az ebben a dokumentumban meghatározott tesztterv alapján fut. 
+A tesztelés alá vetett adatbázisunknak teljesíteni-e kellene a lentebb foglaltakat.
+Az adott táblákban való helyes értékek való tárolása.
+Hibás érték esetén figyelmeztett/nem fogadja el.
+A táblák közötti kapcsolatok ellenörzése.
+A helyes müködés megerősítése.
+A táblák adat kapacitása. 
 
 #	2	Szükséges erőforrások
 
+Olyan programok, amely az adatbázisunkat random értékkel tölti meg és vizsgálja az helyesen megadott értékek elfogadását.
 Teszt adatbázis szerver.
 Random adatok.
 
