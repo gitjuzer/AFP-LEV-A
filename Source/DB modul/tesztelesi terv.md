@@ -129,7 +129,7 @@ Az alábbi elvárások szerepelnek az üzleti illetve fejlesztői specifikáció
 
 ##	4.4	Elfogadási kritériumok
 
-	A teszt sikerességének kritériumai: Az elvárások hiba mentes teljesítése.
+	A teszt sikerességének kritériumai: Az elvárások hiba mentes teljesítése.Csak adott adattípus elfogadása a tábla funkciójának megfelelően. Téves adat esetén hibaüzenet kiíratása.
 ##	4.5	Kockázat kezelés
 
 #	Kockázat	Hatás
