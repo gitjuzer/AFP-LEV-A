@@ -83,7 +83,10 @@ Környezet neve és feladata	A hozzáférés módja	Konfiguráció	Kapcsolattart
 			
 #	3	Tesztelési terv
 
-Ez a fejezet leírja a teszt típusát, a metodológiáját és a riport készítés módszerét. Emellett meghatározza a teszt elvárásokat, a teszt-esetek elvárt eredményeit, sikerességének kritériumait, a kockázatok kezelését és a hatáskörön kívül eseteket.
+A tesztünk egy az adatbázisba felvihető adatok helyességét, a kapcsolatok megfelelő müködését és az adatbázis kapacitását teszteli.
+A tesztelés során keletkezett hibák feljegyzése és későbbiekben csoportosított csoportokban való elhelyezése a riport-ban.
+A tesztelés során esetleges megfigyelések, észrevételek leírása.
+A teszt elvárt eredményeit/sikerességének kritériumai a Tesztleiras.txt-ben található.
 
 ##	3.1	Fejlesztői teszt
 
