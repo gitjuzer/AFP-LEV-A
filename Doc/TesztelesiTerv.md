@@ -368,48 +368,48 @@ A teszteket az alábbi minta alapján végezzük:
 - **A teszt-eset leírás és célja:** Regisztráció siekres működése
 - **A tesztelt folyamat/funkció leírása:** Regisztráció utáni oldal váltás.
 - **A tesztelés előfeltételei:** Nincs.
-- **A tesztelés dátuma és időpontja:**
+- **A tesztelés dátuma és időpontja:** 2019.01.20 18:18
 - **A tesztadatok típusa:**	Nincs
-- **A tesztet végző személy(ek):**
+- **A tesztet végző személy(ek):** Botlik Roland
 - **A tesztelt rendszer beállításai:**
 - **A teszt-eset elvárt eredménye:** Sikeres regisztráció esetén a főoldal betöltése, majd kijelentkezés után sikeres újboli bejelentkezés;
-- **A tesztelés eredménye:** Megfelelt / Nem felelt meg / Megfelelt megjegyzésekkel
-- **Megjegyzések:**	
+- **A tesztelés eredménye:** Megfelelt megjegyzésekkel
+- **Megjegyzések:**	A sikeres regisztrációt követően még nem jelenik meg a bejelentkezett felhasználó e-mail címe a fejlécben, ki és bejelentkezés után már ott van, valószínű nem töltődik megfelelően a session.
 	
 #### Eset 2 - Login működése
 - **A teszt-eset leírás és célja:** Login sikeres működése
 - **A tesztelt folyamat/funkció leírása:** Login utáni oldal váltás.
 - **A tesztelés előfeltételei:** Sikeres regisztráció
-- **A tesztelés dátuma és időpontja:**
+- **A tesztelés dátuma és időpontja:** 2019.01.20 18:21
 - **A tesztadatok típusa:**	Szerver oldalon rögzített test userek.
-- **A tesztet végző személy(ek):**
+- **A tesztet végző személy(ek):** Botlik Roland
 - **A tesztelt rendszer beállításai:**
 - **A teszt-eset elvárt eredménye:** Sikeres login után főoldal betöltése.
-- **A tesztelés eredménye:** Megfelelt / Nem felelt meg / Megfelelt megjegyzésekkel
+- **A tesztelés eredménye:** Megfelelt
 - **Megjegyzések:**	
 
 #### Eset 3 - Hibajelzések megfelelő működése
 - **A teszt-eset leírás és célja:** Login és Regisztráláskor elkövetett "hibák"
 - **A tesztelt folyamat/funkció leírása:** Hiba jelzések arra a pontra mutatnak-e ahol a felhasználó a hibát vétette.
 - **A tesztelés előfeltételei:** Nincs
-- **A tesztelés dátuma és időpontja:**
+- **A tesztelés dátuma és időpontja:** 2019.01.20 18:23
 - **A tesztadatok típusa:**	Szerver oldalon rögzített test userek.
-- **A tesztet végző személy(ek):**
+- **A tesztet végző személy(ek):** Botlik Roland
 - **A tesztelt rendszer beállításai:**
 - **A teszt-eset elvárt eredménye:** Hibák előugrása hibás adat bevitelekor
-- **A tesztelés eredménye:** Megfelelt / Nem felelt meg / Megfelelt megjegyzésekkel
-- **Megjegyzések:**	
+- **A tesztelés eredménye:** Nem felelt meg
+- **Megjegyzések:**	A sikeres tevékenységekre jön csak "reakció", de ha hibát vétünk, nem kapunk visszajelzést, csak nem történik meg az adott funkció (regisztráció vagy bejelentkezés).
 
 #### Eset 4 - Formátum
 - **A teszt-eset leírás és célja:** Formátumok tesztelése.
 - **A tesztelt folyamat/funkció leírása:** Login oldalról a főoldalra navigálás
 - **A tesztelés előfeltételei:** Sikeres login
-- **A tesztelés dátuma és időpontja:**
+- **A tesztelés dátuma és időpontja:** 2019.01.20 18:27
 - **A tesztadatok típusa:**	Szerver oldalon rögzített test userek.
-- **A tesztet végző személy(ek):**
+- **A tesztet végző személy(ek):** Botlik Roland
 - **A tesztelt rendszer beállításai:**
-- **A teszt-eset elvárt eredménye:** 
-- **A tesztelés eredménye:** Megfelelt / Nem felelt meg / Megfelelt megjegyzésekkel
+- **A teszt-eset elvárt eredménye:** Login oldalról a főoldalra navigálás
+- **A tesztelés eredménye:** Megfelelt
 - **Megjegyzések:**	
 
 
