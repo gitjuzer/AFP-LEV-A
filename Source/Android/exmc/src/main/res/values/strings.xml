@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">ExMC</string>
+    <string name="tv_tantargy">Tantárgy</string>
+    <string name="tv_feladatszam">Feladatszám</string>
+    <string name="tv_kerdes">Mennyi 1 + 1 ?</string>
+    <string name="btn1_valasz">1. válasz</string>
+    <string name="btn2_valasz">2. válasz</string>
+    <string name="btn3_valasz">3. válasz</string>
+    <string name="btn4_valasz">4. válasz</string>
+</resources>

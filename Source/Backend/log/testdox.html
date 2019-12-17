@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8"/>
+        <title>Test Documentation</title>
+        <style>
+            body {
+                text-rendering: optimizeLegibility;
+                font-variant-ligatures: common-ligatures;
+                font-kerning: normal;
+                margin-left: 2em;
+            }
+
+            body > ul > li {
+                font-family: Source Serif Pro, PT Sans, Trebuchet MS, Helvetica, Arial;
+                font-size: 2em;
+            }
+
+            h2 {
+                font-family: Tahoma, Helvetica, Arial;
+                font-size: 3em;
+            }
+
+            ul {
+                list-style: none;
+                margin-bottom: 1em;
+            }
+        </style>
+    </head>
+    <body>
+        <h2 id="Tests\Functional\HomepageTest">s\Functional\Homepage</h2>
+        <ul>
+            <li style="color: #555753;">✓ Get without name</li>
+            <li style="color: #555753;">✓ Get with greeting</li>
+            <li style="color: #555753;">✓ Post method not allowed</li>
+            <li style="color: #555753;">✓ Media type not allowed</li>
+            <li style="color: #555753;">✓ Endpoint not found</li>
+        </ul>
+        <h2 id="Tests\Functional\LoginTest">s\Functional\Login</h2>
+        <ul>
+            <li style="color: #555753;">✓ Login with right credentials</li>
+            <li style="color: #555753;">✓ Login with wrong credentials</li>
+            <li style="color: #555753;">✓ Valid token</li>
+            <li style="color: #555753;">✓ In valid token</li>
+        </ul>
+        <h2 id="Tests\Functional\RegistrationTest">s\Functional\Registration</h2>
+        <ul>
+            <li style="color: #555753;">✓ Registration with right credentials</li>
+            <li style="color: #555753;">✓ Registration with existing credentials</li>
+        </ul>
+        <h2 id="Afp\Domain\Base\BaseModelTest">Afp\Domain\Base\BaseModel</h2>
+        <ul>
+            <li style="color: #555753;">✓ Calling missing method throws not implemented exception</li>
+            <li style="color: #555753;">✓ Calling existing method returns correct value</li>
+            <li style="color: #555753;">✓ Isset returns false when property is not exists</li>
+            <li style="color: #555753;">✓ Isset returns false when property is not set</li>
+            <li style="color: #555753;">✓ Isset returns true when property is set</li>
+            <li style="color: #555753;">✓ Get missing property throws inaccessible property exception</li>
+            <li style="color: #555753;">✓ Get existing and readable property returns correct value</li>
+            <li style="color: #555753;">✓ Get existing and readable property returns null when value is not set</li>
+            <li style="color: #555753;">✓ Get existing but write only property throws inaccessible property exception</li>
+            <li style="color: #555753;">✓ Set missing property throws inaccessible property exception</li>
+            <li style="color: #555753;">✓ Set existing and writable property works correctly</li>
+            <li style="color: #555753;">✓ Set existing but read only property throws inaccessible property exception</li>
+            <li style="color: #555753;">✓ Id exists</li>
+            <li style="color: #555753;">✓ Id has setter</li>
+            <li style="color: #555753;">✓ Id has getter</li>
+            <li style="color: #555753;">✓ Integer check</li>
+            <li style="color: #555753;">✓ String check</li>
+            <li style="color: #555753;">✓ Bool check</li>
+        </ul>
+        <h2 id="Afp\Domain\CurriculumTest">Afp\Domain\Curriculum</h2>
+        <ul>
+            <li style="color: #555753;">✓ Curriculum extends base model</li>
+            <li style="color: #555753;">✓ Set title</li>
+            <li style="color: #555753;">✓ Get title</li>
+            <li style="color: #555753;">✓ Set context</li>
+            <li style="color: #555753;">✓ Get context</li>
+            <li style="color: #555753;">✓ Set topic</li>
+            <li style="color: #555753;">✓ Get topic</li>
+        </ul>
+        <h2 id="Afp\Domain\EMCAnswerTest">Afp\Domain\EMCAnswer</h2>
+        <ul>
+            <li style="color: #555753;">✓ E m c a extends base model</li>
+            <li style="color: #555753;">✓ Set answer</li>
+            <li style="color: #555753;">✓ Get answer</li>
+            <li style="color: #555753;">✓ Set is correct</li>
+            <li style="color: #555753;">✓ Get is correct</li>
+            <li style="color: #555753;">✓ Set parent id</li>
+            <li style="color: #555753;">✓ Get parent id</li>
+        </ul>
+        <h2 id="Afp\Domain\ExerciseDilemmaDilemmaTest">Afp\Domain\ExerciseDilemmaDilemma</h2>
+        <ul>
+            <li style="color: #555753;">✓ E d extends base model</li>
+            <li style="color: #555753;">✓ Set question</li>
+            <li style="color: #555753;">✓ Get question</li>
+            <li style="color: #555753;">✓ Set score</li>
+            <li style="color: #555753;">✓ Get score</li>
+            <li style="color: #555753;">✓ Set exercise</li>
+            <li style="color: #555753;">✓ Get topic</li>
+        </ul>
+        <h2 id="Afp\Domain\ExerciseMultipleChoiceTest">Afp\Domain\ExerciseMultipleChoice</h2>
+        <ul>
+            <li style="color: #555753;">✓ E m c extends base model</li>
+            <li style="color: #555753;">✓ Set question</li>
+            <li style="color: #555753;">✓ Get question</li>
+            <li style="color: #555753;">✓ Set exercise</li>
+            <li style="color: #555753;">✓ Get topic</li>
+        </ul>
+        <h2 id="Afp\Domain\ExerciseTest">Afp\Domain\Exercise</h2>
+        <ul>
+            <li style="color: #555753;">✓ Test list extends base model</li>
+            <li style="color: #555753;">✓ Set topic</li>
+            <li style="color: #555753;">✓ Get topic</li>
+        </ul>
+        <h2 id="Afp\Domain\TestListTest">Afp\Domain\TestList</h2>
+        <ul>
+            <li style="color: #555753;">✓ Test list extends base model</li>
+            <li style="color: #555753;">✓ Set title</li>
+            <li style="color: #555753;">✓ Get title</li>
+            <li style="color: #555753;">✓ Set parent id</li>
+            <li style="color: #555753;">✓ Get parent id</li>
+        </ul>
+        <h2 id="Afp\Domain\TestTest">Afp\Domain\Test</h2>
+        <ul>
+            <li style="color: #555753;">✓ Test extends base model</li>
+            <li style="color: #555753;">✓ Set score</li>
+            <li style="color: #555753;">✓ Get score</li>
+            <li style="color: #555753;">✓ Set parent id</li>
+            <li style="color: #555753;">✓ Get parent id</li>
+        </ul>
+        <h2 id="Afp\Domain\TopicTest">Afp\Domain\Topic</h2>
+        <ul>
+            <li style="color: #555753;">✓ Topic extends base model</li>
+            <li style="color: #555753;">✓ Set name</li>
+            <li style="color: #555753;">✓ Get name</li>
+            <li style="color: #555753;">✓ Set description</li>
+            <li style="color: #555753;">✓ Get description</li>
+        </ul>
+        <h2 id="Afp\Domain\UserTest">Afp\Domain\User</h2>
+        <ul>
+            <li style="color: #555753;">✓ User extends base model</li>
+            <li style="color: #555753;">✓ Set login name</li>
+            <li style="color: #555753;">✓ Get login name</li>
+            <li style="color: #555753;">✓ Set name</li>
+            <li style="color: #555753;">✓ Get name</li>
+            <li style="color: #555753;">✓ Set email</li>
+            <li style="color: #555753;">✓ Get email</li>
+            <li style="color: #555753;">✓ Set password</li>
+            <li style="color: #555753;">✓ Get password throws inaccessible property exception</li>
+            <li style="color: #555753;">✓ Type accept student value</li>
+            <li style="color: #555753;">✓ Type accept teacher value</li>
+            <li style="color: #555753;">✓ Type accept admin value</li>
+            <li style="color: #555753;">✓ Type returns correct value</li>
+            <li style="color: #555753;">✓ Type does not accept invalid value</li>
+        </ul>
+    </body>
+</html>

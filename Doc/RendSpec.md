@@ -7,6 +7,8 @@ Az ütemterv első része az alábbiakat tartalmazza.
 - A rendszer funkcióit csak bejelentkezett felhasználó használhatja.
 - Webes, bizonyos funkciókhoz androidos felület.
 - Adattárolás MySQL adatbázison.
+- Adatbázis szétszedése táblákra.
+- Tábláknak megadott előtagok használata
 
 ## Az alkalmazásokkal szemben támasztott funkcionális követelmények
 - Felhasználókezelés
@@ -70,7 +72,7 @@ Táblák:
 		- T_Desc, null
 
 - Tananyag tábla
-	- táblanév: Curiculum
+	- táblanév: Curriculum
 	- mező nevek: 
 		- C_ID, PK
 		- C_T_ID, FK
@@ -114,14 +116,14 @@ Táblák:
 		- TL_U_ID, FK (tanár)
 		
 - Igen/Nem teszt
-	- tábla neve: EDTest
+	- tábla neve: EDTestList
 	- mező nevek:
 		- EDT_ID, PK
 		- EDT_TL_ID, FK
 		- EDT_ED_ID, FK
 		
 - Felelet választó teszt
-	- tábla neve: EMCTest
+	- tábla neve: EMCTestList
 	- mező nevek:
 		- EMCT_ID, PK
 		- EMCT_TL_ID, FK
@@ -134,10 +136,24 @@ Táblák:
 		- TE_U_ID, FK (tanulók)
 		- TE_TL_ID, FK
 		- TE_Score
+- Tanulók által kitöltött tesztek
+	- tábla neve: TUser
+	- mező nevek:
+		-TU_U_ID, FK
+		-TU_TE_ID, FK
 		
 ##Funkció terv
 
 1. Bejelentkezés/regisztráció/jelszócsere
+	A felhasználónak be kell jelentkeznie, erre lehetőség van regisztrációra. Ha szeretne kódot is változtathat. Az adatok 		az User táblába kerülnek.
+	Bejelentkezést követően a felhasználónak lehetősége van kiválasztani a feladattípust a Topic táblában tárolt lehetőségek 	közül. 
+	Ezen fajtáit is kiválaszthatja, Feletválasztós, Teszt, igen/nem. A teszt végén megkapja a teszt eredményét is, amelyet a 	rendszer elment.
+	A rendszer támogatja az új diák, avagy új tanár felvételét a programba.
+	Ezt a funkciót a a "Regisztráció" menüpont valósítja meg.
+	A regisztráció során a beírt adatok az InnoDB által kezelt mysql adatbázisban kerülnek eltárolásra.
+	A rendszer támogatja a jelszó cserét is amely az bejelentkezés után válik elérhetővé.
+	Mely az adott felhasználó, kedve szerint lecserélheti.
+	
 - Web
 	- Tanár
 	- Diák

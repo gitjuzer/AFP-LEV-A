@@ -1,0 +1,14 @@
+{
+  "Username": "Felhasználó neve",
+  "Password": "Jelszó",
+  "Select language": "Válasszon nyelvet",
+  "Login": "Bejelentkezés" ,
+  "Logout": "Kijelentkezés",
+  "Language": "Nyelv",
+  "Registration": "Regisztráció",
+  "If you dont have account, click here to register": "Ha még nem regisztrált ide kattintva megteheti",
+  "Save": "Mentés",
+  "List": "Lista",
+  "Dashboard": "Főoldal",
+  "New topic": "Új topic"
+}
